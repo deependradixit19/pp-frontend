@@ -1,0 +1,26 @@
+.wrapper {
+  border-top-left-radius: 4rem;
+  border-top-right-radius: 4rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100%;
+  padding-top: 2rem;
+}
+.navigation {
+  width: 100%;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: flex-start;
+}
+.content {
+  width: 100%;
+  padding: 2rem 1rem;
+}
+.loader {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+} /*# sourceMappingURL=likesHistory.module.css.map */

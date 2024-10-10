@@ -1,0 +1,25 @@
+@import '../../../../assets/styles/abstracts/variables';
+
+.wrapper {
+  padding: 2rem;
+}
+.header {
+  @include montserrat-18-semi-bold;
+  color: #0d1444;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // margin-bottom: 2.5rem;
+  padding: 1.4rem 0 2.5rem 0.9rem;
+}
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  :global(.button) {
+    &:not(:last-of-type) {
+      margin-right: 1rem;
+    }
+  }
+}

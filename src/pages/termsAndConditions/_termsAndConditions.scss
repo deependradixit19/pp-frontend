@@ -1,0 +1,53 @@
+@import '../../assets/styles/abstracts/variables';
+
+.testandconds {
+  &__layout {
+    .header {
+      padding: 0 2rem;
+      text-align: center;
+      display: flex;
+
+      .header__title {
+        font-size: 1.6rem;
+        margin: 0;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      @include sf-16-normal;
+      text-decoration: none;
+      padding: 0.5rem 0;
+    }
+  }
+
+  &__body {
+    h1 {
+      @include sf-20-normal;
+    }
+
+    h2 {
+      @include sf-16-normal;
+    }
+  }
+
+  &__list {
+    padding: 1rem;
+    font-size: 1.4rem;
+
+    li {
+      padding: 0.25rem 0;
+    }
+
+    &--alt {
+      list-style-type: lower-latin;
+      padding-left: 1.5rem;
+    }
+  }
+}

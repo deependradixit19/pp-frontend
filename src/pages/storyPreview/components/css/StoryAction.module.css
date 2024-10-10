@@ -1,0 +1,60 @@
+.action_post {
+  background: linear-gradient(157.59deg, rgba(24, 25, 32, 0.3137254902) 0%, rgba(15, 15, 19, 0.3137254902) 100%);
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  min-width: 30px;
+  padding: 6px;
+  text-align: center;
+}
+.action_post img {
+  opacity: 1;
+  width: 1.8rem;
+}
+.action_post p {
+  font-family: 'SF-Pro-Display', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0.04em;
+  font-size: 1.1rem;
+  color: #fff;
+  margin: 0;
+  margin-top: 3px;
+  text-align: center;
+}
+.action_post--tip {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.action_story {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 2.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 1rem;
+  min-width: 5.6rem;
+  padding: 1.6rem;
+  text-align: center;
+}
+.action_story img {
+  opacity: 1;
+  width: 1.8rem;
+}
+.action_story p {
+  font-family: 'SF-Pro-Display', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0.04em;
+  font-size: 1.1rem;
+  color: #fff;
+  margin: 0;
+  margin-top: 3px;
+  text-align: center;
+}
+.action_story--tip {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+} /*# sourceMappingURL=StoryAction.module.css.map */

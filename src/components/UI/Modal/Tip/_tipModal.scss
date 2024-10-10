@@ -1,0 +1,148 @@
+@import './../../../../assets/styles/abstracts/variables';
+
+.tip-modal {
+  @include montserrat-16-normal;
+  display: flex;
+  flex-direction: column;
+  * {
+    font-family: inherit;
+  }
+}
+
+.tip-modal-input-avatar-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.tip-modal-input-wrapper {
+  width: 100%;
+  position: relative;
+  .circleAvatar {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 0;
+  }
+  svg {
+    path {
+      transition: all ease-in-out 0.3s;
+    }
+  }
+}
+
+.tip-modal-input-active {
+  svg {
+    path {
+      fill: #200e32;
+    }
+  }
+}
+
+.tip-modal-input {
+  border: 2px solid rgba(103, 110, 125, 0.8);
+  border-left: none;
+  width: 100%;
+  box-shadow: 0px 4px 14px rgba(162, 162, 162, 0.2);
+  border-radius: 25px;
+  outline: none;
+  padding: 15px;
+  padding-left: 101px;
+  font-weight: 600;
+  transition: all ease-in-out 0.3s;
+  color: #200e32;
+  &:focus {
+    border-color: rgba(47, 152, 254, 0.8);
+  }
+  &.error {
+    border-color: rgba(#e73939, 0.8);
+  }
+}
+
+.input-modal-dollar {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 90px;
+  display: flex;
+  align-items: center;
+}
+
+.tip-modal-min-text {
+  margin-left: auto;
+  color: #757576;
+  font-size: 12px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  span {
+    font-weight: 600;
+    margin: 0 2px;
+  }
+
+  &.error {
+    color: #e73939;
+  }
+}
+
+.tip-modal-personal-message-button {
+  width: 100%;
+  display: flex;
+  margin-top: 20px;
+  color: #349bfd;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.tip-modal-personal-message-text-wrapper {
+  max-height: 0;
+  transition: all ease-in-out 0.4s;
+  overflow: hidden;
+  width: 100%;
+  &-open {
+    max-height: 100vh;
+  }
+}
+
+.tip-modal-personal-message-text {
+  width: 100%;
+  color: #200e32;
+  transition: all ease-in-out 0.3s;
+  border: 2px solid rgba(103, 110, 125, 0.8);
+  box-shadow: 0px 4px 14px rgba(162, 162, 162, 0.2);
+  border-radius: 15px;
+  resize: none;
+  outline: none;
+  padding: 15px;
+  font-size: 14px;
+  &:focus {
+    border-color: rgba(47, 152, 254, 0.8);
+  }
+}
+
+.tip-modal-buttons-conainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.tip-modal-cancel-button {
+  font-weight: 500;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tip-modal-send-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 135px;
+  margin-left: 10px;
+  transition: opacity ease-in-out 0.3s;
+  &-loading {
+    opacity: 0.7;
+    pointer-events: none;
+    cursor: default;
+  }
+}

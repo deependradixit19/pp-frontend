@@ -1,0 +1,32 @@
+@import '../../../assets/styles/abstracts/variables';
+.postSidebar {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 2;
+  &__action {
+    min-width: 3rem;
+    // height: 4.5rem;
+    text-align: center;
+    background: linear-gradient(157.59deg, #18192050 0%, #0f0f1350 100%);
+    padding: 0.4rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+
+    img {
+      opacity: 1;
+      width: 1.8rem;
+    }
+
+    p {
+      @include sf-11-normal;
+      color: #fff;
+      margin: 0;
+      text-align: center;
+    }
+
+    &--tip {
+      height: fit-content;
+    }
+  }
+}

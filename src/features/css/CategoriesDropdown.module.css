@@ -1,0 +1,20 @@
+.categoriesDropdown {
+  align-items: center;
+}
+.categoriesDropdown :global(.dropdown-select-input) {
+  text-overflow: ellipsis;
+}
+.categoriesDropdown :global(.dropdown-select-options) {
+  z-index: 11;
+  max-height: 21rem;
+  overflow-y: auto;
+  justify-content: flex-start;
+}
+.categoriesDropdown :global(.dropdown-select-selected-option) {
+  display: block;
+  top: unset;
+  bottom: unset;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+} /*# sourceMappingURL=CategoriesDropdown.module.css.map */

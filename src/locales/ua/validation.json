@@ -1,0 +1,13 @@
+{
+  "required": "Required-UK",
+  "allFieldsAreRequired": "All fields are required!-UK",
+  "mustBe10CharactersOrLess": "Must be 10 characters or less-UK",
+  "mustBe15CharactersOrLess": "Must be 15 characters or less-UK",
+  "mustBe20CharactersOrLess": "Must be 20 characters or less-UK",
+  "mustBe50CharactersOrLess": "Must be 50 characters or less-UK",
+  "mustBe100CharactersOrLess": "Must be 100 characters or less-UK",
+  "pollTitleIsRequired": "Poll title is required!-UK",
+  "pollTitleCannotBeEmpty": "Poll title cannot be empty!-UK",
+  "pollMustHaveMinimum2Options": "Poll must have minimum 2 options!-UK",
+  "questionIsRequired": "Question is required!-UK"
+}

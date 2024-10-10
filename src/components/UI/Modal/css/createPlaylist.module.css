@@ -1,0 +1,24 @@
+.wrapper {
+  padding: 2rem;
+}
+.header {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  color: #0d1444;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 0 2.5rem 0.9rem;
+}
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.footer :global(.button):not(:last-of-type) {
+  margin-right: 1rem;
+} /*# sourceMappingURL=createPlaylist.module.css.map */

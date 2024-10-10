@@ -1,0 +1,108 @@
+@import '../../../assets/styles/abstracts/variables';
+
+.dropdown {
+  position: relative;
+  margin: 1rem;
+  z-index: 10001;
+  margin-right: 0;
+
+  &__body {
+    position: absolute;
+    top: 8.8rem;
+    z-index: -1;
+    right: 0;
+    border-radius: 20px;
+    width: calc(100vw - 4rem);
+    background: #fff;
+    font-size: 1rem;
+    height: 0;
+    opacity: 0;
+    transition: 0.2s all;
+
+    ul {
+      list-style: none;
+      padding: 0 0 1rem 0;
+    }
+    .button__wrapper {
+      display: flex;
+      justify-content: center;
+    }
+
+    &--header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      img {
+        align-self: flex-start;
+      }
+    }
+
+    &--title {
+      @include montserrat-18-normal;
+      font-weight: 600;
+      color: #0d1444;
+      margin: 1.2rem 0 0 1rem;
+    }
+
+    &__item {
+      @include montserrat-14-bold;
+      display: flex;
+      justify-content: space-between;
+
+      white-space: nowrap;
+      padding: 1rem 0;
+      color: #0d1444;
+
+      &__radio {
+        position: relative;
+        width: 2rem;
+        height: 2rem;
+        border: 2px solid rgba(185, 193, 210, 0.8);
+        border-radius: 50%;
+
+        &--active {
+          border: 2px solid rgba(103, 110, 125, 0.8);
+
+          &::after {
+            content: '';
+            position: absolute;
+            top: 0.25rem;
+            left: 0.25rem;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            background: #2f98fe;
+            transition: 0.2s all;
+          }
+        }
+
+        &--inactive {
+          &::after {
+            content: '';
+            position: absolute;
+            top: 0.25rem;
+            left: 0.25rem;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            transition: 0.2s all;
+          }
+        }
+      }
+    }
+
+    &--visible {
+      height: auto;
+      opacity: 1;
+      padding: 2rem;
+      z-index: 1;
+    }
+  }
+
+  &__button {
+    width: 13rem;
+    position: relative;
+    left: calc(50% - 6.5rem);
+  }
+}

@@ -1,0 +1,141 @@
+@import '../../../assets/styles/abstracts/variables';
+
+.videoPlayerControls {
+  padding: 1rem 2rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 6;
+
+  &__progress {
+    width: 100%;
+    margin-bottom: 1.7rem;
+    progress {
+      width: 100%;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &--left {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    &--right {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
+  &__action {
+    &--play {
+      margin-right: 2.5rem;
+
+      svg {
+        width: 1.7rem;
+      }
+    }
+    &--volume {
+      padding: 1rem;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &-icon {
+        width: 4.2rem;
+        height: 2rem;
+      }
+      &-slider {
+        width: 6rem;
+      }
+
+      &.active {
+        background: rgba(51, 55, 65, 0.5);
+        border-radius: 2rem;
+        margin-right: 1.6rem;
+      }
+    }
+    &--autoplay {
+      margin-right: 2rem;
+    }
+  }
+
+  &__duration {
+    @include montserrat-12-semi-bold;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--played {
+      min-width: 3rem;
+      text-align: left;
+    }
+
+    &--loaded {
+      opacity: 0.5;
+      min-width: 3rem;
+      text-align: right;
+    }
+
+    &--divider {
+      opacity: 0.5;
+    }
+  }
+
+  &__settings {
+    position: absolute;
+    right: 1rem;
+    top: -6.5rem;
+    background: rgba(51, 55, 65, 0.5);
+    padding: 1.5rem;
+    border-radius: 1rem;
+  }
+
+  &__setting {
+    @include montserrat-12-semi-bold;
+    display: flex;
+    color: #fff;
+
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+
+    &--name {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+.previewModal--minimized {
+  .videoPlayerControls {
+    width: 100%;
+    left: 0;
+    right: 0;
+    height: 100%;
+
+    &__progress {
+      position: absolute;
+      bottom: -1.7rem;
+      left: 0;
+      padding: 0 1rem;
+
+      .progressBar {
+        background: #f5f5f6;
+      }
+    }
+    &__actions {
+      position: absolute;
+      top: 3.9rem;
+      right: 3rem;
+    }
+  }
+}

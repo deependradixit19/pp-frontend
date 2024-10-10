@@ -1,0 +1,46 @@
+.payoutsContainer {
+  :global {
+    .userCard__avatar {
+      .avatarholder {
+        height: 6rem;
+        min-width: 6rem;
+        width: 6rem;
+      }
+    }
+
+    .userCard__info {
+      .button {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.1rem;
+        line-height: 0px;
+        padding: 1rem 0.6rem;
+      }
+    }
+
+    .userCard--earnings--content {
+      padding: 1rem 1.2rem 1rem 1rem;
+    }
+
+    .earnings--money {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 1.6rem;
+      line-height: 2rem;
+      letter-spacing: 0.02em;
+      color: #0d1444;
+    }
+
+    .earnings--date {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.2rem;
+      line-height: 150%;
+      text-align: right;
+      color: #b0b0b0;
+    }
+  }
+}

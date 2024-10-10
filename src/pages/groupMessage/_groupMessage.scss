@@ -1,0 +1,29 @@
+@import '../../assets/styles/abstracts/variables';
+
+.groupMessage {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 25px;
+  background: $white90deg;
+
+  &__targets {
+    display: flex;
+    align-items: center;
+    padding: 3rem 2rem;
+
+    &__groups {
+      display: flex;
+      flex: 1;
+      height: 5rem;
+      background: #fff;
+      border: 1px solid rgba(38, 42, 51, 0.2);
+      border-radius: 15px;
+      margin-left: 1rem;
+    }
+  }
+
+  &__create {
+    margin-left: 0;
+  }
+}

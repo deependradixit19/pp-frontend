@@ -1,0 +1,23 @@
+.media {
+  border-top-left-radius: 4rem;
+  border-top-right-radius: 4rem;
+  background: linear-gradient(0deg, #ffffff, #ffffff), #f2f6f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100%;
+  padding-top: 2rem;
+}
+.empty {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  color: #778797;
+}
+:global(.media__content__wrapper) :global(.whs__wrapper) {
+  padding-bottom: 3rem;
+} /*# sourceMappingURL=media.module.css.map */

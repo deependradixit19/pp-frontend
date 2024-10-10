@@ -1,0 +1,21 @@
+{
+  "inApp": "In App-JP",
+  "push": "Push-JP",
+  "sms": "Sms-JP",
+  "email": "email-JP",
+  "newComment": "New Comment-JP",
+  "newLike": "New Like-JP",
+  "newTip": "New Tip-JP",
+  "newSubscriber": "New Subscriber-JP",
+  "newPremiumVideoPurchase": "New Premium Video Purchase-JP",
+  "newMessagePurchase": "New Message Purchase-JP",
+  "upcomingStreamReminders": "Upcoming Stream Reminders-JP",
+  "subscriptionRenewal": "Subscription Renewal-JP",
+  "newReferral": "New Referral-JP",
+  "incomingFriendRequest": "Incoming Friend Request-JP",
+  "acceptedFriendRequest": "Accepted Friend Request-JP",
+  "newTags": "New Tags-JP",
+  "newMessage": "New Message-JP",
+  "hasSentYouAFriendRequest": "Has sent you a friend request-JP",
+  "pollResponses": "Poll Responses-JP"
+}

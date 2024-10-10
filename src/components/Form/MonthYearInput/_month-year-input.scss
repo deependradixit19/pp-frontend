@@ -1,0 +1,140 @@
+.month-year-input-wrapper {
+  display: flex;
+  align-items: center;
+  max-width: 155px;
+  width: 100%;
+  height: 68px;
+  padding: 0 20px;
+  overflow: hidden;
+  background: linear-gradient(89.85deg, #fbfbfb 0.1%, #ffffff 102.02%);
+  border: 1px solid #dddddd;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  transition: all 0.2s;
+  margin-bottom: 10px;
+  &-filled {
+    padding-top: 20px;
+  }
+  &-focused {
+    padding-top: 0;
+    .month-year-input-wrapper-border {
+      border-color: #2f98fe;
+    }
+  }
+  * {
+    font-family: inherit;
+  }
+}
+
+.month-year-input-wrapper-border {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: transparent;
+  transition: border 0.2s;
+  border: 2px solid transparent;
+  pointer-events: none;
+  border-radius: 20px;
+
+  &-error {
+    border: 2px solid red;
+    &:focus {
+      border: 2px solid red;
+      outline: none;
+    }
+  }
+}
+
+.month-year-input-background-click {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.month-year-input-field {
+  outline: none;
+  width: 25px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #0d1444;
+  padding: 0;
+  border: none;
+  background: transparent;
+  z-index: 2;
+  height: 100%;
+}
+
+.month-year-input-separator {
+  font-weight: 600;
+  font-size: 14px;
+  color: #0d1444;
+  z-index: 2;
+  display: none;
+  margin-right: 8px;
+  &-show {
+    display: block;
+  }
+}
+
+.month-year-input-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 3;
+  background: linear-gradient(89.85deg, #fbfbfb 0.1%, #ffffff 102.02%);
+  align-items: center;
+  display: flex;
+  padding-left: 20px;
+  transition: all 0.2s;
+  &-filled {
+    align-items: flex-start;
+    padding-top: 16px;
+    background: transparent;
+    pointer-events: none;
+  }
+  &-focused {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.month-year-input-label-text {
+  color: #b0b0b0;
+  font-size: 12px;
+  transition: all 0.2s;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  &-focused {
+    transform: translateY(-10px);
+  }
+}
+
+.month-year-input-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(89.85deg, #fbfbfb 0.1%, #ffffff 102.02%);
+  transition: all 0.2s;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #757576;
+  pointer-events: none;
+  &-filled {
+    display: none;
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "inApp": "In App-FR",
+  "push": "Push-FR",
+  "sms": "Sms-FR",
+  "email": "email-FR",
+  "newComment": "New Comment-FR",
+  "newLike": "New Like-FR",
+  "newTip": "New Tip-FR",
+  "newSubscriber": "New Subscriber-FR",
+  "newPremiumVideoPurchase": "New Premium Video Purchase-FR",
+  "newMessagePurchase": "New Message Purchase-FR",
+  "upcomingStreamReminders": "Upcoming Stream Reminders-FR",
+  "subscriptionRenewal": "Subscription Renewal-FR",
+  "newReferral": "New Referral-FR",
+  "incomingFriendRequest": "Incoming Friend Request-FR",
+  "acceptedFriendRequest": "Accepted Friend Request-FR",
+  "newTags": "New Tags-FR",
+  "newMessage": "New Message-FR",
+  "hasSentYouAFriendRequest": "Has sent you a friend request-FR",
+  "pollResponses": "Poll Responses-FR"
+}

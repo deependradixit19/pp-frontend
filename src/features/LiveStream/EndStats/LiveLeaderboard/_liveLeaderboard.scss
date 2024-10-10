@@ -1,0 +1,131 @@
+@import '../../../../assets/styles/abstracts/variables';
+
+.leaderboard {
+  position: relative;
+  padding: 4rem 0 0 0;
+
+  &__toprated {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3.4rem;
+    padding: 1.5rem 3rem 0 3rem;
+
+    &--item {
+      max-width: 9rem;
+      &.second {
+        align-self: flex-end;
+
+        .tipper__rating {
+          color: #d38c26;
+        }
+
+        .tipper__avatar {
+          width: 9rem;
+          height: 9rem;
+
+          img {
+            width: 8.2rem;
+            height: 8.2rem;
+          }
+
+          background-image: linear-gradient(163.65deg, #de9022 9.94%, #fbc867 88.66%);
+        }
+      }
+      &.third {
+        align-self: flex-end;
+
+        .tipper__rating {
+          color: #b0b0b0;
+        }
+
+        .tipper__avatar {
+          width: 9rem;
+          height: 9rem;
+
+          background-image: linear-gradient(163.44deg, #e6e6e6 10.94%, #a4a4a4 88.54%);
+
+          img {
+            width: 8.2rem;
+            height: 8.2rem;
+          }
+        }
+      }
+      &.first {
+        max-width: 12rem;
+        margin-bottom: 1.5rem;
+        .tipper__avatar {
+          width: 12rem;
+          height: 12rem;
+          filter: drop-shadow(0px 0px 30px rgba(237, 188, 51, 0.5));
+
+          background-image: linear-gradient(163.95deg, #f5c232 12.1%, #ffe48b 88.83%);
+
+          &--crown {
+            position: absolute;
+            top: -1.5rem;
+          }
+
+          img {
+            width: 11.2rem;
+            height: 11.2rem;
+          }
+        }
+
+        align-self: flex-start;
+      }
+    }
+  }
+  &__viewers {
+    overflow: auto;
+    position: relative;
+    -webkit-mask-image: linear-gradient(to top, transparent 5%, black 60%);
+    mask-image: linear-gradient(to bottom, transparent 5%, black 60%);
+    .viewersmodal__list {
+      max-height: 100%;
+      padding: 0 4rem;
+    }
+  }
+}
+
+.tipper {
+  display: flex;
+  flex-direction: column;
+
+  &__rating {
+    @include montserrat-18-light;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  &__avatar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-bottom: 1.2rem;
+
+    img {
+      border-radius: 50%;
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+  &__handle {
+    @include montserrat-14-normal;
+    color: #a8c9f2;
+    margin-bottom: 0.9rem;
+    word-break: break-all;
+    text-align: center;
+  }
+  &__amount {
+    @include montserrat-22-light;
+    color: #fff;
+    text-align: center;
+
+    span {
+      @include montserrat-22-x-light;
+    }
+  }
+}

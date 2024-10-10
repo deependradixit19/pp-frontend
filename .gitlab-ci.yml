@@ -1,0 +1,102 @@
+stages:
+  - build_dev
+  - deploy_dev
+  - build_stage
+  - deploy_stage
+
+variables:
+  DOCKER_IMAGE: quantox/dev
+  DOCKER_TAG: performerplatform-fe
+  SERVICE_NAME: performerplatform_fe_dev
+
+build_dev:
+  stage: build_dev
+  image: docker:dind
+  services:
+    - docker:dind
+  tags:
+    - quantox-shared-runner-max
+  environment:
+    name: dev
+    url: performerplatform.quantox.dev
+  #  rules:
+  #    - if: $CI_COMMIT_BRANCH == "dev"
+  before_script:
+    - docker login -u ${DOCKERHUB_USER} -p ${DOCKERHUB_PASSWORD}
+  script:
+    - echo "${FE_DEV_DOTENV}" > .env
+    - docker build --tag "${DOCKER_IMAGE}":${DOCKER_TAG} .
+    - docker push "${DOCKER_IMAGE}":${DOCKER_TAG}
+  only:
+    - development
+
+deploy:
+  stage: deploy_dev
+  tags:
+    - quantox-shared-runner-max
+  environment:
+    name: dev
+    url: performerplatform-be.quantox.dev
+  # rules:
+  #   - if: $CI_COMMIT_BRANCH == "dev"
+  before_script:
+    - 'command -v ssh-agent >/dev/null || ( apt-get update -y && apt-get install openssh-client -y )'
+    - eval $(ssh-agent -s)
+    - echo "${DEV_SSH_PRIVATE_KEY}" | tr -d '\r' | ssh-add -
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - echo "${DEV_SSH_KNOWN_HOSTS}" > ~/.ssh/known_hosts
+    - chmod 644 ~/.ssh/known_hosts
+  script:
+    - ssh ${DEV_SERVER_SSH} "docker service update --force --image "${DOCKER_IMAGE}":${DOCKER_TAG} --with-registry-auth ${SERVICE_NAME}"
+  only:
+    - development
+
+build_stage:
+  stage: build_stage
+  image: docker:dind
+  services:
+    - docker:dind
+
+  only:
+    refs:
+      - master
+  tags:
+    - quantox-shared-runner-max
+  script:
+    - echo "${FE_STAGE_DOTENV}" > .env
+    - echo "${CI_REGISTRY_PASSWORD}" | docker login -u "${CI_REGISTRY_USER}" --password-stdin "${CI_REGISTRY}"
+    - docker pull "${CI_REGISTRY_IMAGE}:production" || true
+    - |
+      docker image build --tag "${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHORT_SHA}" \
+                         --tag "${CI_REGISTRY_IMAGE}:production" \
+                         --cache-from "${CI_REGISTRY_IMAGE}:production" \
+                         .
+    - docker push "${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHORT_SHA}"
+    - docker push "${CI_REGISTRY_IMAGE}:production"
+
+deploy_stage:
+  stage: deploy_stage
+  type: deploy
+  before_script:
+    - 'which ssh-agent || ( apk add openssh )'
+    - eval $(ssh-agent -s)
+    - echo "$STAGE_SSH_PRIVATE_KEY" | ssh-add -
+
+    - mkdir -p ~/.ssh
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+
+  script:
+    # Configure SSH deploy keys
+    - 'which ssh-agent || ( apk add openssh )'
+    - eval $(ssh-agent -s)
+    - echo "${STAGE_SSH_KEY}" | ssh-add -
+    - mkdir -p ~/.ssh
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+    # Perform the deployment on each of the servers
+    - for SERVER in "${STAGE_SERVERS}"; do ssh "${SERVER}" /usr/local/bin/deploy.sh; done
+  only:
+    refs:
+      - master
+  tags:
+    - quantox-shared-runner-max

@@ -1,0 +1,45 @@
+.userInfo {
+  display: flex;
+}
+.userInfo__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1.5rem;
+}
+.userInfo__name {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: #0d1444;
+  margin: 0 0 0.2rem 0;
+}
+.userInfo__username {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  font-weight: 500;
+  color: #828c94;
+  margin: 0 0 0.2rem 0;
+}
+.userInfo__stats {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  font-weight: 500;
+  color: #828c94;
+  margin: 0;
+}
+.userInfo__stats span {
+  font-weight: 600;
+  color: #349bfd;
+} /*# sourceMappingURL=UserInfo.css.map */

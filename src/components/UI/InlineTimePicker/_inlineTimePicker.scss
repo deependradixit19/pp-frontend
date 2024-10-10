@@ -1,0 +1,89 @@
+@import '../../../assets/styles/abstracts/variables';
+
+.time-picker-container {
+  @include montserrat-12-light;
+  align-items: center;
+  display: flex;
+  font-size: 30px;
+  height: 150px;
+  justify-content: center;
+  overflow: hidden;
+
+  .colon {
+    margin: 0 18px;
+  }
+
+  .swiper-digit-container {
+    height: 150px;
+    min-width: 50px;
+    overflow: hidden;
+    width: 50px;
+  }
+
+  .swiper-slide {
+    align-items: center;
+    display: flex;
+    font-size: 30px;
+    justify-content: center;
+    &-active {
+      background: #f1f1f186;
+      border-radius: 10px;
+      color: #2894ff;
+      height: 50px;
+      width: 50px;
+    }
+
+    &-prev,
+    &-next {
+      color: #bcbcbc;
+      position: relative;
+      &:after {
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 1) 18%,
+          rgba(255, 255, 255, 0) 65%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        border-radius: 10px;
+        content: '';
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+    }
+
+    &-next {
+      &:after {
+        background: linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 1) 18%,
+          rgba(255, 255, 255, 0) 65%,
+          rgba(255, 255, 255, 0) 100%
+        );
+      }
+    }
+  }
+
+  .time-of-day {
+    &-container {
+      align-items: center;
+      display: flex;
+      margin-left: 30px;
+    }
+
+    &-button {
+      background: transparent;
+      border: none;
+      color: #0d1444;
+      font-size: 20px;
+      outline: none;
+      padding: 1px 6px;
+
+      &.active {
+        color: #2894ff;
+      }
+    }
+  }
+}

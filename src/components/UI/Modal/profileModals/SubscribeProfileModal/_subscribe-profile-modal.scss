@@ -1,0 +1,180 @@
+.subscribe-profile-modal-wrapper {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  align-items: stretch;
+  position: relative;
+}
+
+.subscribe-profile-modal-wrapper-bundles {
+  .subscribe-profile-modal-container {
+    transform: translate(-100%, 0);
+  }
+  .subscribe-profile-modal-bundles-container {
+    transform: translate(-100%, 0);
+  }
+}
+
+.subscribe-profile-modal-container {
+  min-width: 0;
+  flex: 0 0 100%;
+  display: flex;
+  padding: 30px;
+  flex-direction: column;
+  align-items: center;
+  transition: all ease-in-out 0.3s;
+}
+.subscribe-profile-modal-info {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.subscribe-profile-modal-modal {
+  .modal-wrapper-card {
+    overflow-y: auto;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+.subscribe-profile-modal-avatar {
+  position: relative;
+  top: initial;
+  left: initial;
+  width: 92px;
+  height: 92px;
+  .iic--profile__container {
+    width: 85px;
+    height: 85px;
+  }
+  .iic__loader {
+    width: 92px;
+    height: 92px;
+  }
+  .iic__loader--top {
+    top: -2px;
+  }
+  .iic__loader--left {
+    left: -2px;
+  }
+}
+
+.subscribe-profile-modal-info-name-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 25px;
+  font-family: 'Montserrat', sans-serif;
+  flex: 1;
+}
+
+.subscribe-profile-modal-info-name {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 2px;
+  color: #0d1444;
+}
+
+.subscribe-profile-modal-info-name-username {
+  font-size: 14px;
+  color: #2894ff;
+}
+
+.subscribe-profile-modal-subscription-benefits-container {
+  display: flex;
+  flex-direction: column;
+  background: #f9faff;
+  border-radius: 20px;
+  padding: 13px;
+  margin: 30px 0;
+  width: 100%;
+}
+
+.subscribe-profile-modal-subscription-benefit {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  color: #0d1444;
+  margin: 5px 0;
+  font-size: 13px;
+}
+
+.subscibtion-benefit-text {
+  margin-left: 10px;
+}
+
+.subscription-profile-modal-bundles-button {
+  margin-bottom: 25px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: 1px solid rgba(103, 110, 125, 0.8);
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 12px;
+  color: #757576;
+  background-color: white;
+  outline: none;
+  cursor: pointer;
+}
+
+.subscription-profile-modal-subscribe-button {
+  background: linear-gradient(92.95deg, #53aff7 -12.15%, #2894ff 111.4%);
+  box-shadow: 0px 10px 10px rgba(78, 172, 249, 0.2);
+  border-radius: 160px;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 15px;
+  width: 100%;
+  border: none;
+  outline: none;
+  transition: opacity ease-in-out 0.3s;
+  cursor: pointer;
+  &-loading {
+    opacity: 0.7;
+    pointer-events: none;
+    cursor: default;
+  }
+}
+
+.subscribe-profile-modal-bundles-container {
+  transform: translate(100%, 0);
+  transition: all ease-in-out 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 100%;
+  min-width: 0;
+  padding: 30px;
+}
+
+.subscribe-profile-modal-bundles-options {
+  display: flex;
+  flex-direction: column;
+  max-height: 350px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  .subscription-card-container {
+    margin: 10px 0;
+  }
+}
+
+.subscribe-profile-modal-back-button {
+  padding: 10px 50px;
+  margin-top: auto;
+}
+
+.subscribe-profile-modal-login-container {
+  width: 100%;
+  .auth-login__form {
+    padding: 0;
+  }
+}

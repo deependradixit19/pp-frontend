@@ -1,0 +1,21 @@
+{
+  "inApp": "In App-KO",
+  "push": "Push-KO",
+  "sms": "Sms-KO",
+  "email": "email-KO",
+  "newComment": "New Comment-KO",
+  "newLike": "New Like-KO",
+  "newTip": "New Tip-KO",
+  "newSubscriber": "New Subscriber-KO",
+  "newPremiumVideoPurchase": "New Premium Video Purchase-KO",
+  "newMessagePurchase": "New Message Purchase-KO",
+  "upcomingStreamReminders": "Upcoming Stream Reminders-KO",
+  "subscriptionRenewal": "Subscription Renewal-KO",
+  "newReferral": "New Referral-KO",
+  "incomingFriendRequest": "Incoming Friend Request-KO",
+  "acceptedFriendRequest": "Accepted Friend Request-KO",
+  "newTags": "New Tags-KO",
+  "newMessage": "New Message-KO",
+  "hasSentYouAFriendRequest": "Has sent you a friend request-KO",
+  "pollResponses": "Poll Responses-KO"
+}

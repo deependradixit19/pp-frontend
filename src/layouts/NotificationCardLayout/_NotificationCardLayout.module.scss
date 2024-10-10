@@ -1,0 +1,121 @@
+@import '../../assets/styles/abstracts/_variables.scss';
+
+.notificationCard {
+  position: relative;
+  display: flex;
+  // align-items: center;
+  padding: 1rem 1rem 1.3rem 1rem;
+  width: 100%;
+  min-height: 9.4rem;
+  background: $white89deg;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  position: relative;
+  margin-bottom: 1rem;
+  overflow: hidden;
+
+  a {
+    display: inline-flex;
+    text-decoration: none;
+  }
+
+  .body {
+    margin-top: 0.4rem;
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    flex-grow: 0;
+    overflow: hidden;
+
+    .nameContainer {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      overflow: hidden;
+      flex-grow: 0;
+      width: 100%;
+      max-width: 100%;
+      margin: 0 0 0.2rem;
+      // max-width: calc(100% - 7rem);
+
+      a {
+        max-width: 100%;
+      }
+
+      .name {
+        @include montserrat-16-semi-bold;
+        @include text-ellipsis;
+        display: inline-block;
+        flex-grow: 0;
+        width: fit-content;
+        max-width: 100%;
+        color: #0d1444;
+        margin: 0 0;
+        margin-right: 0.8rem;
+      }
+
+      .atName {
+        @include montserrat-12-normal;
+        @include text-ellipsis;
+        display: inline-block;
+        flex-grow: 0;
+        width: fit-content;
+        max-width: 100%;
+        color: #828c94;
+      }
+    }
+
+    .content {
+      @include montserrat-14-normal;
+      color: #828c94;
+      line-height: 2.1rem;
+      margin: 0 0;
+      width: 100%;
+
+      a {
+        color: #285f95;
+      }
+
+      :global(.circleButton) {
+        border-color: #f4f4f4;
+      }
+    }
+
+    .time {
+      @include montserrat-12-normal;
+      line-height: 1.8rem;
+      color: #b0b0b0;
+      margin: 0 0;
+      margin-top: 0.3rem;
+    }
+  }
+
+  .isSystem {
+    color: #2894ff !important;
+  }
+
+  &__like {
+    position: absolute;
+    right: 2rem;
+    height: 100%;
+    top: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .avatarCircle {
+    margin: 0.4rem 0 0 0.4rem;
+  }
+
+  // .subscriptionRenewal {
+  //   margin-bottom: 0.7rem;
+
+  //   .notificationPriceButton {
+  //     span {
+  //       color: #fff;
+  //     }
+  //   }
+  // }
+}

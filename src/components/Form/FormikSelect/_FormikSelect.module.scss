@@ -1,0 +1,123 @@
+@import '../../../assets/styles/abstracts/variables';
+
+// bankCountryInput not used!
+.bankCountryInput {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 7rem;
+  background: linear-gradient(89.85deg, #fbfbfb 0.1%, #ffffff 102.02%);
+  border: 1px solid #dddddd;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  margin-bottom: 1rem;
+
+  :global(.dropdown-select-selected-option.dropdown-select-selected-option-open) {
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    font-weight: 600;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    transition:
+      border 0.2s,
+      padding 0.2s;
+  }
+
+  input {
+    padding-left: 1.8rem;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    font-weight: 600;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    transition:
+      border 0.2s,
+      padding 0.2s;
+
+    &::placeholder {
+      font-family: 'Montserrat', sans-serif;
+      font-style: normal;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+      font-weight: 500;
+      color: #b0b0b0;
+      pointer-events: none;
+      transition: 0.2s all;
+      transform: translateY(0);
+      background-color: white;
+    }
+  }
+}
+
+.selectContainer {
+  &.selectDropdownOpen {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    position: relative;
+  }
+
+  .formikSelect {
+    text-indent: 0;
+    padding-left: 1.8rem;
+    display: flex;
+    align-items: center;
+
+    span {
+      // position: absolute;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .dropdown {
+      background: linear-gradient(89.85deg, #fbfbfb 0.1%, #ffffff 102.02%);
+      border: 1px solid #dddddd;
+      border-top: none;
+      border-radius: 0 0 20px 20px;
+      left: -1px;
+      overflow-y: auto;
+      position: absolute;
+      top: 100%;
+      width: calc(100% + 2px);
+      z-index: 10;
+      padding-bottom: 0.75rem;
+      padding-left: 1.9rem;
+      padding-right: 1.9rem;
+      max-height: 30vh;
+      overflow-x: hidden;
+      > div {
+        @include montserrat-14-semi-bold;
+        align-items: center;
+        display: flex;
+        padding: 0.8rem 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
+      }
+    }
+  }
+
+  .arrow {
+    position: absolute;
+    right: 0;
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    justify-self: flex-end;
+    padding-right: 0.75rem;
+  }
+}

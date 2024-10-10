@@ -1,0 +1,21 @@
+.home__feed {
+  border-radius: 2.5rem 2.5rem 0 0;
+  background-color: #fff;
+  padding: 3rem 2rem;
+  flex: 1;
+}
+
+#viewportMarker {
+  height: 39.1rem;
+  width: 100%;
+  position: fixed;
+  top: 20rem;
+  left: 0;
+  right: 0;
+  z-index: -9999;
+}
+
+.moreFeed .localLoader {
+  position: relative;
+  margin-bottom: 4rem;
+}

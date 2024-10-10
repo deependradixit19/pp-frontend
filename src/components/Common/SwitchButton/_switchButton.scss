@@ -1,0 +1,54 @@
+@import '../../../assets/styles/abstracts/variables';
+
+.switchbutton {
+  width: 5.2rem;
+  height: 2.6rem;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding: 0.3rem;
+  position: relative;
+
+  &--inactive {
+    background: hsla(219, 11%, 70%, 0.5);
+  }
+  &--active {
+    background: $blue92deg;
+  }
+
+  &__withText {
+    @include montserrat-12-bold;
+    width: 12rem;
+
+    .switchbutton__circle--active {
+      transform: translateX(9rem);
+    }
+  }
+
+  &__circle {
+    background: #fff;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    transform: translateX(0);
+    transition: 0.2s transform;
+
+    &--active {
+      transform: translateX(125%);
+    }
+  }
+
+  &__text {
+    @include montserrat-12-bold;
+    position: absolute;
+
+    &--inactive {
+      transform: translateX(80%);
+      color: #757576;
+    }
+    &--active {
+      transform: translateX(10%);
+      color: #fff;
+    }
+  }
+}

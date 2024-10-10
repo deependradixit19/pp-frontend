@@ -1,0 +1,50 @@
+.contentRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.contentRow .notificationActions {
+  display: flex;
+  align-items: center;
+}
+.contentRow .notificationActions.likeAction {
+  margin-left: 2.1rem;
+  margin-right: 1.1rem;
+}
+.contentRow .notificationActions.likeAction svg {
+  width: 2rem;
+  height: 2rem;
+}
+.contentColumn {
+  display: flex;
+  flex-direction: column;
+}
+.textIcon {
+  display: inline;
+  vertical-align: middle;
+  margin-left: 0.4rem;
+  line-height: 1;
+}
+:global(.notificationPriceButton) {
+  border-radius: 2rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #d6ebff;
+}
+:global(.notificationPriceButton) span {
+  color: #fff !important;
+}
+:global(.notificationPriceButton) p {
+  margin: 0;
+  padding: 1rem;
+  text-align: center;
+}
+.contentText {
+  display: inline-block;
+  white-space: pre-wrap;
+}
+.contentText:first-letter {
+  text-transform: uppercase;
+} /*# sourceMappingURL=NotificationCard.module.css.map */

@@ -1,0 +1,11 @@
+.settings_notifications {
+  :global(.actionCard__body__text) {
+    hyphens: auto;
+    word-wrap: break-word;
+    word-break: normal;
+
+    @media (max-width: 400px) {
+      font-size: 1.2rem;
+    }
+  }
+}

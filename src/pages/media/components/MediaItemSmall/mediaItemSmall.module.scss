@@ -1,0 +1,81 @@
+@import '../../../../assets/styles/abstracts/variables';
+
+.wrapper {
+  width: 15rem;
+}
+.top {
+  margin-bottom: 2.6rem;
+}
+.cover {
+  height: 9rem;
+  border-radius: 2rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 1rem;
+}
+
+.avatar {
+  position: absolute;
+  left: 50%;
+  bottom: -2rem;
+  transform: translateX(-50%);
+  width: 5.4rem;
+  height: 5.4rem;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    display: block;
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+    z-index: 2;
+    border-radius: 50%;
+    border: 3px solid white;
+  }
+
+  &.active {
+    background-color: #2894ff;
+    background-image: linear-gradient(135deg, #2894ff 0%, #ffffff 100%);
+  }
+}
+
+.count {
+  background: #2894ff;
+  border-radius: 0.5rem;
+  width: fit-content;
+  padding: 0.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  @include montserrat-10-normal;
+
+  span {
+    @include montserrat-10-bold-700;
+    margin-right: 0.3rem;
+  }
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .title {
+    @include montserrat-12-semi-bold;
+    color: #0d1444;
+    text-decoration: none;
+  }
+  .subTitle {
+    @include montserrat-10-normal;
+    color: #b0b0b0;
+  }
+}

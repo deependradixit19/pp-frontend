@@ -1,0 +1,108 @@
+@import '../../../assets/styles/abstracts/variables';
+
+.dateRangePicker {
+  :global(.react-calendar__tile--rangeStart) {
+    overflow: visible !important;
+    z-index: 1;
+  }
+
+  :global(.react-calendar__tile--rangeEnd) {
+    overflow: visible !important;
+    z-index: 1;
+  }
+
+  :global(.react-calendar__month-view__weekdays) {
+    text-transform: none;
+  }
+
+  :global(.react-calendar__month-view__weekdays:nth-of-type(even)) {
+    background-color: #f6f6f688 !important;
+    border-radius: 1.2rem 1.2rem 0 0;
+  }
+
+  :global(.react-calendar__month-view__days__day) {
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+  }
+
+  :global(.react-calendar__month-view__days__day:nth-of-type(7n - 1)) {
+    background-color: #f6f6f6aa !important;
+  }
+
+  :global(.react-calendar__month-view__days__day:nth-of-type(7n + 2)) {
+    background-color: #f6f6f6aa !important;
+  }
+
+  :global(.react-calendar__month-view__days__day:nth-of-type(7n + 4)) {
+    background-color: #f6f6f6aa !important;
+  }
+
+  :global(.react-calendar__month-view__days__day:nth-last-of-type(2)) {
+    background-color: #f6f6f688 !important;
+    border-radius: 0 0 1.2rem 1.2rem;
+  }
+
+  :global(.react-calendar__month-view__days__day:nth-last-of-type(4)) {
+    background-color: #f6f6f688 !important;
+    border-radius: 0 0 1.2rem 1.2rem;
+  }
+
+  :global(.react-calendar__month-view__days__day:nth-last-of-type(6)) {
+    background-color: #f6f6f688 !important;
+    border-radius: 0 0 1.2rem 1.2rem;
+  }
+
+  // beetween start and end of range
+  :global(.react-calendar__tile--range:not(.react-calendar__tile--rangeStart, .react-calendar__tile--rangeEnd)) {
+    padding: 0.9rem 0;
+
+    abbr {
+      border-radius: 0;
+      width: 100%;
+      height: 2.6rem;
+      color: #0d1444;
+      background: linear-gradient(92.95deg, #53aff733 -12.15%, #2894ff33 111.4%);
+      box-shadow: 0px 1rem 1rem rgba(78, 172, 249, 0.2 * 0.2);
+    }
+  }
+
+  // range Sundays
+  :global(
+      .react-calendar__tile--range.react-calendar__month-view__days__day:nth-of-type(7n):not(
+          .react-calendar__tile--rangeStart,
+          .react-calendar__tile--rangeEnd
+        )
+    ) {
+    abbr {
+      border-radius: 0 1.2rem 1.2rem 0;
+    }
+  }
+
+  // range Mondays
+  :global(
+      .react-calendar__tile--range.react-calendar__month-view__days__day:nth-of-type(7n-6):not(
+          .react-calendar__tile--rangeStart,
+          .react-calendar__tile--rangeEnd
+        )
+    ) {
+    abbr {
+      border-radius: 1.2rem 0 0 1.2rem;
+    }
+  }
+
+  // range start
+  :global(.react-calendar__tile--rangeStart:not(.react-calendar__tile--rangeBothEnds)) {
+    background: linear-gradient(92.95deg, #53aff733 -12.15%, #2894ff33 111.4%);
+    background-repeat: no-repeat;
+    background-position: right 0.9rem;
+    background-size: 51% 2.6rem;
+  }
+
+  // range end
+  :global(.react-calendar__tile--rangeEnd:not(.react-calendar__tile--rangeBothEnds)) {
+    background: linear-gradient(92.95deg, #53aff733 -12.15%, #2894ff33 111.4%);
+    background-repeat: no-repeat;
+    background-position: left 0.9rem;
+    background-size: 51% 2.6rem;
+  }
+}

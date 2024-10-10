@@ -1,0 +1,205 @@
+@import '../../assets/styles/abstracts/variables';
+
+.uploadedfile {
+  position: relative;
+  height: 11.5rem;
+  width: 11.5rem;
+  // min-width: 11.5rem;
+  // margin-right: 1rem;
+  // border-radius: 20px;
+  // background: $white0deg;
+  // overflow: hidden;
+
+  img,
+  video {
+    border: 3px solid transparent;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  &__wrapper {
+    display: flex;
+    position: relative;
+    width: fit-content;
+
+    .uploadedfile {
+      // border: 3px solid transparent;
+      &--locked {
+        img,
+        video {
+          border: 3px solid #76bcff;
+          box-shadow: 0px 4px 14px rgba(47, 152, 254, 0.5);
+        }
+        // filter: drop-shadow(0px 4px 14px rgba(47, 152, 254, 0.5));
+      }
+
+      &--video {
+        width: 17.5rem !important;
+        img {
+          &:not(.uploadedfile__play) {
+            width: 17.5rem !important;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+      }
+    }
+
+    &__cover {
+      .uploadedfile {
+        border: 3px solid #76bcff;
+
+        &::before {
+          @include sf-12-normal;
+          content: 'Cover';
+          position: absolute;
+          top: 0.5rem;
+          left: 0.5rem;
+          padding: 0.5rem;
+          border-radius: 6px;
+          background: $black157deg;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+  &--cover {
+    width: 11.5rem !important;
+    width: auto;
+
+    img {
+      width: 11.5rem;
+      // max-width: 11.5rem !important;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    &.uploadedfile--video {
+      width: 17.5rem !important;
+      img {
+        &:not(.uploadedfile__play) {
+          width: 17.5rem !important;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+    }
+  }
+
+  &__premium {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.6rem;
+    background: rgba(#fff, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__icon {
+    }
+  }
+
+  &__cover {
+    @include montserrat-12-normal;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 0.5rem;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    z-index: 2;
+  }
+
+  &__play {
+    position: absolute;
+    top: calc(50% - 0.8rem);
+    left: calc(50% - 0.8rem);
+    height: 1.6rem !important;
+    width: 1.6rem !important;
+    border: none !important;
+  }
+  &--video {
+    text-align: center;
+    min-width: fit-content;
+
+    img {
+      border-radius: unset;
+    }
+    // width: 17.5rem;
+
+    video {
+      width: 17.5rem;
+      // width: auto;
+      height: 100%;
+    }
+
+    // div:first-of-type {
+    //   width: 17.5rem !important;
+    //   max-width: 17.5rem !important;
+    //   display: flex;
+    //   justify-content: center;
+
+    //   video {
+    //     width: auto;
+    //     height: 100%;
+    //   }
+    // }
+  }
+
+  &--audio {
+    background: hsla(206, 91%, 65%, 0.301);
+  }
+
+  &__remove {
+    @include flex-center;
+    position: absolute;
+    top: -0.5rem;
+    right: 1rem;
+    background: $white0deg;
+    width: 2rem;
+    height: 2rem;
+    box-shadow: 0 0 2px #000;
+    border-radius: 50%;
+
+    img {
+      object-fit: contain;
+      height: 0.75rem;
+      filter: brightness(0);
+    }
+  }
+
+  &__reorder {
+    @include flex-center;
+    @include montserrat-12-bold;
+    position: absolute;
+    bottom: 1rem;
+    right: 1.5rem;
+    width: 2rem;
+    height: 2rem;
+    background: #fff;
+    border-radius: 50%;
+  }
+
+  &__preview {
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

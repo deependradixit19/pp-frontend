@@ -1,0 +1,16 @@
+@import '../../../../assets//styles/abstracts/variables';
+
+.storyFooterContainer {
+  width: 100%;
+  height: auto;
+  bottom: 2.7rem;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.8rem;
+  z-index: 2;
+  :global .groupCircles__overlay {
+    background: $blue140deg;
+  }
+}

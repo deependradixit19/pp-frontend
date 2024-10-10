@@ -1,0 +1,78 @@
+@import '../../../assets/styles/abstracts/variables';
+
+.reactionStats {
+  @include flex-center;
+  @include sf-12-normal;
+  position: absolute;
+  right: 1.5rem;
+  bottom: -1rem;
+  height: 2.2rem;
+  border-radius: 20px;
+  background-color: #778797;
+  color: #fff;
+  padding: 0 1rem;
+  animation: appear 0.2s forwards;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    img {
+      height: 1.4rem;
+      margin-right: 0.4rem;
+      animation: appear 0.4s forwards;
+    }
+
+    &:not(:last-of-type) {
+      margin-right: 0.4rem;
+    }
+  }
+
+  &--sent {
+    right: 40%;
+  }
+
+  &__modal {
+    .modal__card {
+      padding: 2rem 1rem;
+    }
+  }
+
+  &__users {
+    min-height: 3rem;
+    padding: 1rem 2rem;
+  }
+  &__user {
+    display: flex;
+
+    .avatarholder {
+      margin-right: 1.5rem;
+    }
+    p {
+      margin: 0;
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &__name {
+      @include montserrat-14-bold;
+      color: #0d1444;
+    }
+    &__username {
+      @include montserrat-12-normal;
+      color: #b0b0b0;
+    }
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

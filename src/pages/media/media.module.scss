@@ -1,0 +1,23 @@
+@import '../../assets/styles/abstracts/variables';
+
+.media {
+  border-top-left-radius: 4rem;
+  border-top-right-radius: 4rem;
+  background: linear-gradient(0deg, #ffffff, #ffffff), #f2f6f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.empty {
+  @include montserrat-12-normal;
+  color: #778797;
+}
+
+:global(.media__content__wrapper) {
+  :global(.whs__wrapper) {
+    padding-bottom: 3rem;
+  }
+}

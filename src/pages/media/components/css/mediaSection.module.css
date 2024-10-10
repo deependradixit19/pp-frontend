@@ -1,0 +1,47 @@
+.wrapper {
+  width: 100%;
+  padding: 0 2rem;
+  margin-bottom: 2.8rem;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.3rem;
+}
+.sectionTitle {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.sectionTitle .icon {
+  margin-right: 1rem;
+}
+.sectionTitle .title {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  color: #0d1444;
+  text-transform: capitalize;
+}
+.action {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-decoration: none;
+}
+.action .button {
+  margin-left: 1rem;
+}
+.action .text {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  color: #778797;
+} /*# sourceMappingURL=mediaSection.module.css.map */

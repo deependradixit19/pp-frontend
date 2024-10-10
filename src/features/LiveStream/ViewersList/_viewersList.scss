@@ -1,0 +1,90 @@
+@import '../../../assets/styles/abstracts/variables';
+
+.viewersmodal__list {
+  max-height: 40rem;
+  overflow: auto;
+}
+
+.viewer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: #262a33;
+  border-radius: 2.1rem;
+  padding: 1.2rem 1rem;
+
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  &__order {
+    @include montserrat-12-normal;
+    color: #828c94;
+    margin-right: 1.6rem;
+  }
+
+  &__avatar {
+    width: 3.6rem;
+    height: 3.6rem;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 1rem;
+
+    img {
+      width: 100%;
+    }
+  }
+  &__text {
+    margin-right: auto;
+    &--name {
+      color: #fff;
+      @include montserrat-14-semi-bold;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-right: 1rem;
+    }
+    &--handle {
+      color: #828c94;
+      @include montserrat-12-normal;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  &__tipped {
+    @include montserrat-12-semi-bold;
+    background: #000000;
+    border-radius: 0.5rem;
+    color: #828c94;
+    line-height: 150%;
+    padding: 0 0.5rem;
+
+    &.highest {
+      background: linear-gradient(180deg, #eb6079 0%, #ff4b77 100%);
+      color: #ffced7;
+    }
+  }
+  &__menu {
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(157.59deg, #181920 0%, #0f0f13 100%);
+    // opacity: 0.3;
+    border-radius: 1.1rem;
+    margin-left: 1rem;
+
+    span {
+      display: block;
+      width: 0.3rem;
+      height: 0.3rem;
+      background: #778797;
+      border-radius: 50%;
+
+      &:not(:last-child) {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}

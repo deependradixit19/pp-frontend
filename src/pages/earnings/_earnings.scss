@@ -1,0 +1,240 @@
+@import '../../assets/styles/abstracts/variables';
+.earnings {
+  background-color: #05090d;
+  background-image: url('../../assets/svg/transactions-bg-vector.svg');
+  background-size: contain;
+  background-position: 0 -95px;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.balance-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 25px;
+  font-family: 'Montserrat', sans-serif;
+  // background-color: #070707;
+}
+
+.balance-wrapper {
+  position: relative;
+}
+
+.balance-text {
+  font-weight: 600;
+  font-size: 12px;
+  color: #9b9b9b;
+}
+
+.balance-number {
+  display: flex;
+  font-size: 60px;
+  color: #ffffff;
+  margin: 15px 0;
+  align-items: flex-start;
+  line-height: 60px;
+}
+
+.balance-number-value {
+  margin-left: 5px;
+}
+
+.balance-number-currency-text {
+  color: #349bfd;
+  font-size: 12px;
+  line-height: 30px;
+}
+
+.balance-pending {
+  @include montserrat-12-normal;
+  color: #9b9b9b;
+  margin-bottom: 1.8rem;
+
+  span {
+    @include montserrat-12-semi-bold;
+    color: #ffffff;
+  }
+}
+
+.balance-button {
+  padding: 0 1rem;
+}
+
+.balance-options {
+  display: flex;
+}
+
+.balance-payment {
+  background: #262a33;
+  padding: 7px 25px 9px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  margin: 0 10px;
+}
+
+.balance-payment-subtext {
+  font-weight: 600;
+  font-size: 12px;
+  color: #757576;
+}
+
+.balance-payment-text {
+  font-weight: 600;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.balance-settings {
+  background: #262a33;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.balance-graph {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #262a33;
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.balance-chart {
+  padding: 0 21px;
+  width: 100%;
+}
+
+.balance-chart-options {
+  display: flex;
+  // justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  .balance-number {
+    font-size: 40px;
+    align-items: center;
+  }
+  .balance-number-currency-text {
+    font-size: 12px;
+    // align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    line-height: 20px;
+    justify-content: space-between;
+    margin-left: 5px;
+    .balance-text {
+      font-size: 10px;
+    }
+  }
+}
+
+.balance-chart-select {
+  position: relative;
+  margin-left: auto;
+}
+
+.balance-chart-selected {
+  background: #262a33;
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 12px;
+  color: #757576;
+  width: 80px;
+  span {
+    color: white;
+  }
+}
+
+.balance-chart-select-list {
+  position: absolute;
+  left: 0;
+  top: 40px;
+  border-radius: 20px;
+  background: #262a33;
+  width: 80px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: -1px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all ease-in-out 0.3s;
+}
+
+.balance-chart-select-list-open {
+  opacity: 1;
+  visibility: visible;
+  margin-top: 0;
+}
+
+.balance-chart-select-option {
+  color: #757576;
+  font-size: 12px;
+  &:nth-of-type(2) {
+    margin: 20px 0;
+  }
+  span {
+    color: white;
+    transition: all ease-in-out 0.4s;
+    &:hover {
+      color: #2894ff;
+    }
+  }
+}
+
+.balance-chart-close {
+  background: #262a33;
+  padding: 4px;
+  margin-left: 5px;
+  border-radius: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sales-card-dropdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 50px;
+  padding-left: 80px;
+}
+
+.sales-dropdown-card-content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-top: 1px solid #d9d9d9;
+  padding: 1rem 0;
+  margin-top: 1.2rem;
+}
+
+.sales-dropdown-card-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 5px;
+  &-type {
+    color: #b0b0b0;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+  &-value {
+    font-weight: 600;
+    font-size: 14px;
+    color: #0d1444;
+  }
+}

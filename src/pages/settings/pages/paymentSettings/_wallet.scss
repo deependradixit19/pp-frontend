@@ -1,0 +1,150 @@
+@import '../../../../assets/styles/abstracts/variables';
+
+.wallet-top-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  border-top: 1px solid #20222d;
+  padding: 20px;
+}
+
+.wallet-top-section-title {
+  color: #9b9b9b;
+  width: 100%;
+  text-align: center;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.wallet-top-section-number-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 25px;
+}
+
+.wallet-top-section-number {
+  display: flex;
+  font-size: 60px;
+  color: #ffffff;
+  margin: 15px 0;
+  align-items: flex-start;
+  line-height: 60px;
+}
+
+.wallet-top-section-number-currency-text {
+  color: #349bfd;
+  font-size: 12px;
+  line-height: 30px;
+}
+
+.wallet-top-section-button {
+  background: linear-gradient(92.95deg, #53aff7 -12.15%, #2894ff 111.4%);
+  box-shadow: 0px 10px 10px rgba(78, 172, 249, 0.2);
+  border-radius: 25px;
+  max-width: 175px;
+  width: 100%;
+  padding: 15px 45px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.wallet-top-section-options {
+  display: flex;
+  flex-direction: column;
+}
+
+.wallet-top-section-option {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-top: 1px solid #20222d;
+  align-items: center;
+}
+
+.wallet-top-section-option-txt {
+  color: #999999;
+  font-weight: 600;
+  font-size: 14px;
+  max-width: 70%;
+}
+
+.wallet-top-dropdown-container {
+  display: flex;
+  flex-direction: column;
+  & label {
+    @include montserrat-12-semi-bold;
+    color: #778797;
+    margin-bottom: 0.5rem;
+  }
+  & select {
+    @include montserrat-12-semi-bold;
+    background-color: #262a33;
+    align-items: center;
+    border-radius: 2rem;
+    color: #ffffff;
+    display: flex;
+    height: 3.6rem;
+    line-height: 1.2rem;
+    padding: 0 1rem;
+  }
+}
+
+.wallet-card-expires {
+  color: #b0b0b0;
+}
+
+.wallet-card-verified {
+  color: #778797;
+  font-size: 12px;
+}
+
+.wallet-card-number {
+  color: #778797;
+}
+
+.wallet-card-verify-area {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.wallet-card-verify-btn {
+  background: #ffffff;
+  border: 1px solid rgba(103, 110, 125, 0.8);
+  border-radius: 25px;
+  color: #757576;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 5px 22px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-right: 1.5rem;
+}
+
+.wallet-card-verify-txt {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  color: #b0b9c1;
+}
+
+.wallet-card-add-txt {
+  color: #afafaf;
+  font-weight: 600;
+  font-size: 14px;
+}

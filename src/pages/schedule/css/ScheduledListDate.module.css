@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+.number {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  font-size: 2.8rem;
+  line-height: 3.4rem;
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  width: 4.5rem;
+}
+.number span {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  color: #bcbcbc;
+}
+.list {
+  flex: 1;
+  list-style: none;
+  margin-top: 0;
+} /*# sourceMappingURL=ScheduledListDate.module.css.map */

@@ -1,0 +1,257 @@
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  padding-bottom: 307px;
+  padding-top: 15px;
+  * {
+    font-family: inherit;
+  }
+}
+
+.close_button {
+  position: absolute;
+  top: 21px;
+  right: 20px;
+  z-index: 1;
+  cursor: pointer;
+  svg {
+    path {
+      transition: all ease-in-out 0.3s;
+    }
+  }
+  &:hover {
+    svg {
+      path {
+        fill: #ffffff;
+      }
+    }
+  }
+}
+
+.profile_info_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.profile_info_background {
+  position: absolute;
+  top: -20px;
+  opacity: 0.7;
+  right: -30px;
+  left: -30px;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 0;
+  svg {
+    width: 100%;
+  }
+}
+
+.profile_picture {
+  position: relative;
+  top: initial;
+  left: initial;
+  z-index: 1;
+}
+
+.profile_holder {
+  background: linear-gradient(140.46deg, #93ceff 14.38%, #2894ff 94.98%);
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+
+.username_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 17px;
+  z-index: 1;
+}
+
+.name {
+  color: #0d1444;
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.username {
+  font-size: 14px;
+  font-weight: 400;
+  color: #0d1444;
+}
+
+.buttons_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+  z-index: 1;
+}
+
+.button_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 5px;
+}
+
+.button {
+  background: #ffffff;
+  border: 1px solid #f4f4f4;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 7px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  svg {
+    z-index: 1;
+    path {
+      transition: all ease-in-out 0.3s;
+    }
+  }
+  &:hover {
+    .button_background {
+      opacity: 1;
+      visibility: visible;
+    }
+    svg {
+      path {
+        fill: #ffffff;
+        stroke: #ffffff;
+      }
+    }
+  }
+}
+
+.button_background {
+  background: linear-gradient(92.95deg, #53aff7 -12.15%, #2894ff 111.4%);
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all ease-in-out 0.3s;
+}
+
+.button_text {
+  color: #778797;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.details_container {
+  height: 307px;
+  background-color: #ffffff;
+  background: linear-gradient(180deg, #ffffff 12.4%, #fbfbfb 99.26%);
+  border-radius: 40px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.details_options {
+  display: flex;
+  width: 100%;
+  background: #f5f5f6;
+  border-radius: 20px;
+  padding: 5px;
+  margin-bottom: 23px;
+}
+
+.details_option {
+  height: 30px;
+  flex: 1;
+  border-radius: 20px;
+  color: #757576;
+  font-weight: 600;
+  font-size: 12px;
+  transition: all ease-in-out 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.details_option_active {
+  background: #262a33;
+  color: #ffffff;
+}
+
+.details_list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex: 1;
+}
+
+.details_list_item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.details_list_item_label {
+  color: #828c94;
+  font-size: 12px;
+}
+
+.details_list_item_value {
+  color: #0d1444;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.details_list_item_value_total {
+  color: #2894ff;
+}
+
+.details_list_item_value_empty {
+  color: #778797;
+}
+
+.details_list_item_value_status_active {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 0px;
+  padding: 1rem 0.5rem;
+  border: 1px solid #a1e7e1;
+  border-radius: 0.5rem;
+  color: #10cbbb;
+  background: #ffffff;
+}
+
+.details_list_item_value_status_inactive {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 0px;
+  padding: 1rem 0.5rem;
+  border: 1px solid #bd2121;
+  background: #ffffff;
+  color: #bd2121;
+  border-radius: 0.5rem;
+}

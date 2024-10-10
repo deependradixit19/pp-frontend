@@ -1,0 +1,18 @@
+@import '../../../assets/styles/abstracts/variables';
+
+.blackbutton {
+  @include montserrat-14-bold;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: $black157deg;
+  border-radius: 160px;
+  padding: 0 2rem;
+  height: 3.6rem;
+
+  text-align: center;
+  letter-spacing: 0.02em;
+
+  color: #ffffff;
+}

@@ -1,0 +1,67 @@
+@import '../../../assets/styles/abstracts/variables';
+
+.draggable__text {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: transparent;
+  overflow: hidden;
+
+  .hide {
+    display: none !important;
+  }
+
+  .trash__drop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 2rem;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: fit-content;
+    z-index: 9;
+
+    &__text {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 150%;
+      text-align: center;
+      color: #ffffff;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+    }
+
+    &__circle {
+      width: 6rem;
+      height: 6rem;
+      position: relative;
+      top: 0;
+      left: 0;
+      margin: 0;
+
+      .iic--login__container {
+        width: 4.2rem;
+        height: 4.2rem;
+      }
+    }
+
+    &.active {
+      .trash__drop__text {
+        color: #f00;
+      }
+      .iic--login {
+        &__container {
+          background-color: #f00;
+        }
+
+        &::after {
+          background: #f00;
+        }
+      }
+    }
+  }
+}

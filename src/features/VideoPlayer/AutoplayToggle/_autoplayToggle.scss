@@ -1,0 +1,38 @@
+@import '../../../assets/styles/abstracts/variables';
+
+.autoplayToggle {
+  position: relative;
+  width: 5.2rem;
+  height: 2.6rem;
+  background: rgba(51, 55, 65, 0.5);
+  border-radius: 15px;
+  // transform: matrix(-1, 0, 0, 1, 0, 0);
+
+  &.active {
+    background: #46a7fa;
+    .autoplayToggle__thumb {
+      transform: translateX(3.3rem);
+      transition: all 0.2s ease-in-out;
+    }
+  }
+
+  &__thumb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    background: #fff;
+    left: -0.5rem;
+    transition: all 0.2s ease-in-out;
+
+    svg {
+      width: 1.4rem;
+      height: 1.4rem;
+      position: relative;
+      left: 0.1rem;
+    }
+  }
+}

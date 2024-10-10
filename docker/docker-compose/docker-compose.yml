@@ -1,0 +1,65 @@
+version: '3'
+
+services:
+  db:
+    image: mysql:8
+    restart: unless-stopped
+    container_name: '${COMPOSE_PROJECT_NAME}_db'
+    hostname: '${COMPOSE_PROJECT_NAME}_db'
+    environment:
+      MYSQL_ROOT_PASSWORD: '${MYSQL_ROOT_PASSWORD}'
+      MYSQL_USER: '${MYSQL_USER}'
+      MYSQL_PASSWORD: '${MYSQL_PASSWORD}'
+      MYSQL_DATABASE: '${MYSQL_DATABASE}'
+    networks:
+      - network
+    volumes:
+      - '${VOLUME_MOUNT_ROOT_PATH}/db/data:/var/lib/mysql'
+    healthcheck:
+      test: ['CMD', 'mysqladmin', 'ping', '-p${MYSQL_PASSWORD}']
+      retries: 3
+      timeout: 5s
+
+  redis:
+    image: redis:7-alpine
+    command: redis-server --appendonly yes --replica-read-only no --requirepass AyM0DTMxkR86
+    restart: unless-stopped
+    container_name: '${COMPOSE_PROJECT_NAME}_redis'
+    hostname: '${COMPOSE_PROJECT_NAME}_redis'
+    #    environment:
+    #      - REDIS_PASSWORD: "${REDIS_PASSWORD}"
+    networks:
+      - network
+    volumes:
+      - '${VOLUME_MOUNT_ROOT_PATH}/redis/data:/data'
+    healthcheck:
+      test: ['CMD', 'redis-cli', 'ping']
+      retries: 3
+      timeout: 5s
+
+  app:
+    #    image: "${APP_IMAGE}"
+    build:
+      context: ../../
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    container_name: '${COMPOSE_PROJECT_NAME}_app'
+    hostname: '${COMPOSE_PROJECT_NAME}_app'
+    depends_on:
+      - 'db'
+      - 'redis'
+    ports:
+      - '${APP_PORT}:80'
+    networks:
+      - network
+      # - proxy_network # If you are using an proxy (ingress) Nginx, uncomment this network, update network name and uncomment lines #53-#54 (network declaration)
+    volumes:
+      # - '../../src:/usr/src/app/src'
+      - '${VOLUME_MOUNT_ROOT_PATH}/app/.env:/app/.env'
+      - '${VOLUME_MOUNT_ROOT_PATH}/app/storage:/app/storage' # REMEMBER! "chmod 777" required for storage path!
+
+networks:
+  network:
+    driver: bridge
+  # proxy_network: # If you are using an proxy (ingress) Nginx, uncomment this network, update network name and uncomment line #45 (app container network)
+  #   external: true

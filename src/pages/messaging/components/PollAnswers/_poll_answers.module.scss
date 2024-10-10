@@ -1,0 +1,139 @@
+.poll_ask_card {
+  padding: 10px;
+}
+
+.question_container {
+  display: flex;
+}
+
+.question_icons {
+  background: linear-gradient(140.46deg, #b8deff 14.38%, #8bc5ff 94.98%);
+  border-radius: 35px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 9px;
+}
+
+.question_text_container,
+.question_time_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.question_time_container {
+  margin-left: auto;
+}
+
+.responses {
+  color: #2894ff;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.question_text {
+  color: #828c94;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.question_time {
+  color: #b0b0b0;
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.new_respones {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 11px;
+  background: linear-gradient(92.95deg, #53aff7 -12.15%, #2894ff 111.4%);
+  margin-left: auto;
+}
+
+.answers_container {
+  max-height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-left: 30px;
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  padding-top: 20px;
+  * {
+    font-family: inherit;
+  }
+}
+
+.answer {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.answer_avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-right: 14px;
+  flex-shrink: 0;
+  img {
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.answer_text_container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.answer_name_container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3px;
+  width: 100%;
+}
+
+.answer_name {
+  font-weight: 600;
+  font-size: 14px;
+  color: #0d1444;
+  margin-right: 3px;
+}
+
+.answer_username {
+  font-size: 12px;
+  color: #828c94;
+}
+
+.answer_text {
+  font-size: 14px;
+  color: #828c94;
+  max-width: 100%;
+  word-break: break-word;
+}
+
+.answer_time {
+  margin-left: auto;
+  font-size: 12px;
+  color: #b0b0b0;
+}

@@ -1,0 +1,26 @@
+@import '../../../assets/styles/abstracts/variables';
+
+.fixedbb {
+  @include montserrat-16-bold;
+  display: flex;
+  align-items: center;
+
+  position: fixed;
+  bottom: 8rem;
+  left: calc(50% - 8.3rem);
+
+  padding: 1.5rem 3rem;
+
+  background: $black157deg;
+  border-radius: 160px;
+
+  color: #ffffff;
+
+  &--disabled {
+    opacity: 0.3;
+  }
+
+  img {
+    margin-right: 1.5rem;
+  }
+}

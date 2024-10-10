@@ -1,0 +1,73 @@
+@import '../../assets/styles/abstracts/variables.scss';
+
+.whs.notifications {
+  .whs__header {
+    border-bottom: 1px solid #d9d9d9;
+    padding-bottom: 2.7rem;
+    margin-bottom: 0;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .whs__wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.notificationPageLayout .header__title {
+  @include montserrat-22-semi-bold;
+}
+
+.headerSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & h1 {
+    @include montserrat-22-normal;
+    color: #0d1444;
+  }
+
+  &__icons {
+    position: relative;
+
+    &__settings {
+      position: absolute;
+      top: 50%;
+      right: 5rem;
+      transform: translateY(-50%);
+    }
+  }
+}
+.notificationsList {
+  overflow: auto;
+  padding-top: 2.9rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  &__empty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 0 6.2rem 0;
+
+    &__text {
+      text-align: center;
+
+      &--title {
+        @include montserrat-24-semi-bold;
+        line-height: 2.9rem;
+        letter-spacing: 0.02em;
+        color: #cfd0da;
+      }
+      &--sub {
+        @include montserrat-14-light;
+        line-height: 1.7rem;
+        letter-spacing: 0.02em;
+        color: #cfd0da;
+      }
+    }
+  }
+}

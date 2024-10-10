@@ -1,0 +1,254 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  border-top: 1px solid #d9d9d9;
+  padding-top: 25px;
+  * {
+    font-family: inherit;
+  }
+}
+
+.select_container {
+  width: 100%;
+  position: relative;
+  background: linear-gradient(89.85deg, #fbfbfb 0.1%, #ffffff 102.02%);
+  border: 1px solid #dddddd;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  &_open {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+.select_selected {
+  color: #0d1444;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  &_disabled {
+    pointer-events: none;
+    cursor: default;
+  }
+  @media (max-width: 400px) {
+    font-size: 12px;
+  }
+}
+
+.select_icon {
+  margin-right: 9px;
+  width: 50px;
+  height: 50px;
+  background: #f7f7f7;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 25px;
+  overflow: hidden;
+}
+
+.select_options {
+  position: absolute;
+  left: -1px;
+  right: -1px;
+  top: 100%;
+  background: linear-gradient(89.85deg, #fbfbfb 0.1%, #ffffff 102.02%);
+  border: 1px solid #dddddd;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
+  padding: 5px;
+  div {
+    cursor: pointer;
+    color: #0d1444;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 5px 0;
+    padding: 10px;
+  }
+  &_open {
+    opacity: 1;
+    visibility: visible;
+  }
+  @media (max-width: 400px) {
+    div {
+      font-size: 12px;
+    }
+  }
+}
+
+.type_buttons_container {
+  margin: 15px 0;
+  display: flex;
+  flex-wrap: wrap;
+  &_disabled {
+    pointer-events: none;
+    opacity: 0.7;
+    .type_button {
+      cursor: default;
+      pointer-events: none;
+    }
+  }
+}
+
+.type_button {
+  cursor: pointer;
+  border: 1px solid #000000;
+  border-radius: 160px;
+  height: 36px;
+  color: #131419;
+  font-size: 14px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px 0;
+  &:first-of-type {
+    margin-right: 10px;
+  }
+  &_selected {
+    color: #ffffff;
+    background: linear-gradient(157.59deg, #181920 0%, #0f0f13 100%);
+  }
+  @media (max-width: 405px) {
+    font-size: 12px;
+    padding: 0 15px;
+  }
+}
+
+.two_inputs_container {
+  display: flex;
+
+  @media (max-width: 360px) {
+    flex-wrap: wrap;
+  }
+}
+
+.two_inputs_input {
+  @media (max-width: 360px) {
+    width: 100%;
+  }
+  @media (max-width: 400px) {
+    & :global(.inputcard__input) {
+      font-size: 12px;
+    }
+    & :global(.inputcard-mask) {
+      font-size: 12px;
+      top: 2px;
+    }
+    & :global(.inputcard__label) {
+      font-size: 10px;
+      line-height: 18px;
+    }
+  }
+  &_margin {
+    margin-right: 20px;
+
+    @media (max-width: 400px) {
+      margin-right: 10px;
+    }
+    @media (max-width: 360px) {
+      margin-right: 0;
+    }
+  }
+}
+
+.submit_buttons_container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: flex-end;
+  border-top: 1px solid #d9d9d9;
+  margin-top: 25px;
+  padding-top: 25px;
+  padding-bottom: 15px;
+}
+
+.cancel_button {
+  cursor: pointer;
+  background: #f5f5f6;
+  border-radius: 20px;
+  width: 109px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  font-size: 14px;
+  color: #757576;
+}
+
+.submit_button {
+  cursor: pointer;
+  background: linear-gradient(157.59deg, #181920 0%, #0f0f13 100%);
+  color: #ffffff;
+  border-radius: 20px;
+  width: 109px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  &_loading {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.7;
+  }
+}
+
+.discount_container {
+  border: 1px solid #dddddd;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+  background: linear-gradient(89.85deg, #fbfbfb 0.1%, #ffffff 102.02%);
+  border-radius: 20px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  @media (max-width: 400px) {
+    font-size: 12px;
+  }
+  @media (max-width: 360px) {
+    flex-wrap: wrap;
+    height: auto;
+    .discount_price {
+      flex: 1;
+      p {
+        text-align: center;
+      }
+    }
+  }
+  p {
+    color: #b0b0b0;
+    flex: 1;
+  }
+}
+
+.discount_price {
+  display: flex;
+  align-items: center;
+
+  p {
+    color: #0d1444;
+    margin: 0 2.4rem 0 1.6rem;
+    width: 2rem;
+  }
+
+  & :global(.iconbutton) {
+    border: 1px solid #f4f4f4;
+  }
+}

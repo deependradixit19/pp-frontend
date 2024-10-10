@@ -1,0 +1,46 @@
+@import '../../../assets/styles/abstracts/variables';
+
+.livetoprated {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__tipper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+
+    &:not(:last-of-type) {
+      margin-bottom: 1.1rem;
+    }
+
+    &:nth-of-type(1) {
+      background-image: linear-gradient(163.95deg, #f5c232 12.1%, #ffe48b 88.83%);
+    }
+    &:nth-of-type(2) {
+      background-image: linear-gradient(163.44deg, #e6e6e6 10.94%, #a4a4a4 88.54%);
+    }
+    &:nth-of-type(3) {
+      background-image: linear-gradient(163.65deg, #de9022 9.94%, #fbc867 88.66%);
+    }
+
+    img {
+      display: block;
+      width: 3.6rem;
+      height: 3.6rem;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    &--crown {
+      position: absolute;
+      left: 2px;
+      top: -6px;
+    }
+  }
+}

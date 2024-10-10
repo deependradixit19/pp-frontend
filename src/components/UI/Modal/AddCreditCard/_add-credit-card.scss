@@ -1,0 +1,110 @@
+.add-credit-card-modal-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 62px;
+  bottom: 82px;
+  left: 20px;
+  right: 20px;
+  z-index: 25;
+  background: #ffffff;
+  box-shadow: 0px 20px 40px rgba(17, 29, 41, 0.6);
+  border-radius: 20px;
+  font-family: 'Montserrat', sans-serif;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-bottom: 30px;
+  transition: all ease-in-out 0.3s;
+  opacity: 0;
+  visibility: hidden;
+  &-open {
+    top: 82px;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.add-credit-card-modal-title {
+  font-weight: 600;
+  font-size: 18px;
+  color: #0d1444;
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  svg {
+    margin-right: 10px;
+  }
+}
+
+.add-credit-card-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-credit-card-info {
+  background: #f1f1f1;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.add-credit-card-modal-section {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+.add-credit-card-form-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  .inputcard {
+    max-width: 48%;
+  }
+}
+
+.add-credit-card-checkbox-container {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  .checkboxField {
+    align-items: flex-start;
+
+    .checkboxField__box {
+      min-width: 20px;
+      width: 20px;
+      height: 20px;
+      .checkboxField__box__check {
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
+}
+
+.add-credit-card-checkbox-text {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #757576;
+}
+
+.add-credit-card-submit-button {
+  background: linear-gradient(92.95deg, #53aff7 -12.15%, #2894ff 111.4%);
+  box-shadow: 0px 10px 10px rgba(78, 172, 249, 0.2);
+  border-radius: 25px;
+  padding: 15px 45px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  max-width: 175px;
+  width: 100%;
+  border: none;
+  margin: 10px auto;
+  cursor: pointer;
+}

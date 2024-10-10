@@ -1,0 +1,25 @@
+@import '../../../assets/styles/abstracts/variables';
+
+.radiobutton {
+  @include flex-center;
+  // position: absolute;
+  // top: 1.5rem;
+  // right: 2rem;
+  height: 2rem;
+  width: 2rem;
+  border: 1.51px solid rgba(185, 193, 210, 0.8);
+  border-radius: 25px;
+
+  &__inner {
+    height: 1rem;
+    width: 1rem;
+    border-radius: 25px;
+    background: #2f98fe;
+    transform: scale(0);
+    transition: 0.2s transform;
+
+    &--active {
+      transform: scale(1);
+    }
+  }
+}

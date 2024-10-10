@@ -1,0 +1,17 @@
+.feed {
+  &__temp {
+    display: flex;
+    justify-content: space-around;
+
+    &__button {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      background: transparent;
+      border: 1px solid #7171ef;
+      padding: 1rem;
+      border-radius: 20px;
+    }
+  }
+}

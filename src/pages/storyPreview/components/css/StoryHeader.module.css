@@ -1,0 +1,70 @@
+.headerContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 7;
+}
+.progressContainer {
+  height: 2rem;
+  width: 100%;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.avatarContainer {
+  align-items: center;
+  border: 2px solid #2e97fe;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  height: 4rem;
+  width: 4rem;
+}
+.avatarRing {
+  width: 4.7rem;
+  height: 4.7rem;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.avatar {
+  border-radius: 50%;
+  display: block;
+  height: 3.6rem;
+  margin: 0;
+  width: 3.6rem;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.titleContainer {
+  display: flex;
+  align-items: center;
+}
+.title {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  margin-right: 1rem;
+  color: #fff;
+  margin-left: 1.3rem;
+}
+.subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  color: #bfbebe;
+} /*# sourceMappingURL=StoryHeader.module.css.map */

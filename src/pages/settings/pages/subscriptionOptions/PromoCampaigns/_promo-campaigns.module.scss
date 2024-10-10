@@ -1,0 +1,157 @@
+.promo_campaign_card {
+  & :global(.subsOptions__card__body) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  & :global(.subsOptions__actions) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+.card_title {
+  font-family: 'Montserrat', sans-serif;
+  color: #afafaf;
+  font-weight: 600;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.duration {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: #0d1444;
+  font-weight: 600;
+}
+
+.description_container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 25px;
+  font-family: 'Montserrat', sans-serif;
+  * {
+    font-family: inherit;
+  }
+}
+
+.description_additional_text {
+  background: #f9faff;
+  border-radius: 10px;
+  color: #778797;
+  font-size: 12px;
+  padding: 6px 10px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.description_bottom_area {
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.description_title {
+  color: #afafaf;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.description_date_container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.description_date {
+  color: #afafaf;
+  font-size: 12px;
+  margin-right: 20px;
+  margin-bottom: 15px;
+  span {
+    color: #0d1444;
+  }
+  @media (max-width: 365px) {
+    margin-right: 10px;
+    font-size: 11px;
+  }
+}
+
+.description_limit {
+  display: flex;
+  font-size: 14px;
+  color: #0d1444;
+  margin-bottom: 30px;
+  span {
+    margin-left: 10px;
+  }
+}
+
+.description_options {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.filter_tabs {
+  padding: 5px;
+  display: flex;
+  background: #f5f5f6;
+  border-radius: 20px;
+  height: 40px;
+  max-width: 285px;
+  margin-bottom: 20px;
+}
+
+.filter_tab {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  color: #757576;
+  flex: 1;
+  border-radius: 20px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &_active {
+    color: #ffffff;
+    background: #262a33;
+  }
+}
+
+.description_claimed_by {
+  span {
+    color: #0d1444;
+    margin-left: 3px;
+  }
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.description_claimed_by_text {
+  color: #afafaf;
+  font-size: 12px;
+  margin-bottom: 2px;
+  margin-top: 2px;
+}
+
+.stacked_img_container {
+  margin-left: 10px;
+  margin-bottom: 2px;
+  margin-top: 2px;
+}
+
+.stacked_img {
+  div {
+    width: 24px;
+    height: 24px;
+    margin-right: -12px;
+  }
+}

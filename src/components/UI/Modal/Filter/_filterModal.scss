@@ -1,0 +1,132 @@
+@import '../../../../assets/styles/abstracts/variables';
+.filterModal {
+  &__section {
+    @include montserrat-16-normal;
+    margin: 0 !important;
+    text-transform: capitalize;
+    color: #828c94;
+    padding-bottom: 0.8rem;
+  }
+
+  &__title {
+    @include montserrat-24-normal;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 !important;
+    text-transform: capitalize;
+    color: #0d1444;
+  }
+
+  &__navigation {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+
+    &__dot {
+      height: 0.8rem;
+      width: 0.8rem;
+      border-radius: 50%;
+      background: #dfdfdf;
+      margin: 0 0.5rem;
+
+      &--active {
+        background: #262a33;
+      }
+      &--filled {
+        background: #3ea2fc;
+      }
+    }
+  }
+
+  &__search {
+    &__withbuttons {
+      display: flex;
+
+      &__input {
+        flex: 1;
+      }
+
+      .iconbutton {
+        margin-left: 0.5rem;
+      }
+    }
+  }
+
+  &__sort {
+    margin: 0;
+    padding: 0 2rem;
+
+    &:first-of-type {
+      padding-top: 1rem;
+    }
+
+    &__wrapper {
+      .button {
+        margin: 0 auto 2rem auto;
+      }
+    }
+
+    &__2nd {
+      border-top: 1px solid #d9d9d9;
+      padding-top: 2.4rem;
+    }
+
+    &__3rd {
+      border-top: 1px solid #d9d9d9;
+      padding-top: 2.4rem;
+    }
+
+    &__item {
+      @include montserrat-14-bold;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+      font-weight: 600;
+      &:last-of-type {
+        margin-bottom: 3rem;
+      }
+    }
+  }
+
+  &__actiondd {
+    position: absolute;
+    right: 2rem;
+    top: 10rem;
+    width: 24rem;
+    background: linear-gradient(115.6deg, #ffffff -3.22%, #ffffff 102.21%);
+    z-index: 1001;
+    border: 3px solid #ffffff;
+    border-radius: 20px;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: 0.2s transform;
+
+    &--active {
+      transform: scaleY(1);
+    }
+
+    &__item {
+      @include montserrat-14-bold;
+      height: 4.5rem;
+      display: flex;
+      align-items: center;
+      padding: 0 2rem;
+
+      &:hover {
+        background: #f4f4f4;
+      }
+
+      img {
+        margin-right: 1rem;
+      }
+
+      &:first-of-type {
+        margin-top: 1rem;
+      }
+      &:last-of-type {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@import '../../assets/styles/abstracts/variables';
+
+.friends {
+  &__header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    .searchfield {
+      flex: 1;
+    }
+
+    &__actions {
+      display: flex;
+
+      .dropdown {
+        margin: 0 0.5rem;
+
+        &:first-of-type {
+          margin-left: 1rem;
+        }
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+.list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+
+  .friends-number {
+    margin-right: 10px;
+    padding: 4px 9px;
+    border-radius: 5px;
+
+    @include montserrat-11-normal;
+    background-color: white;
+
+    span {
+      font-weight: bold;
+    }
+  }
+}

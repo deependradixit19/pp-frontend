@@ -1,0 +1,65 @@
+@import '../../../assets/styles/abstracts/variables';
+@import '../../../assets/styles/reset';
+
+.container {
+  // position: fixed;
+  // top: 23rem;
+  // left: 2rem;
+
+  // @media (max-width: 376px) {
+  //   top: 14rem;
+  // }
+  position: relative;
+  display: inline-flex;
+  margin-top: 3rem;
+  padding-left: 1rem;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  // transform: translateY(-50%);
+}
+
+.item {
+  @include resetButton;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  & + & {
+    margin-top: 3rem;
+
+    @media (max-width: 376px) {
+      margin-top: 2rem;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+
+  &:first-of-type {
+    .icon {
+      border: none;
+    }
+  }
+}
+
+.icon {
+  width: 3rem;
+  height: 3rem;
+  border: 1.5px solid rgba(255, 255, 255, 1);
+  box-sizing: border-box;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.05);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.label {
+  @include montserrat-12-normal;
+  color: #ffffff;
+  margin-left: 1rem;
+}

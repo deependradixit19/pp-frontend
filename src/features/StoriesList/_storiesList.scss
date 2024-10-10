@@ -1,0 +1,40 @@
+@import '../../assets/styles/abstracts/variables';
+
+.storieslist {
+  &__wrapper {
+    width: 100%;
+    padding: 0 2rem;
+    display: flex;
+  }
+
+  width: 100%;
+  display: flex;
+
+  overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__add {
+    height: 100%;
+    margin-right: 2rem;
+    min-width: 5.8rem;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+
+    /* to make only stories scrollable, not add story button
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+*/
+  }
+}
+.home__stories {
+  padding: 0;
+}

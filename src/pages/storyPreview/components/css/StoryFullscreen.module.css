@@ -1,0 +1,63 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  -webkit-backdrop-filter: blur(19px) brightness(0.8);
+  backdrop-filter: blur(19px) brightness(0.8);
+}
+.goLeft,
+.goRight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 1;
+}
+.goRight {
+  left: 50%;
+}
+.background {
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.actionsContainer {
+  width: 5.6rem;
+  position: absolute;
+  right: 1.8rem;
+  top: 12rem;
+  z-index: 7;
+}
+.pollContainer {
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex: 1 1;
+  bottom: 10rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.pollContainer .pollPreview {
+  background-color: red;
+}
+.pollContainer .pollPreview__wrapper {
+  padding: 0rem;
+}
+.textContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+} /*# sourceMappingURL=StoryFullscreen.module.css.map */

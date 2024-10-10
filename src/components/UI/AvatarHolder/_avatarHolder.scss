@@ -1,0 +1,151 @@
+@import '../../../assets/styles/abstracts/variables';
+
+.avatarholder {
+  position: relative;
+
+  img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &--80 {
+    height: 8rem;
+    min-width: 8rem;
+    width: 8rem;
+
+    .avatarholder__online {
+      top: 0.25rem;
+      right: 0.25rem;
+    }
+  }
+  &--60 {
+    height: 6rem;
+    min-width: 6rem;
+    width: 6rem;
+
+    .avatarholder__online {
+      top: -0.15rem;
+      right: -0.15rem;
+    }
+  }
+  &--50 {
+    height: 5rem;
+    min-width: 5rem;
+    width: 5rem;
+
+    .avatarholder__online {
+      top: -0.15rem;
+      right: -0.15rem;
+    }
+  }
+
+  &--40 {
+    height: 4rem;
+    min-width: 4rem;
+    width: 4rem;
+
+    .avatarholder__online {
+      top: -0.15rem;
+      right: -0.15rem;
+    }
+  }
+
+  &--36 {
+    height: 3.6rem;
+    min-width: 3.6rem;
+    width: 3.6rem;
+    .avatarholder__online {
+      top: -0.15rem;
+      right: -0.15rem;
+    }
+  }
+
+  &--30 {
+    height: 3rem;
+    min-width: 3rem;
+    width: 3rem;
+    .avatarholder__online {
+      top: -0.15rem;
+      right: -0.15rem;
+    }
+  }
+
+  &__story {
+    &--unread {
+      border-radius: 50%;
+      box-shadow:
+        0 0 0 2px #fff,
+        0 0 0 4px #8ccbff;
+    }
+    &--read {
+      border-radius: 50%;
+      box-shadow:
+        0 0 0 2px #fff,
+        0 0 0 4px #8c8c8c41;
+    }
+  }
+
+  &__online {
+    position: absolute;
+    width: 1.4rem;
+    height: 1.4rem;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    background: #0fe465;
+  }
+
+  &__live {
+    @include flex-center;
+    @include montserrat-10-normal;
+    font-weight: 500;
+    position: absolute;
+    bottom: -0.4rem;
+    left: calc(50% - 1.6rem);
+    color: #fff;
+    width: 3.2rem;
+    height: 1.6rem;
+    border-radius: 1rem;
+    background: $black157deg;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    z-index: 1;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -0.1rem;
+      left: -0.3rem;
+      height: 0.6rem;
+      width: 0.6rem;
+      background: #0fe465;
+      border: 2px solid #000;
+      border-radius: 50%;
+    }
+  }
+
+  &__blueicon {
+    @include flex-center;
+    position: absolute;
+    bottom: 0.25rem;
+    right: -0.2rem;
+    height: 1.8rem;
+    width: 1.8rem;
+    background: #fff;
+    border-radius: 50%;
+
+    &--heart {
+      height: 0.8rem !important;
+      width: 0.8rem !important;
+    }
+    &--dollar {
+      height: 1.2rem !important;
+      width: 1.2rem !important;
+    }
+    &--diamond {
+      height: 1.2rem !important;
+      width: 1.2rem !important;
+    }
+  }
+}

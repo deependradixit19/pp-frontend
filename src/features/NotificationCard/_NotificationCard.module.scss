@@ -1,0 +1,161 @@
+@import '../../assets/styles/abstracts/_variables.scss';
+
+.contentRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  .notificationActions {
+    display: flex;
+    align-items: center;
+
+    &.likeAction {
+      margin-left: 2.1rem;
+      margin-right: 1.1rem;
+
+      svg {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
+}
+
+.btnsRow {
+  margin: 0.75rem 0;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  > div {
+    flex-grow: 1;
+    flex-basis: auto;
+    flex-shrink: 1;
+    border-radius: 2rem;
+  }
+}
+
+.contentColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.textIcon {
+  display: inline;
+  vertical-align: middle;
+  margin-left: 0.4rem;
+  line-height: 1;
+}
+
+:global(.notificationPriceButton) {
+  border-radius: 2rem;
+  color: #d6ebff;
+
+  span {
+    color: #fff !important;
+  }
+
+  p {
+    margin: 0;
+    text-align: center;
+  }
+}
+
+.contentText {
+  @include capitalize-first;
+}
+
+.arrowRightBtn {
+  border-radius: 1rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: #f1f1f1;
+  flex-shrink: 0;
+  flex-grow: 0;
+  margin-left: 1rem;
+  padding: 0;
+}
+
+.chatMediaNotificationText {
+  display: flex;
+  align-items: center;
+  svg {
+    margin-left: 5px;
+  }
+}
+
+// .notificationCard {
+//   position: relative;
+//   display: flex;
+//   // align-items: center;
+//   padding: 1rem 1rem 1.3rem 1rem;
+//   width: 100%;
+//   min-height: 9.4rem;
+//   background: $white89deg;
+//   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+//   border-radius: 20px;
+//   position: relative;
+//   margin-bottom: 1rem;
+
+//   &__body {
+//     margin-left: 1rem;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+
+//     &__name {
+//       display: flex;
+//       align-items: center;
+
+//       &--name {
+//         @include montserrat-16-semi-bold;
+//         color: #0d1444;
+//         margin: 0 0;
+//         margin-right: 0.8rem;
+//       }
+
+//       &--username {
+//         @include montserrat-12-normal;
+//         font-weight: 400;
+//         color: #828c94;
+//         margin: 0 0;
+//       }
+//     }
+
+//     &__time {
+//       @include montserrat-12-normal;
+//       line-height: 1.8rem;
+//       color: #b0b0b0;
+//       margin: 0 0;
+//       margin-top: 1px;
+//     }
+//   }
+
+//   &__like {
+//     position: absolute;
+//     right: 2rem;
+//     height: 100%;
+//     top: 0;
+//     display: flex;
+//     align-items: center;
+//   }
+
+//   .avatarCircle {
+//     margin: 0.4rem 0 0 0.4rem;
+//   }
+
+//   .friendRequest {
+//     .circleButton {
+//       border: 1px solid #f4f4f4;
+//     }
+//   }
+//   .subscriptionRenewal {
+//     margin-bottom: 0.7rem;
+
+//     .notificationPriceButton {
+//       span {
+//         color: #fff;
+//       }
+//     }
+//   }
+// }

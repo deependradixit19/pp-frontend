@@ -1,0 +1,242 @@
+@import '../../assets/styles/abstracts/variables';
+
+.actionCard {
+  width: 100%;
+  background: $white89deg;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1rem;
+  margin-bottom: 1rem;
+  min-height: 5rem;
+  transition: all ease-in-out 0.3s;
+  border: 2px solid transparent;
+  position: relative;
+  &--top-area {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    // height: 100%;
+  }
+
+  &--selected {
+    border-color: #2f98fe;
+  }
+
+  &__selectIcon {
+    background-color: white;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: -11px;
+    right: -11px;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0);
+    transition: all ease-in-out 0.3s;
+    &--background {
+      background-color: #2894ff;
+      width: 20px;
+      height: 20px;
+      border-radius: inherit;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &--visible {
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1);
+    }
+  }
+
+  &.text__light {
+    .actionCard__body__text {
+      color: #afafaf;
+    }
+  }
+
+  &--withouticon {
+    padding: 1.5rem 2rem;
+  }
+
+  &__icon {
+    @include flex-center;
+    position: relative;
+
+    min-width: 5rem;
+    height: 5rem;
+    background: #f7f7f7;
+    border-radius: 20px;
+    margin-right: 1.5rem;
+    overflow: hidden;
+    &--absfix {
+      margin-top: 2rem;
+    }
+    &--absfixsvg {
+      padding-top: 2rem;
+    }
+    &--medium {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+
+    &__text {
+      @include montserrat-14-semi-bold;
+      margin: 0;
+      color: #0d1444;
+      word-break: break-word;
+
+      &--hassub {
+        margin: 0 0 0.5rem 0;
+      }
+    }
+
+    &__suptext {
+      @include montserrat-12-normal;
+      margin: 0 0 0.5rem 0;
+      color: #b0b0b0;
+    }
+
+    &__subtext {
+      @include montserrat-12-normal;
+      font-weight: 500;
+      margin: 0;
+      color: #b0b0b0;
+      word-break: break-word;
+      &--hassub {
+        margin: 0 0 0.5rem 0;
+      }
+    }
+
+    &__description {
+      @include montserrat-12-normal;
+      font-weight: 500;
+      margin: 0;
+      color: #778797;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+
+    &__trash {
+      border: 1px solid #f4f4f4;
+    }
+
+    &__edit {
+      border: 1px solid #f4f4f4;
+      margin-left: 1rem;
+    }
+
+    &__wire {
+      @include montserrat-12-normal;
+      font-weight: 500;
+      // color: #389efc;
+      color: #757576;
+      background: #f1f1f17c;
+      margin-right: 1rem;
+      padding: 0.75rem;
+      border-radius: 10px;
+    }
+
+    &__arrow {
+      @include flex-center;
+      min-width: 3rem;
+      height: 3rem;
+      background: #f7f7f7;
+      border-radius: 10px;
+      // margin-top: 1rem;
+      margin-top: 0;
+
+      &--withtoggle {
+        margin-top: 0;
+        margin-left: 2rem;
+      }
+    }
+  }
+
+  &__pending {
+    @include montserrat-12-bold;
+    @include flex-center;
+    margin-right: 2rem;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background: $blue92deg;
+    color: #fff;
+  }
+
+  &--disabled {
+    touch-action: none;
+    pointer-events: none;
+
+    .actionCard__body {
+      &__text {
+        color: #afafaf;
+      }
+    }
+
+    .actionCard__buttons {
+      .radiobutton__inner {
+        background: rgba(170, 176, 187, 0.5);
+      }
+
+      .switchbutton--active {
+        background: rgba(170, 176, 187, 0.5);
+      }
+    }
+  }
+}
+
+.action-card-dropdown-arrow {
+  background: rgba($color: #f1f1f1, $alpha: 0.5);
+  border-radius: 10px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  svg {
+    transition: transform ease-in-out 0.4s;
+  }
+  &-open {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.action-card-dropdown-content {
+  display: flex;
+  max-height: 0;
+  width: 100%;
+  overflow: hidden;
+  transition: max-height ease-in-out 0.4s;
+  &-open {
+    max-height: 100vh;
+  }
+}
+
+.actionCard--avatar {
+  width: 5rem;
+  height: 5rem;
+  overflow: hidden;
+  margin-right: 1.5rem;
+}

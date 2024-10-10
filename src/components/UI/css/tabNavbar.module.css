@@ -1,0 +1,57 @@
+.navbar {
+  background-color: #f5f5f6;
+  padding: 0.5rem;
+  height: 4rem;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.navbar .button {
+  border: none;
+}
+.navbar .link,
+.navbar .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  text-decoration: none;
+  height: 100%;
+  text-transform: capitalize;
+  border-radius: 20px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0 2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.navbar .link.inactive,
+.navbar .button.inactive {
+  color: #757576;
+}
+.navbar .link.active,
+.navbar .button.active {
+  background: #262a33;
+  color: #fff;
+}
+.navbar.dark {
+  background-color: #262a33;
+}
+.navbar.dark .link.inactive,
+.navbar.dark .button.inactive {
+  color: #757576;
+}
+.navbar.dark .link.active,
+.navbar.dark .button.active {
+  background: #fff;
+  color: #0d1444;
+} /*# sourceMappingURL=tabNavbar.module.css.map */

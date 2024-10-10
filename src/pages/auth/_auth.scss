@@ -1,0 +1,500 @@
+@import '../../assets/styles/abstracts/variables';
+@import '../../assets/styles/layout/login-layout';
+
+/* -----------------------------
+  #REGISTER
+------------------------------*/
+.auth-register {
+  @include ll__wrapper;
+
+  &__title {
+    @include ll__wrapper__title;
+    margin-bottom: 3.3rem;
+  }
+
+  &__form {
+    @include ll__wrapper__form;
+  }
+
+  &__action {
+    margin-top: 3.4rem;
+  }
+
+  &__checkbox .checkboxField__box {
+    background: #fff;
+  }
+}
+
+/* -----------------------------
+  #LOGIN
+------------------------------*/
+
+.auth-login {
+  @include ll__wrapper;
+
+  &__title {
+    @include ll__wrapper__title;
+    margin-bottom: 3.3rem;
+  }
+
+  &__form {
+    @include ll__wrapper__form;
+
+    @media (max-width: 370px) {
+      padding: 0 2rem;
+    }
+
+    button {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__hr {
+    @include montserrat-14-normal;
+    display: block;
+    position: relative;
+    height: 1.7rem;
+    text-align: center;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+
+    &--side {
+      flex: 1;
+      width: 100%;
+      height: 1px;
+      background: #d5d7da;
+    }
+
+    &--or {
+      width: 4rem;
+      color: #d5d7da;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    margin-bottom: 1.8rem;
+
+    a {
+      text-decoration: none;
+      color: #285f95;
+    }
+
+    .checkboxField__box {
+      background: #fff;
+    }
+
+    @media (max-width: 330px) {
+      .checkboxField label {
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  &__twitter,
+  &__google {
+    margin-bottom: 2rem;
+    padding: 0 2rem 0 5.2rem;
+    text-align: start;
+
+    @media (max-width: 330px) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__google {
+    margin-bottom: 1.2rem;
+  }
+
+  &__forgot-password {
+    @include montserrat-14-normal;
+
+    @media (max-width: 330px) {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+/* -----------------------------
+  #RECOVER
+------------------------------*/
+.auth-recover {
+  @include ll__wrapper;
+
+  &__title {
+    @include ll__wrapper__title;
+  }
+
+  &__text {
+    @include montserrat-14-normal;
+    color: #696b73;
+    width: calc(100% - 10rem);
+    margin: 0 auto 4rem auto;
+    text-align: center;
+  }
+
+  &__help {
+    @include montserrat-12-normal;
+    margin-top: 4rem;
+    color: #696b73;
+    text-align: center;
+
+    span {
+      color: #2f98fe;
+    }
+  }
+
+  &__form {
+    @include ll__wrapper__form;
+
+    button {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__buttons {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    .button {
+      margin-top: 3rem;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.6rem;
+    margin-top: 2rem;
+
+    a {
+      text-decoration: none;
+      color: #285f95;
+    }
+  }
+}
+
+/* -----------------------------
+  #RESET PASSWORD
+------------------------------*/
+.auth-reset-password {
+  @include ll__wrapper;
+
+  &__title {
+    @include ll__wrapper__title;
+  }
+
+  &__text {
+    @include montserrat-14-normal;
+    color: #696b73;
+    width: calc(100% - 10rem);
+    margin: 0 auto 4rem auto;
+    text-align: center;
+  }
+
+  &__help {
+    @include montserrat-12-normal;
+    margin-top: 4rem;
+    color: #696b73;
+    text-align: center;
+
+    span {
+      color: #2f98fe;
+    }
+  }
+
+  &__form {
+    @include ll__wrapper__form;
+
+    .inputfield {
+      flex-wrap: wrap;
+      margin-bottom: 0;
+
+      input {
+        margin-bottom: 2rem;
+      }
+
+      &__eye__wrapper {
+        top: 0.5rem;
+      }
+
+      &__error {
+        position: relative;
+        margin: -2.7rem 0 0;
+        top: 0;
+      }
+    }
+
+    .auth-reset-password__new-password .inputfield__error {
+      margin-bottom: 1.75rem;
+    }
+
+    button {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__buttons {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    .button {
+      margin-top: 3rem;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.6rem;
+    margin-top: 2rem;
+
+    a {
+      text-decoration: none;
+      color: #285f95;
+    }
+  }
+}
+
+/* -----------------------------
+  #VERIFICATION
+------------------------------*/
+.auth-verify {
+  @include ll__wrapper;
+
+  &__title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 2.6rem;
+    letter-spacing: 0.04em;
+    line-height: 3.2rem;
+    text-align: center;
+    margin-top: 4rem;
+
+    span {
+      font-weight: 600;
+    }
+  }
+
+  &__text {
+    @include montserrat-14-normal;
+    margin: 0 auto 2.7rem;
+    text-align: center;
+    color: #696b73;
+
+    span {
+      color: #2f98fe;
+    }
+  }
+
+  &__form {
+    @include ll__wrapper__form;
+
+    @media (max-width: 360px) {
+      padding: 0 2rem;
+    }
+
+    button {
+      margin-bottom: 2rem;
+    }
+
+    .verificationCode {
+      text-align: center;
+
+      &__title {
+        @include montserrat-18-normal;
+      }
+
+      &__actions__button {
+        min-width: 15rem;
+        min-height: 5rem;
+      }
+
+      input {
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__remember {
+    @include montserrat-14-normal;
+    @include flex-center;
+    color: #696b73;
+    margin-bottom: 3.5rem;
+    margin-top: 9rem;
+
+    .radiobutton {
+      margin-right: 1.5rem;
+      width: 3rem;
+      height: 3rem;
+
+      &__inner {
+        width: 1.4rem;
+        height: 1.4rem;
+      }
+    }
+  }
+}
+
+/* -----------------------------
+  #SELECT ROLE
+------------------------------*/
+.auth-select {
+  @include ll__wrapper;
+
+  &__title {
+    @include ll__wrapper__title;
+    margin-bottom: 0;
+  }
+
+  &__links {
+    width: 100%;
+    text-align: center;
+    padding: 0 4rem 4rem;
+    margin-top: 4.3rem;
+
+    a {
+      text-decoration: none;
+    }
+
+    a:first-of-type {
+      margin-bottom: 3rem;
+      display: block;
+    }
+  }
+}
+
+.auth__nl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+
+  &__title {
+    @include montserrat-26-bold;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 3.8rem;
+    margin-bottom: 0;
+    color: #0d1444;
+
+    span {
+      font-weight: 500;
+    }
+  }
+
+  &__slider {
+    width: 100%;
+    margin-top: 3.2rem;
+    color: #0d1444;
+  }
+
+  &__links {
+    width: 100%;
+    text-align: center;
+    padding: 0 4rem 4rem;
+    margin-top: 9.6rem;
+
+    a {
+      text-decoration: none;
+    }
+
+    a:first-of-type {
+      margin-bottom: 3rem;
+      display: block;
+    }
+  }
+
+  &__carousel {
+    height: 100%;
+
+    &__item {
+      @include montserrat-18-normal;
+      height: 100%;
+      box-sizing: border-box;
+      color: #5b5c63;
+      text-align: center;
+    }
+
+    .carousel.carousel-slider {
+      overflow: unset;
+      height: 100%;
+    }
+
+    .carousel .control-dots {
+      bottom: -5.3rem;
+
+      .dot {
+        width: 6px;
+        height: 6px;
+        background: rgba(129, 141, 175, 0.5);
+        box-shadow: none;
+      }
+      .dot.selected {
+        background: #2f98fe;
+      }
+    }
+  }
+}
+
+.dark-theme {
+  .auth-register {
+    &__title {
+      color: #fff;
+    }
+  }
+
+  .auth-login {
+    &__title {
+      color: #fff;
+    }
+
+    &__hr {
+      &--side {
+        background: #262a33;
+      }
+      &--or {
+        color: #262a33;
+      }
+    }
+
+    &__form {
+      background: $black157deg;
+    }
+  }
+
+  .auth-recover {
+    &__title {
+      color: #fff;
+    }
+  }
+
+  .auth-select {
+    &__title {
+      color: #fff;
+    }
+  }
+
+  .auth__nl {
+    &__title {
+      color: #fff;
+    }
+
+    &__slider {
+      color: #5b5c63;
+    }
+
+    &__links {
+      background: $black157deg;
+    }
+  }
+}

@@ -1,0 +1,97 @@
+.dropdown-select-container {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+.dropdown-select-input {
+  padding: 15px;
+  background: linear-gradient(89.85deg, #fbfbfb 0.1%, #ffffff 102.02%);
+  border: 1px solid #dddddd;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 15px;
+  outline: none;
+  width: 100%;
+  transition: all ease-in-out 0.3s;
+  font-family: 'Montserrat', sans-serif;
+  &-open {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+.dropdown-select-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: linear-gradient(89.85deg, #fbfbfb 0.1%, #ffffff 102.02%);
+  border: 1px solid #dddddd;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 0px 0px 15px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 5px 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all ease-in-out 0.3s;
+  z-index: 1;
+  &-open {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.dropdown-select-option {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  margin: 10px 0;
+  & .colorDots {
+    border-radius: 50%;
+    height: 0.6rem;
+    width: 0.6rem;
+    margin-right: 1rem;
+  }
+}
+
+.dropdown-select-selected-option {
+  z-index: 1;
+  position: absolute;
+  background: transparent;
+  background: linear-gradient(89.85deg, #fbfbfb 0.1%, #ffffff 102.02%);
+  top: 5px;
+  bottom: 5px;
+  left: 50px;
+  right: 15px;
+  border-radius: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  display: none;
+  color: #828c94;
+  overflow: hidden;
+  white-space: nowrap;
+  &-open {
+    display: flex;
+  }
+}
+
+.dropdown-select-icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}

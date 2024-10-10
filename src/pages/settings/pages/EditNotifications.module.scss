@@ -1,0 +1,11 @@
+.settings_notifications {
+  .tabs_switch {
+    padding-left: 0;
+    margin-left: 0;
+    margin-bottom: 2rem;
+  }
+
+  :global(.actionCard__body__text) {
+    word-break: break-word;
+  }
+}

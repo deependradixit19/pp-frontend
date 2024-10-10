@@ -1,0 +1,98 @@
+.header_section {
+  & :global(.whs__header) {
+    border-color: #d9d9d9;
+  }
+
+  & :global(.notificationsList) {
+    padding: 0;
+  }
+}
+
+.layout_title {
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+}
+
+.action_card {
+  padding: 10px;
+  padding-bottom: 17px;
+  & :global(.actionCard--avatar) {
+    width: initial;
+    height: initial;
+    overflow: visible;
+  }
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  border-radius: 100%;
+  background-color: #d9d9d9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    object-fit: cover;
+    border-radius: 100%;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.avatar_small {
+  width: 30px;
+  height: 30px;
+  margin-right: 14px;
+}
+
+.title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  color: #0d1444;
+}
+
+.cards_container {
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.status_name {
+  font-size: 14px;
+  color: #0d1444;
+  span {
+    color: #0d1444;
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
+
+.status_text {
+  color: #828c94;
+  font-weight: 500;
+  font-size: 14px;
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  span {
+    margin: 0 3px;
+    color: #285f95;
+  }
+}
+
+.status_time {
+  color: #b0b0b0;
+  font-size: 12px;
+  font-weight: 500;
+}

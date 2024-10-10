@@ -1,0 +1,57 @@
+@import '../../../../assets/styles/abstracts/variables';
+
+.action_post {
+  background: linear-gradient(157.59deg, #18192050 0%, #0f0f1350 100%);
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  min-width: 30px;
+  padding: 6px;
+  text-align: center;
+
+  img {
+    opacity: 1;
+    width: 1.8rem;
+  }
+
+  p {
+    @include sf-11-normal;
+    color: #fff;
+    margin: 0;
+    margin-top: 3px;
+    text-align: center;
+  }
+
+  &--tip {
+    height: fit-content;
+  }
+}
+
+.action_story {
+  align-items: center;
+  background: rgba($color: #000000, $alpha: 0.3);
+  border-radius: 2.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 1rem;
+  min-width: 5.6rem;
+  padding: 1.6rem;
+  text-align: center;
+
+  img {
+    opacity: 1;
+    width: 1.8rem;
+  }
+
+  p {
+    @include sf-11-normal;
+    color: #fff;
+    margin: 0;
+    margin-top: 3px;
+    text-align: center;
+  }
+
+  &--tip {
+    height: fit-content;
+  }
+}

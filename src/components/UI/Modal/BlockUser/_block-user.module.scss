@@ -1,0 +1,103 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat';
+  * {
+    font-family: inherit;
+  }
+}
+
+.user_details {
+  display: flex;
+  align-items: center;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #d9d9d9;
+  margin-bottom: 25px;
+}
+
+.user_avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-right: 10px;
+  img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+  }
+}
+
+.user_name {
+  div {
+    color: #0d1444;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    &:last-of-type {
+      color: #828c94;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 150%;
+    }
+  }
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+.option {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #0d1444;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 120%;
+  & :global(.radiobutton) {
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
+    flex-shrink: 0;
+  }
+  & :global(.radiobutton_inner) {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  & :global(.button) {
+    width: 120px;
+    height: 36px;
+    font-size: 14px;
+    &:first-of-type {
+      margin-right: 10px;
+    }
+  }
+}
+
+.user_avatar_icon_container {
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+}

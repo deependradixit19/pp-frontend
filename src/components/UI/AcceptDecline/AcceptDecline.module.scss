@@ -1,0 +1,14 @@
+.acceptDecline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  :global(.circleButton) {
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid #50525f;
+    margin-right: 1rem;
+  }
+}

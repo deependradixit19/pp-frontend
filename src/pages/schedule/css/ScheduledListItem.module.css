@@ -1,0 +1,102 @@
+.container {
+  align-items: center;
+  background: linear-gradient(89.85deg, #fbfbfb 0.1%, #ffffff 102.02%);
+  border-radius: 2rem;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  width: 100%;
+}
+.container:last-child {
+  margin-bottom: 0;
+}
+.leftContainer {
+  align-items: center;
+  display: flex;
+}
+.leftContainer .stripe {
+  border-radius: 2.5rem;
+  box-shadow: 0px 10px 10px rgba(78, 172, 249, 0.2);
+  height: 30px;
+  margin-left: 1rem;
+  width: 3px;
+}
+.leftContainer .itemImage {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 2rem;
+  height: 60px;
+  margin-left: 0.7rem;
+  width: 60px;
+}
+.rightContainer {
+  margin-right: 2rem;
+}
+.rightContainer .optionsButton {
+  align-items: center;
+  background: rgba(241, 241, 241, 0.5);
+  border: none;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  padding: 0.8rem;
+}
+.rightContainer .optionsButton .dot {
+  background: #767676;
+  border-radius: 50%;
+  height: 0.3rem;
+  margin-bottom: 0.3rem;
+  width: 0.3rem;
+}
+.rightContainer .optionsButton .dot:last-child {
+  margin-bottom: 0;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+.content .itemType {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  color: #0d1444;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+}
+.content .postingTime {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  color: #0d1444;
+  margin: 0;
+  margin-bottom: 0.2rem;
+  padding: 0;
+}
+.content .group {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  color: #828c94;
+}
+.content .group span {
+  background: linear-gradient(140.46deg, #b8deff 14.38%, #8bc5ff 94.98%);
+  border-radius: 3.5rem;
+  color: #fff;
+  margin-left: 0.5rem;
+  padding: 0.6rem 0.7rem;
+} /*# sourceMappingURL=ScheduledListItem.module.css.map */

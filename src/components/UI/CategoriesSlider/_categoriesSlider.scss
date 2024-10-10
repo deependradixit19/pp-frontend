@@ -1,0 +1,47 @@
+@import '../../../assets/styles/abstracts/variables';
+
+.categories {
+  @include montserrat-12-normal;
+  color: #cfd0da;
+  margin-bottom: 1.5rem;
+  transition: all 0.4s;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.categories-slider-open {
+  max-height: 100vh;
+  transition: all 1s;
+}
+
+.noCategories {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  color: #cfd0da;
+  p {
+    margin: 0 1rem 0 0;
+  }
+}
+
+.category {
+  display: block;
+  padding: 0.8rem 1rem;
+  background: #ffffff;
+  border: 1px solid #f4f4f4;
+  border-radius: 30px;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+  user-select: none;
+  &.active {
+    color: #262a33;
+    font-weight: 600;
+  }
+
+  &:not(:last-of-type) {
+    margin-right: 1rem;
+  }
+}

@@ -1,0 +1,15 @@
+.wrapper {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 0.6rem;
+  padding: 0.6rem 0.6rem 0 0.6rem;
+}
+.count {
+  text-align: center;
+  font-family: 'SF-Pro-Display', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  font-size: 1.1rem;
+  color: #fff;
+  height: 1.8rem;
+} /*# sourceMappingURL=mediaItemSidebar.module.css.map */

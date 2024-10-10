@@ -1,0 +1,82 @@
+@import '../../../assets/styles/abstracts/variables';
+
+.stats {
+  &__overlay {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 22rem;
+    width: 26.5rem;
+    background: linear-gradient(0deg, rgba(15, 17, 21, 0.95), rgba(15, 17, 21, 0.95));
+    border-radius: 2rem;
+    z-index: 3;
+    padding: 2.1rem 6rem 2.1rem 2.9rem;
+  }
+  &__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.9rem;
+    z-index: 3;
+  }
+  &__data {
+    &--top {
+      margin-bottom: 1rem;
+    }
+  }
+  &--divider {
+    background: #3e4043;
+    height: 0.1rem;
+  }
+}
+.stat {
+  @include montserrat-12-normal;
+  display: flex;
+  justify-content: space-between;
+
+  &:not(:last-of-type) {
+    margin-bottom: 1rem;
+  }
+
+  &__text {
+    color: #838c9e;
+  }
+  &__value {
+    color: #fff;
+    font-weight: 600;
+
+    span {
+      font-weight: 400;
+      display: inline-block;
+
+      &:first-of-type {
+        padding-right: 0.5rem;
+        border-right: 1px solid #3e4043;
+      }
+      &:last-of-type {
+        padding-left: 0.5rem;
+      }
+    }
+  }
+
+  .bold {
+    font-weight: 600;
+  }
+  .white {
+    color: #fff;
+  }
+  .blue {
+    color: #2894ff;
+  }
+}
+.previewStats {
+  .modal__card {
+    background: none;
+  }
+  .stats__overlay {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 5rem;
+  }
+}

@@ -1,0 +1,338 @@
+@import '../../../assets/styles/abstracts/variables';
+
+.directmessage {
+  &__content__wrapper {
+    height: calc(100% - 6rem) !important;
+  }
+
+  &__search {
+    display: flex;
+
+    &__input {
+      flex: 1;
+    }
+  }
+
+  &__header {
+    &__actions {
+      display: flex;
+      margin-left: 1rem;
+
+      .iconbutton {
+        margin-right: 0.5rem;
+      }
+
+      &__dropdown {
+        margin: 0;
+
+        .dropdown__body {
+          right: -8rem;
+        }
+      }
+    }
+  }
+
+  &__attachments {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 33rem;
+    border-radius: 35px 35px 0 0;
+    width: 100%;
+    background: $white180deg;
+    box-shadow: 0px 4px 54px rgba(0, 0, 0, 0.25);
+    transform: translateY(100%);
+    transition: 0.4s all;
+    z-index: 0;
+    .swiper {
+      overflow: visible;
+    }
+    .swiper-slide {
+      width: auto;
+    }
+    &--active {
+      transform: translateY(0);
+    }
+
+    &--inactive {
+      transform: translateY(100%) !important;
+    }
+
+    &--minimized {
+      transform: translateY(40%);
+
+      .directmessage__attachments__wrapper,
+      .directmessage__price {
+        display: none;
+      }
+    }
+
+    &--vault {
+      height: 28rem;
+
+      .directmessage__attachments__header {
+        padding-top: 2rem;
+        margin-bottom: 1rem;
+      }
+    }
+
+    &--sound {
+      bottom: 90px;
+    }
+
+    &--gifOpen {
+      bottom: 225px;
+    }
+
+    &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 3rem 3rem 0 3rem;
+      margin-bottom: 2rem;
+      font-family: $montserrat;
+
+      h1 {
+        margin: 0;
+      }
+    }
+
+    &__wrapper {
+      height: 20rem;
+      padding-left: 2rem;
+      padding-top: 0.5rem;
+      overflow-x: auto;
+    }
+
+    &__list {
+      display: flex;
+      height: 10.5rem;
+    }
+
+    &__attach {
+      @include flex-center;
+      min-width: 10.5rem;
+      height: 100%;
+      background: $white0deg;
+      border: 1px dashed #d6d6d6;
+      box-sizing: border-box;
+      border-radius: 20px;
+
+      img {
+        opacity: 0.5;
+      }
+    }
+
+    &__pricebutton {
+      @include flex-center;
+      font-family: $montserrat;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 1.4rem;
+      line-height: 17px;
+      text-align: center;
+      letter-spacing: 0.02em;
+
+      color: #ffffff;
+      background: $blue92deg;
+      box-shadow: 0px 10px 10px rgba(78, 172, 249, 0.2);
+      border-radius: 160px;
+      height: 3rem;
+      min-width: 10.7rem;
+    }
+
+    &__reply {
+      padding: 2rem;
+
+      &--file {
+        height: 25rem;
+      }
+      &--text {
+        height: 14rem;
+      }
+
+      &--body {
+        @include montserrat-14-bold;
+        margin: 0 0 1.2rem 0;
+        width: 90%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      &--text {
+        @include montserrat-14-normal;
+      }
+
+      &--media {
+        display: flex;
+        overflow-x: auto;
+      }
+
+      &--close {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        border-radius: 50%;
+        padding: 0.2rem;
+      }
+    }
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    height: 10.5rem;
+    padding: 0 2rem;
+
+    &__files {
+      width: 7.5rem;
+      height: 7.5rem;
+      overflow: hidden;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-right: 2rem;
+
+      img {
+        height: 3.5rem;
+        width: 3.5rem;
+        border-radius: 0.5rem;
+        object-fit: cover;
+        margin-bottom: 0.4rem;
+      }
+    }
+
+    &__info {
+      height: 7.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex: 1;
+
+      p {
+        margin: 0;
+        font-family: $montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.2rem;
+        letter-spacing: 0.02em;
+
+        color: #757576;
+      }
+    }
+
+    &__actions {
+      height: 5rem;
+      display: flex;
+
+      &--input {
+        height: 100%;
+        flex: 3;
+        position: relative;
+        margin-right: 1rem;
+        input {
+          @include sf-16-bold;
+          height: 100%;
+          width: 100%;
+
+          background: #ffffff;
+          border: 2px solid rgba(103, 110, 125, 0.8);
+          box-sizing: border-box;
+          box-shadow: 0px 4px 14px rgba(162, 162, 162, 0.2);
+          border-radius: 25px;
+          text-indent: 2.6rem;
+          outline: none;
+        }
+
+        &::before {
+          @include sf-16-bold;
+          content: '$';
+          position: absolute;
+          top: 0;
+          left: 0;
+
+          color: #696b73;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          padding-left: 2rem;
+        }
+      }
+
+      button {
+        height: 100%;
+        flex: 2;
+        background: $blue92deg;
+        box-shadow: 0px 10px 10px rgba(78, 172, 249, 0.2);
+        border-radius: 160px;
+        font-family: $montserrat;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 20px;
+        outline: none;
+        border: none;
+
+        letter-spacing: 0.02em;
+
+        color: #ffffff;
+
+        &:disabled {
+          opacity: 0.5;
+        }
+      }
+
+      &__dropdown {
+        padding: 0;
+      }
+    }
+  }
+}
+
+.write-message-audio-reply {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.write-message-reply {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #e3e7eb;
+  border-radius: 20px 20px 0px 0px;
+  padding: 12px 20px;
+  padding-bottom: 135px;
+  display: flex;
+  align-items: flex-start;
+  transform: translateY(100%);
+  transition: transform ease-in-out 0.3s;
+  &-open {
+    transform: translateY(0);
+  }
+  p {
+    font-size: 12px;
+    font-family: 'Montserrat';
+    font-style: italic;
+    margin: 0;
+    color: rgba(119, 135, 151, 1);
+    margin-left: 5px;
+    word-break: break-word;
+  }
+  svg {
+    flex-shrink: 0;
+  }
+}
+
+.write-message-reply-close {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  border: none;
+  background-color: #bbc3cc;
+  margin-left: auto;
+}

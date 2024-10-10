@@ -1,0 +1,26 @@
+.separator {
+  border-top: 1px solid #d9d9d9;
+  margin-bottom: 2.5rem;
+}
+.minMaxContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.minMaxContainer .minMax {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+.minMaxContainer .minMax strong {
+  font-weight: 600;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+} /*# sourceMappingURL=AddFunds.module.css.map */

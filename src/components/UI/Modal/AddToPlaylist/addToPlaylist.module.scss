@@ -1,0 +1,84 @@
+@import '../../../../assets/styles/abstracts/variables';
+
+.wrapper {
+}
+
+.header {
+  @include montserrat-18-semi-bold;
+  color: #0d1444;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem;
+
+  .button {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    box-shadow: 0px 4px 14px rgba(162, 162, 162, 0.2);
+    border-radius: 1rem;
+  }
+}
+
+.list {
+  max-height: 25rem;
+  overflow: scroll;
+
+  .inner {
+    padding: 0 2rem;
+  }
+}
+
+.iconWrapperBlue {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  background: linear-gradient(92.95deg, #53aff7 -12.15%, #3ba0fb 56.18%, #2894ff 111.4%);
+  border-radius: 10px;
+}
+
+.counterWrapper {
+  display: flex;
+  justify-content: flex-start;
+
+  .count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0.5rem;
+  }
+  .info {
+    @include montserrat-12-normal;
+    color: #828c94;
+    padding: 0.3rem;
+    border-radius: 0.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:not(:last-of-type) {
+      margin-right: 0.5rem;
+    }
+
+    p {
+      margin: 0 0 0 0.5rem;
+    }
+  }
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+
+  :global(.button) {
+    &:not(:last-of-type) {
+      margin-right: 1rem;
+    }
+  }
+}

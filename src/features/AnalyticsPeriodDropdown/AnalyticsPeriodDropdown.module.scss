@@ -1,0 +1,38 @@
+.analyticsPeriodDropdown {
+  align-items: center;
+
+  :global(.dropdown-select-input) {
+    text-overflow: ellipsis;
+  }
+
+  :global(.dropdown-select-options) {
+    z-index: 11; // go over navbar
+    max-height: 21rem; // analytics - sales: limit not to go out of screen view
+    overflow-y: auto;
+    justify-content: flex-start;
+  }
+
+  :global(.dropdown-select-option) {
+    width: 100%;
+    position: relative;
+
+    &:last-of-type::before {
+      content: '';
+      height: 1px;
+      background: #d9d9d9;
+      width: calc(100% + 4rem);
+      position: absolute;
+      left: -2rem;
+      top: -1rem;
+    }
+  }
+
+  :global(.dropdown-select-selected-option) {
+    display: block;
+    top: unset;
+    bottom: unset;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

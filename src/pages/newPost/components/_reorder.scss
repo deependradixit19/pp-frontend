@@ -1,0 +1,29 @@
+@import '../../../assets/styles/abstracts/variables';
+
+.newpost__reorder {
+  &__file {
+    height: 10.5rem;
+    margin-bottom: 0.5rem;
+    transition: none;
+    position: relative;
+    border: 3px solid transparent;
+  }
+
+  &__cover {
+    .uploadedfile {
+      border: 3px solid #76bcff;
+
+      &::before {
+        @include sf-12-normal;
+        content: 'Cover';
+        position: absolute;
+        top: 0.5rem;
+        left: 0.5rem;
+        padding: 0.5rem;
+        border-radius: 6px;
+        background: $black157deg;
+        color: #ffffff;
+      }
+    }
+  }
+}

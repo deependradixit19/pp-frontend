@@ -1,0 +1,140 @@
+@import '../../assets/styles/abstracts/variables';
+
+.dropdownSelect {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: $white89deg;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  border: 1px solid #dddddd;
+  padding: 1.5rem 1rem 0.5rem 1rem;
+
+  &--top {
+    border-radius: 20px 20px 0 0;
+  }
+
+  &--bot {
+    border-radius: 0 0 20px 20px;
+  }
+
+  &__head {
+    display: flex;
+
+    &__icon {
+      @include flex-center;
+      position: relative;
+
+      min-width: 5rem;
+      height: 5rem;
+      background: #f7f7f7;
+      border-radius: 20px;
+      margin-right: 1.5rem;
+
+      &--absfix {
+        margin-top: 2rem;
+      }
+
+      &.light {
+        background-color: unset;
+        border: 1px solid #f7f7f7;
+      }
+      &.small {
+        img {
+          width: 2rem;
+        }
+      }
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 1;
+      color: #0d1444;
+
+      input {
+        @include montserrat-14-bold;
+        height: 100%;
+        border: none;
+        overflow-x: auto;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      &__title {
+        @include montserrat-12-normal;
+        font-weight: 500;
+        color: #b0b0b0;
+        margin: 0.5rem 0 0 0;
+      }
+    }
+
+    &__arrow {
+      @include flex-center;
+      min-width: 3rem;
+      height: 3rem;
+      background: #f7f7f7;
+      border-radius: 10px;
+      margin-top: 1rem;
+
+      img {
+        transition: 0.4s all;
+        transform: rotate(90deg);
+      }
+
+      &--active {
+        img {
+          transform: rotate(-90deg);
+        }
+      }
+    }
+  }
+
+  &--withouticon {
+    padding: 1.5rem 2rem;
+  }
+
+  &__body {
+    transition: 0.4s height;
+    margin-top: 1rem;
+    &--inactive {
+      height: 0;
+      overflow: hidden;
+    }
+    &--active {
+      max-height: 23rem;
+      overflow-y: auto;
+    }
+  }
+
+  &__element {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8rem;
+
+    &__icon {
+      @include flex-center;
+      position: relative;
+
+      min-width: 5rem;
+      height: 5rem;
+      width: 5rem;
+      background: #f7f7f7;
+      border-radius: 20px;
+      margin-right: 1.5rem;
+
+      img {
+        max-width: 60%;
+      }
+    }
+
+    &__name {
+      @include montserrat-14-bold;
+      color: #0d1444;
+      flex: 1;
+    }
+  }
+}

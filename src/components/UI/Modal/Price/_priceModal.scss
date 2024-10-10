@@ -1,0 +1,51 @@
+@import '../../../../assets/styles/abstracts/variables';
+
+.priceModal {
+  padding: 0 0rem;
+
+  &__info {
+    @include montserrat-12-bold;
+    margin-bottom: 1.7rem;
+    color: #757576;
+  }
+
+  &__body {
+    @include montserrat-16-normal;
+    color: #757576;
+    margin-bottom: 1rem;
+  }
+
+  &__input {
+    width: 100%;
+    position: relative;
+
+    input {
+      @include sf-16-bold;
+      background: #ffffff;
+      height: 5rem;
+      border: 2px solid rgba(103, 110, 125, 0.8);
+      box-sizing: border-box;
+      box-shadow: 0px 4px 14px rgba(162, 162, 162, 0.2);
+      border-radius: 25px;
+      text-indent: 3rem;
+      color: #696b73;
+      width: 100%;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  &--dollar {
+    @include sf-16-bold;
+    position: absolute;
+    top: 1.5rem;
+    left: 2rem;
+    color: #696b73;
+  }
+
+  &__button {
+    margin: 2.5rem auto 0 auto;
+  }
+}

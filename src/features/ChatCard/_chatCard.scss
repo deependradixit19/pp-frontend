@@ -1,0 +1,80 @@
+@import '../../assets/styles/abstracts/variables';
+
+.chatCard {
+  position: relative;
+  display: flex;
+  height: 8rem;
+  padding: 0.7rem;
+  background: $white89deg;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  margin-bottom: 1rem;
+
+  &__avatar {
+    margin-right: 0.6rem;
+    img {
+      height: 6.6rem;
+      width: 6.6rem;
+      border-radius: 50%;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    margin-left: 1rem;
+
+    &__name {
+      @include montserrat-16-bold;
+      // margin-bottom: 0;
+      margin: 0;
+      color: #0d1444;
+
+      &__n {
+        margin-right: 0.3rem;
+      }
+    }
+
+    &__username {
+      @include sf-14-normal;
+      color: #828c94;
+      margin: 0;
+    }
+
+    &__message {
+      @include sf-14-normal;
+      margin: 0;
+      color: #828c94;
+    }
+  }
+
+  &__stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__time {
+      @include montserrat-12-normal;
+      font-weight: 500;
+      text-align: right;
+      color: #b0b0b0;
+      margin: 0 0 2rem 0;
+    }
+
+    &__number {
+      @include flex-center;
+      @include montserrat-10-bold;
+      font-size: 1.1rem;
+      color: #ffffff;
+      background: $blue92deg;
+      width: fit-content;
+      padding: 0.5rem 0.75rem;
+      border-radius: 50%;
+      margin: 2rem 0 0 0;
+      position: absolute;
+      right: 1.1rem;
+    }
+  }
+}

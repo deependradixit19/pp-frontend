@@ -1,0 +1,35 @@
+.wrapper {
+  position: absolute;
+  left: 0;
+  padding: 0 1.5rem 1rem 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0.5rem;
+}
+.info {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  color: #fff;
+  padding: 0.3rem;
+  background: linear-gradient(157.59deg, rgba(24, 25, 32, 0.3137254902) 0%, rgba(15, 15, 19, 0.3137254902) 100%);
+  border-radius: 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.info:not(:last-of-type) {
+  margin-right: 0.5rem;
+}
+.info p {
+  margin: 0 0 0 0.5rem;
+} /*# sourceMappingURL=postInfoBottom.module.css.map */

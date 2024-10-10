@@ -1,0 +1,46 @@
+@import '../../../../../assets/styles/abstracts/variables';
+
+.friendReqMessageModal {
+  .userInfo {
+    margin-bottom: 22px;
+  }
+
+  &__message {
+    display: block;
+    width: 100%;
+    min-height: 90px;
+    margin-bottom: 2.5rem;
+    padding: 1.2rem;
+
+    border-radius: 22px;
+
+    @include montserrat-14-normal;
+    font-weight: 500;
+
+    color: #0d1444;
+    background-color: #f6f6f6;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+
+    .button {
+      margin-right: 8px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &__deny {
+        height: 4rem !important;
+        width: 4rem !important;
+        border-radius: 50% !important;
+      }
+
+      &__accept {
+        height: 4rem;
+      }
+    }
+  }
+}

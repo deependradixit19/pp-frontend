@@ -1,0 +1,289 @@
+@import '../../assets/styles/abstracts/variables';
+
+.support__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+
+  &__title {
+    margin-top: 3.6rem;
+    margin-bottom: 2.4rem;
+    @include montserrat-24-semi-bold;
+  }
+}
+
+.support__borderline {
+  width: 100%;
+  height: 1px;
+  margin: 3rem 0;
+  background-color: #d9d9d9;
+}
+
+.submit__ticket__iconPlus {
+  width: 6rem;
+  height: 6rem;
+  background: linear-gradient(92.95deg, #53aff7 -12.15%, #2894ff 111.4%);
+  border: 3px solid #76bcff;
+  box-shadow: 0px 4px 14px rgba(47, 152, 254, 0.5);
+  border-radius: 16rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 10rem;
+  right: 2rem;
+}
+
+.submit__ticket {
+  &__actionCard {
+    margin-top: 2rem;
+  }
+
+  &__new {
+    width: 3rem;
+    height: 1.6rem;
+    display: inline-block;
+    background-color: #2894ff;
+    border-radius: 5px;
+    color: #fff;
+    margin-left: 1rem;
+    @include montserrat-10-semi-bold;
+    text-align: center;
+  }
+
+  &__date {
+    @include montserrat-12-normal;
+    font-weight: 500;
+    color: #0d1444;
+
+    &--created {
+      color: #afafaf;
+    }
+  }
+
+  &__bottomArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &--p {
+      @include montserrat-14-normal;
+      font-weight: 500;
+      line-height: 150%;
+      color: #828c94;
+      margin: 2.5rem 0;
+    }
+
+    &--borderLine {
+      width: 100%;
+      height: 1px;
+      background-color: #d9d9d9;
+      margin-bottom: 2rem;
+    }
+
+    &--bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+
+      &--left {
+        display: flex;
+        align-items: center;
+
+        &--attachIcon {
+          display: flex;
+          align-items: center;
+          margin-right: 1rem;
+
+          span {
+            @include montserrat-12-normal;
+            font-weight: 500;
+            color: #757576;
+            margin-left: 0.3rem;
+          }
+        }
+
+        &--chatIcon {
+          display: flex;
+          align-items: center;
+
+          span {
+            @include montserrat-12-normal;
+            font-weight: 500;
+            color: #757576;
+            margin-left: 0.3rem;
+          }
+        }
+      }
+
+      &--right {
+        display: flex;
+        align-items: center;
+
+        &--tickedId {
+          @include montserrat-12-normal;
+          line-height: 180%;
+          font-weight: 500;
+          color: #757576;
+          margin-right: 2rem;
+
+          span {
+            color: #afafaf;
+          }
+        }
+
+        &--button {
+          margin-right: 2rem;
+          padding: 0.2rem 0.3rem;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}
+
+// CREATE A TICKET
+
+.createTicket__heading {
+  margin: 1rem 0rem !important;
+}
+
+.createTicket__body {
+  background: linear-gradient(89.85deg, #fbfbfb 0.1%, #ffffff 102.02%);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 2rem;
+  padding: 2rem;
+
+  .actionCard.createTicket__body__search {
+    box-shadow: none;
+    background: #fff;
+    border: 1px solid rgba(38, 42, 51, 0.2);
+    border-radius: 1.5rem;
+    height: 5rem;
+    padding: 0;
+    width: 100%;
+    margin-bottom: 2rem;
+
+    .actionCard__icon {
+      background: transparent;
+      margin-right: 0;
+    }
+
+    .createTicket__body__search--icon {
+      width: 3rem;
+      height: 3rem;
+      background: linear-gradient(157.59deg, #181920 0%, #0f0f13 100%);
+      border-radius: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .createTicket__body__search--text {
+      color: #828c94;
+      font-weight: 500;
+    }
+  }
+
+  &__text {
+    background: #ffffff;
+    border: 1px solid rgba(38, 42, 51, 0.2);
+    box-sizing: border-box;
+    border-radius: 1.5rem;
+
+    &--p {
+      @include montserrat-14-normal;
+      font-weight: 500;
+      color: #0d1444;
+      padding: 1.3rem 1.6rem 1.6rem 1.1rem;
+      margin: 0;
+    }
+  }
+
+  &__bottomBorderLine {
+    width: 100%;
+    height: 1px;
+    background: #d9d9d9;
+    margin: 2rem 0;
+  }
+
+  &__bottomButtons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+// CREATE A TICKET QUESTIONS MODAL
+
+.createTicketModal {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 20px 40px rgba(17, 29, 41, 0.6);
+  padding: 1rem 2rem 0;
+  position: fixed;
+  top: 4rem;
+  bottom: 6rem;
+  left: 2rem;
+  right: 2rem;
+  z-index: 100;
+  overflow-x: hidden;
+  overflow-y: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+
+  &--open {
+    top: 6rem;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__dropDown {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+
+    li {
+      @include montserrat-14-semi-bold;
+      color: #0d1444;
+      line-height: 150%;
+      margin: 1rem 0;
+    }
+  }
+}
+
+.actionCard.createTicketModal__dropDown__actionCard {
+  background: #ffffff;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.05);
+  border-radius: 0px;
+  padding: 1.5rem 0;
+  padding-left: 1rem;
+}
+
+.actionCard.createTicketModal__dropDown__actionCard.actionCard__dropDown--open {
+  .actionCard__body__text {
+    color: #2894ff;
+  }
+
+  .action-card-dropdown-arrow {
+    background: linear-gradient(92.95deg, #53aff7 -12.15%, #2894ff 111.4%);
+
+    svg {
+      path {
+        stroke: #fff;
+      }
+    }
+  }
+}
+
+.actionCard.createTicketModal__actionCard {
+  background: linear-gradient(89.85deg, #fbfbfb 0.1%, #ffffff 102.02%);
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.05);
+  border-radius: 2rem;
+}

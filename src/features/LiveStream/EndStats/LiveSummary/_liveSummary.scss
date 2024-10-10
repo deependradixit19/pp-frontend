@@ -1,0 +1,104 @@
+@import '../../../../assets/styles/abstracts/variables';
+
+.summary {
+  position: relative;
+
+  &__viewers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 8.4rem;
+    margin-bottom: 2.4rem;
+
+    &--value {
+      @include montserrat-60-normal;
+      background: linear-gradient(108.07deg, #2894ff -7.62%, #76bcff 108.47%), #ffffff;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+    &--title {
+      @include montserrat-14-semi-bold;
+      color: #a8c9f2;
+    }
+  }
+  &__tips {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 6.7rem;
+
+    &--value {
+      margin-bottom: 0.4rem;
+      @include montserrat-36-normal;
+      color: #fff;
+      span {
+        @include montserrat-26-x-light;
+      }
+    }
+    &--title {
+      @include montserrat-14-semi-bold;
+      color: #a8c9f2;
+    }
+  }
+  &__slider {
+    padding: 0 0.5rem;
+    margin-bottom: 3rem;
+  }
+  &__share {
+    padding: 0 4rem;
+
+    &--wrapper {
+      background: #262a33;
+      border-radius: 2.1rem;
+      padding: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &--text {
+      @include montserrat-14-semi-bold;
+      color: #fff;
+    }
+  }
+}
+
+.streamSummarySwiper {
+  .swiper-wrapper {
+    align-items: center;
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .swiper-slide {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: opacity 200ms linear;
+  }
+  .swiper-slide-active {
+    width: 7rem;
+    height: 7rem;
+  }
+  .swiper-slide-prev,
+  .swiper-slide-next {
+    width: 6rem;
+    height: 6rem;
+  }
+  .slide__outer--1 {
+    width: 5rem;
+    height: 5rem;
+    opacity: 0.5;
+  }
+  .slide__outer--2 {
+    width: 4rem;
+    height: 4rem;
+    opacity: 0.25;
+  }
+}

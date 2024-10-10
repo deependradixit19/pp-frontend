@@ -1,0 +1,30 @@
+@import '../../../assets/styles/abstracts/variables';
+
+.caughtUpMessage {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 6.2rem;
+
+  &__checkMark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    &__line {
+      width: 100%;
+      border: 1px solid #d9d9d9;
+    }
+
+    &__icon {
+      margin: 1.8rem 2.2rem 0 2.2rem;
+    }
+  }
+
+  &__text {
+    @include montserrat-16-semi-bold;
+    color: #0d1444;
+    margin-top: -1rem;
+  }
+}

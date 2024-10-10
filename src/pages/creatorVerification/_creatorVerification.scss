@@ -1,0 +1,45 @@
+.creatorVerification {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 6.7rem 0 2rem;
+  background: linear-gradient(90deg, #f6f6f6 0%, #ffffff 51.09%, #efefef 100%), #f2f6f9;
+
+  &.overflowHidden {
+    overflow: hidden;
+  }
+
+  &__close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+
+  &__wizard {
+    display: flex;
+    flex: 1;
+    > div {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      max-width: 100%;
+    }
+  }
+
+  .rsw_2Y {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+  }
+
+  // .profileholder {
+  //   height: 24rem;
+  // }
+}

@@ -1,0 +1,101 @@
+@import '../../../assets/styles/abstracts/variables';
+
+.goal {
+  width: 80%;
+  border-radius: 2rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.header {
+  position: relative;
+  padding: 2.2rem 1rem;
+  &::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(157.59deg, #181920 0%, #0f0f13 100%);
+    opacity: 0.7;
+  }
+
+  input {
+    @include montserrat-18-semi-bold;
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    position: relative;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: #ffffff;
+      opacity: 0.5;
+    }
+  }
+}
+
+.content {
+  position: relative;
+  padding: 2rem;
+  background-color: rgba($color: #fff, $alpha: 0.8);
+}
+
+.inputGroup {
+  position: relative;
+  background: #ffffff;
+  padding: 1.2rem 1.2rem 1.2rem 2rem;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  height: 5rem;
+
+  input {
+    @include montserrat-14-semi-bold;
+    color: #0d1444;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    position: relative;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: #bcbcbc;
+    }
+  }
+
+  .dollar {
+    @include montserrat-14-semi-bold;
+    color: #0d1444;
+    position: absolute;
+    left: 1rem;
+  }
+
+  label {
+    @include montserrat-10-normal;
+    position: absolute;
+    top: 0.3rem;
+    left: 2rem;
+  }
+}
+.error {
+  @include montserrat-12-normal;
+  color: red;
+  position: absolute;
+  bottom: 0.3rem;
+  left: 2rem;
+}

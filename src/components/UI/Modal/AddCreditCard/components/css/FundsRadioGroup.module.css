@@ -1,0 +1,45 @@
+.groupContainer {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.radioLabel,
+.radioLabelSelected {
+  align-items: center;
+  border: 1px solid #000;
+  border-radius: 160px;
+  color: #000;
+  display: flex;
+  height: 3.6rem;
+  justify-content: center;
+  margin-right: 5px;
+  width: 6.2rem;
+  flex-shrink: 0.6;
+}
+.radioLabel input[type='radio'],
+.radioLabelSelected input[type='radio'] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.radioLabel:last-child,
+.radioLabelSelected:last-child {
+  margin-right: 0;
+}
+.radioLabelSelected {
+  background: linear-gradient(157.59deg, #181920 0%, #0f0f13 100%);
+  border-radius: 160px;
+  color: #fff;
+}
+.text {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  font-weight: 600;
+} /*# sourceMappingURL=FundsRadioGroup.module.css.map */

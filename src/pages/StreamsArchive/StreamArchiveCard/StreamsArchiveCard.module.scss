@@ -1,0 +1,35 @@
+@import '../../../assets/styles/abstracts/variables';
+
+.container {
+  position: relative;
+  width: 116px;
+  height: 116px;
+  border-radius: 20px;
+  flex: 0 0 auto;
+  margin: 2px;
+}
+
+.bubble {
+  @include montserrat-12-normal;
+  position: absolute;
+  background: rgba($color: #000000, $alpha: 0.3);
+  border-radius: 0.6rem;
+  height: 1.8rem;
+  line-height: 150%;
+  color: #ffffff;
+  padding: 0 0.5rem;
+  display: flex;
+  align-items: center;
+  &.date {
+    top: 1rem;
+    left: 1rem;
+  }
+  &.profit {
+    bottom: 1rem;
+    left: 1rem;
+  }
+  &.duration {
+    bottom: 1rem;
+    right: 1rem;
+  }
+}

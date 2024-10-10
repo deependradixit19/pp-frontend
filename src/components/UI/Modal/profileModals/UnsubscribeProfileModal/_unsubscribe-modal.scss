@@ -1,0 +1,122 @@
+.unsubscribe-modal-wrapper {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  padding: 30px;
+  * {
+    font-family: inherit;
+  }
+}
+
+.unsubscribe-modal-title {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 25px;
+  color: #0d1444;
+}
+
+.unsubscribe-modal-profile-pic-container {
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+  img {
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    object-fit: cover;
+  }
+}
+
+.unsubscribe-modal-user-info-container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.unsubscribe-modal-user-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.unsubscribe-modal-user-info-name {
+  color: #0d1444;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.unsubscribe-modal-user-info-username {
+  font-size: 12px;
+  color: #828c94;
+}
+
+.unsubscribe-modal-description {
+  width: 100%;
+  color: #0d1444;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.unsubscribe-modal-buttons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.unsubscribe-modal-unsub-button {
+  margin-left: 10px;
+  transition: opacity ease-in-out 0.3s;
+  cursor: pointer;
+  &-loading {
+    cursor: default;
+    pointer-events: none;
+    opacity: 0.7;
+  }
+}
+
+.unsubscribe-modal-reason-text {
+  color: #349bfd;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  width: 100%;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.unsubscribe-modal-reason-input-wrapper {
+  max-height: 0;
+  transition: all ease-in-out 0.4s;
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 20px;
+  &-open {
+    max-height: 100vh;
+  }
+}
+
+.unsubscribe-modal-reason-input {
+  width: 100%;
+  color: #200e32;
+  transition: all ease-in-out 0.3s;
+  border: 2px solid rgba(103, 110, 125, 0.8);
+  box-shadow: 0px 4px 14px rgba(162, 162, 162, 0.2);
+  border-radius: 15px;
+  resize: none;
+  outline: none;
+  padding: 15px;
+  font-size: 14px;
+  &:focus {
+    border-color: rgba(47, 152, 254, 0.8);
+  }
+}

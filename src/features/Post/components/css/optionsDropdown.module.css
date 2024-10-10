@@ -1,0 +1,86 @@
+.optionsDropdown .optionsWrapper {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0px -20px 40px rgba(17, 29, 41, 0.6);
+  padding: 3rem 0 9rem;
+  border-radius: 10px;
+  display: none;
+  z-index: 9;
+}
+.optionsDropdown .optionsWrapper .dropdownSection {
+  padding-bottom: 1rem;
+}
+.optionsDropdown .optionsWrapper .dropdownSection--bot {
+  padding-top: 2rem;
+}
+.optionsDropdown .optionsWrapper .dropdownSection--bot .post__options__option {
+  padding: 1.3rem 3rem 0.8rem 3rem;
+}
+.optionsDropdown .optionsWrapper .dropdownSection--bot .post__options__option span {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  color: #0d1444;
+}
+.optionsDropdown .optionsWrapper .dropdownSection--bot .post__options__option:hover {
+  background-color: #f4f4f4;
+}
+.optionsDropdown .optionsWrapper .dropdownSection--bot .post__options__option:last-of-type {
+  margin-bottom: 0;
+}
+.optionsDropdown .optionsWrapper .dropdownSection .separator__line {
+  height: 1px;
+  background-color: #d9d9d9;
+  margin: 0 3rem;
+}
+.optionsDropdown .optionsWrapper--vid {
+  padding: 2rem 3rem;
+  overflow-y: auto;
+}
+.optionsDropdown .optionsWrapper.active {
+  display: block;
+}
+.optionsDropdown__option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.optionsDropdown__option img {
+  margin-right: 1.4rem;
+  width: 2rem;
+}
+.optionsDropdown__option span {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  white-space: nowrap;
+}
+.option {
+  padding: 1.3rem 3rem 0.8rem 3rem;
+}
+.option span {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  color: #0d1444;
+}
+.option:hover {
+  background-color: #f4f4f4;
+}
+.separator {
+  height: 1px;
+  background-color: #d9d9d9;
+  margin: 0 3rem;
+} /*# sourceMappingURL=optionsDropdown.module.css.map */

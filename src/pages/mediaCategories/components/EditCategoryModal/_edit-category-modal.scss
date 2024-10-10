@@ -1,0 +1,22 @@
+.edit-category-modal-buttons-container {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  margin-top: 25px;
+}
+
+.edit-category-modal-button {
+  margin-left: 10px;
+  cursor: pointer;
+  transition: opacity ease-in-out 0.3s;
+  user-select: none;
+  &-loading {
+    cursor: default;
+    pointer-events: none;
+    opacity: 0.7;
+  }
+}
+
+.edit-category-modal-input {
+  margin-bottom: 35px;
+}

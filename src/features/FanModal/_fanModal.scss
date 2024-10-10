@@ -1,0 +1,77 @@
+@import '../../assets/styles/abstracts/variables';
+
+.fanModal {
+  height: calc(100vh - 15rem);
+
+  &__cover {
+    height: 60%;
+    padding: 1rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    color: #fff;
+  }
+
+  &__avatar {
+    margin: 0 auto;
+    height: 12rem;
+    width: 12rem;
+  }
+
+  &__name {
+    @include montserrat-18-bold;
+  }
+
+  &__username {
+    @include montserrat-14-normal;
+    color: #fff;
+    margin-bottom: 2rem;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+
+    &__button {
+      margin: 0 0.5rem;
+      .iconbutton {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+
+  &__tabs {
+    padding: 2rem;
+    height: 55%;
+    background: $white180deg;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-radius: 40px 40px 0 0;
+
+    .csTabs {
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  &__summary {
+    padding: 1rem;
+    &__item {
+      display: flex;
+      justify-content: space-between;
+
+      &__left {
+        @include montserrat-12-normal;
+        font-weight: 500;
+        color: #828c94;
+        margin-bottom: 2rem;
+      }
+
+      &__right {
+        @include montserrat-14-bold;
+        color: #0d1444;
+      }
+    }
+  }
+}

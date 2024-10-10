@@ -1,0 +1,108 @@
+@import '../../../../../assets/styles/abstracts/variables';
+
+:global(.social__accounts__password__needed) {
+  @include montserrat-14-normal;
+}
+
+:global(.social__accounts__password__needed__btn) {
+  @include montserrat-14-normal;
+  background: none;
+  border: none;
+  padding: 0;
+  color: #069;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+:global(.whs-connect-social-accounts) {
+  :global(.layoutHeader__section) {
+    margin-left: 0.8rem !important;
+  }
+}
+
+:global(.whs-connect-social-accounts) {
+  :global(.layoutHeader__title) {
+    margin-left: 0.8rem !important;
+  }
+}
+
+:global(.whs-connect-social-accounts) {
+  :global(.layoutHeader__section) {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    letter-spacing: 0.02em;
+    color: #828c94;
+  }
+}
+
+:global(.whs-connect-social-accounts) {
+  :global(.layoutHeader__title) {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+    letter-spacing: 0.02em;
+    color: #0d1444;
+  }
+}
+
+.socialCard {
+  border-width: 0;
+  padding: 1rem;
+
+  :global(.actionCArd--top-area) {
+    min-width: 0;
+  }
+
+  :global(.actionCard__body) {
+    overflow: hidden;
+  }
+
+  :global(.actionCard__body__text) {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  :global(.actionCard__body__subtext) {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: #b0b0b0;
+  }
+
+  :global(.switchbutton__text) {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    transform: translateX(3.3rem);
+  }
+
+  :global(.switchbutton__text--active) {
+    transform: translateX(0);
+    left: 1.6rem;
+  }
+
+  :global(.switchbutton__circle) {
+    transform: translateX(0.1rem);
+  }
+
+  :global(.switchbutton__circle--active) {
+    transform: translateX(9.3rem);
+  }
+}

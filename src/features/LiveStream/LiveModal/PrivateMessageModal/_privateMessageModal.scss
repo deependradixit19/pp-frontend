@@ -1,0 +1,37 @@
+@import '../../../../assets/styles/abstracts/variables';
+
+.privateMessageModal {
+  &__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    &--sort {
+      width: 5rem;
+      height: 5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #262a33;
+      border-radius: 1rem;
+    }
+  }
+  .searchfield {
+    flex: 1;
+    background: #262a33;
+    border: 1px solid rgba(38, 42, 51, 0.2);
+    box-sizing: border-box;
+    border-radius: 15px;
+    padding: 0 2rem 0 5rem;
+    margin-right: 1rem;
+
+    &__input {
+      @include montserrat-14-semi-bold;
+      color: #fff;
+      background: transparent;
+      box-shadow: none;
+      border: none;
+      text-indent: 0;
+    }
+  }
+}

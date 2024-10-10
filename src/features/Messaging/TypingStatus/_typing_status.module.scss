@@ -1,0 +1,67 @@
+@keyframes bouncingCircles {
+  0% {
+    background-color: #778797;
+    bottom: 6px;
+  }
+  100% {
+    background-color: #d4d2d4;
+    bottom: 0;
+  }
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.container {
+  display: flex;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  border-radius: 100%;
+  overflow: hidden;
+  margin-right: 10px;
+  img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.card_container {
+  width: 58px;
+  height: 36px;
+  background: linear-gradient(89.85deg, #fbfbfb 0.1%, #ffffff 102.02%);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 13px;
+  transform-origin: top left;
+  animation: popIn 0.1s 1 linear;
+  div {
+    position: relative;
+    border-radius: 100%;
+    width: 6px;
+    height: 6px;
+    background-color: #778797;
+    animation: bouncingCircles 0.5s infinite alternate;
+    &:nth-of-type(2) {
+      animation-delay: 0.25s;
+    }
+    &:nth-of-type(3) {
+      animation-delay: 0.5s;
+    }
+  }
+}

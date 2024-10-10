@@ -1,0 +1,58 @@
+@import '../../../assets/styles/abstracts/variables';
+
+.modal__card {
+  max-height: 90%;
+}
+
+.newListModal {
+  &__listNameLabel {
+    font-family: 'SF-Pro-Display', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: 0.04em;
+    font-size: 1.6rem;
+  }
+  &__divider {
+    background: #d9d9d9;
+    height: 1px;
+    margin: 2rem auto;
+  }
+
+  &__selection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+      @include montserrat-12-light;
+      margin: 0;
+      color: #757576;
+
+      span {
+        @include montserrat-12-semi-bold;
+      }
+    }
+  }
+
+  &__footer {
+    margin-left: -3.5rem;
+    margin-bottom: -2rem;
+    width: calc(100% + 7rem);
+    padding: 2.5rem 0 3.5rem;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(90deg, #f6f6f6 0%, #ffffff 51.09%, #efefef 100%), #f2f6f9;
+    border-top-left-radius: 4rem;
+    border-top-right-radius: 4rem;
+  }
+
+  .checkboxField__box {
+    min-width: 2rem;
+    height: 2rem;
+
+    &__check {
+      width: 0.9rem;
+      height: 0.9rem;
+    }
+  }
+}

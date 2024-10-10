@@ -1,0 +1,43 @@
+@import '../../assets/styles/abstracts/variables';
+
+.creatorsList {
+  margin-top: 2rem;
+  overflow-y: auto;
+
+  padding-top: 0.5rem;
+  margin-bottom: 3rem;
+
+  & > div {
+    padding-bottom: 1rem;
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+  .creator {
+    margin-bottom: 10px;
+  }
+  &__empty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 0 6.2rem 0;
+
+    &__text {
+      text-align: center;
+
+      &--title {
+        @include montserrat-24-semi-bold;
+        line-height: 2.9rem;
+        letter-spacing: 0.02em;
+        color: #cfd0da;
+      }
+      &--sub {
+        @include montserrat-14-light;
+        line-height: 1.7rem;
+        letter-spacing: 0.02em;
+        color: #cfd0da;
+      }
+    }
+  }
+}

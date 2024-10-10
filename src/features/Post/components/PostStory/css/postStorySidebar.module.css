@@ -1,0 +1,33 @@
+.postStorySidebar {
+  position: absolute;
+  top: 2.4rem;
+  right: 1.5rem;
+  z-index: 5;
+}
+.action {
+  min-width: 3rem;
+  text-align: center;
+  background: linear-gradient(157.59deg, rgba(24, 25, 32, 0.3137254902) 0%, rgba(15, 15, 19, 0.3137254902) 100%);
+  padding: 0.4rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+.action img {
+  opacity: 1;
+  width: 1.8rem;
+}
+.action p {
+  font-family: 'SF-Pro-Display', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0.04em;
+  font-size: 1.1rem;
+  color: #fff;
+  margin: 0;
+  text-align: center;
+}
+.tip {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+} /*# sourceMappingURL=postStorySidebar.module.css.map */

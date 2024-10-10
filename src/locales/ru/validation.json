@@ -1,0 +1,13 @@
+{
+  "required": "Required-RU",
+  "allFieldsAreRequired": "All fields are required!-RU",
+  "mustBe10CharactersOrLess": "Must be 10 characters or less-RU",
+  "mustBe15CharactersOrLess": "Must be 15 characters or less-RU",
+  "mustBe20CharactersOrLess": "Must be 20 characters or less-RU",
+  "mustBe50CharactersOrLess": "Must be 50 characters or less-RU",
+  "mustBe100CharactersOrLess": "Must be 100 characters or less-RU",
+  "pollTitleIsRequired": "Poll title is required!-RU",
+  "pollTitleCannotBeEmpty": "Poll title cannot be empty!-RU",
+  "pollMustHaveMinimum2Options": "Poll must have minimum 2 options!-RU",
+  "questionIsRequired": "Question is required!-RU"
+}

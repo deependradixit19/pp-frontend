@@ -1,0 +1,24 @@
+@import '../../../../assets//styles/abstracts/variables';
+
+.textContainer {
+  border-radius: 2rem;
+  background: linear-gradient(157.59deg, #181920 0%, #0f0f13 100%);
+  display: inline-block;
+  max-width: 90%;
+  opacity: 0.7;
+  padding: 1.7rem 2rem 2rem;
+  position: absolute;
+  z-index: 3;
+  transform: translate(-50%, -50%);
+  span {
+    @include montserrat-18-semi-bold;
+    display: inline-block;
+    background: transparent;
+    border: 0px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    opacity: 0.8;
+    min-width: 2ch;
+  }
+}

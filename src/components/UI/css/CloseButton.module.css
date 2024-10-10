@@ -1,0 +1,10 @@
+.button {
+  position: absolute;
+  top: 31px;
+  right: 21px;
+  opacity: 0.5;
+}
+.button svg {
+  width: 1.6rem;
+  height: 1.6rem;
+} /*# sourceMappingURL=CloseButton.module.css.map */

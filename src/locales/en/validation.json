@@ -1,0 +1,17 @@
+{
+  "required": "Required",
+  "allFieldsAreRequired": "All fields are required!",
+  "mustBe10CharactersOrLess": "Must be 10 characters or less",
+  "mustBe15CharactersOrLess": "Must be 15 characters or less",
+  "mustBe20CharactersOrLess": "Must be 20 characters or less",
+  "mustBe50CharactersOrLess": "Must be 50 characters or less",
+  "mustBe100CharactersOrLess": "Must be 100 characters or less",
+  "mustBe255CharactersOrLess": "Must be 255 characters or less",
+  "pollTitleIsRequired": "Poll title is required!",
+  "pollTitleCannotBeEmpty": "Poll title cannot be empty!",
+  "pollMustHaveMinimum2Options": "Poll must have minimum 2 options!",
+  "questionIsRequired": "Question is required!",
+  "premiumPostCannotBeAudioOnly": "Premium post cannot be audio only",
+  "postCannotBeEmpty": "Post cannot be empty",
+  "onlyDigits": "Only digits are allowed"
+}

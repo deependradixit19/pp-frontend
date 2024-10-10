@@ -1,0 +1,26 @@
+@import '../../../../assets/styles/abstracts/variables';
+
+.addModal__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 2rem;
+
+  &__backBtn {
+    margin-right: 1rem;
+  }
+}
+
+.addModal__numberOfChars {
+  @include montserrat-12-semi-bold;
+  color: #b3b3b3;
+  text-align: right;
+
+  &--input {
+    color: #757576;
+  }
+
+  &--max {
+    color: #929294;
+  }
+}

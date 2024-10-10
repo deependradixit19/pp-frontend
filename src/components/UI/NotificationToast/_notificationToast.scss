@@ -1,0 +1,223 @@
+@import '../../../assets/styles/abstracts/_variables.scss';
+
+.notificationsWrapper {
+  .Toastify {
+    &__toast {
+      background: rgba(18, 20, 24, 0.97);
+      border-radius: 2rem;
+      box-shadow: none;
+      padding: 2rem;
+
+      &-body {
+        padding: 0;
+        width: 100%;
+
+        & > div {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.notificationToast {
+  display: flex;
+  justify-content: flex-start;
+  // align-items: center;
+  width: 100%;
+
+  &__avatar {
+    position: relative;
+    width: 6.6rem;
+    height: 6.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(315deg, #8ccbff 0%, #2e97fe 100%);
+    border-radius: 50%;
+
+    img {
+      display: block;
+      width: 6.2rem;
+      height: 6.2rem;
+      filter: drop-shadow(0px 4px 34px rgba(0, 0, 0, 0.15));
+      object-fit: cover;
+      border-radius: 50%;
+      border: 1px solid black;
+    }
+
+    &__heart {
+      position: absolute;
+      right: 0.3rem;
+      bottom: 0.3rem;
+      width: 1.8rem;
+      height: 1.8rem;
+      border-radius: 50%;
+      background: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &__content {
+    padding-left: 1.5rem;
+    flex: 1;
+    overflow: hidden;
+    // max-width: calc(100% - 7rem);
+
+    &__top {
+      display: flex;
+      justify-content: space-between;
+      // margin-bottom: 0.4rem;
+      &--name {
+        @include montserrat-16-semi-bold;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        flex-shrink: 1;
+        line-height: 2rem;
+        letter-spacing: 0.02em;
+        color: #ffffff;
+        text-decoration: none;
+      }
+      &--time {
+        // padding-left: 1rem;
+        flex-grow: 0;
+        flex-shrink: 0;
+        @include montserrat-12-normal;
+        line-height: 1.8rem;
+        color: #828c94;
+      }
+    }
+    &__handle {
+      @include montserrat-12-normal;
+      display: inline-block;
+      text-decoration: none;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      color: #828c94;
+      margin-bottom: 0.2rem;
+    }
+
+    &__bottom {
+      color: #828c94;
+      @include montserrat-14-normal;
+
+      a {
+        color: #2f98fe;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.textWithIcon {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__link {
+    @include montserrat-14-normal;
+    line-height: 2.1rem;
+    margin-right: 0.5rem;
+
+    a {
+      color: #2f98fe;
+      text-decoration: none;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.contentPurchased {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 22rem;
+
+  &__link {
+    @include montserrat-14-normal;
+    line-height: 2.1rem;
+    margin-right: 0.5rem;
+
+    a {
+      color: #2f98fe;
+      text-decoration: none;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.friendRequest {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  &__link {
+    @include montserrat-14-normal;
+    line-height: 2.1rem;
+    margin-right: 0.5rem;
+    max-width: 15rem;
+
+    a {
+      color: #2f98fe;
+      text-decoration: none;
+    }
+  }
+  &__actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__accept {
+      padding: 1rem;
+    }
+  }
+  .circleButton {
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid #50525f;
+    margin-right: 1rem;
+
+    & > svg * {
+      fill: #50525f;
+    }
+  }
+}
+
+.subscriptionRenewal {
+  // padding-right: 3rem;
+  &__text {
+    color: #828c94;
+    @include montserrat-14-normal;
+    margin-bottom: 1rem;
+    line-height: 2.1rem;
+  }
+  &__link {
+    display: inline-block;
+    @include montserrat-14-normal;
+    line-height: 2.1rem;
+    // margin-right: 0.5rem;
+    max-width: 15rem;
+
+    a {
+      color: #2f98fe;
+      text-decoration: none;
+    }
+  }
+}
+
+.notificationPriceButton {
+  span {
+    @include montserrat-14-semi-bold;
+  }
+}

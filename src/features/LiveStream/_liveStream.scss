@@ -1,0 +1,167 @@
+@import '../../assets/styles/abstracts/variables';
+
+.livestream {
+  background-color: black;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 3rem 2rem 2rem 2rem;
+
+  &.landscape {
+    .livestream__header {
+      &--wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-right: 3rem;
+      }
+      &__top {
+        &--close {
+          padding-top: 0.5rem;
+        }
+      }
+    }
+    .livestream__toprated {
+      justify-content: flex-end;
+    }
+    .livestream__chat {
+      height: 90%;
+    }
+    .livetoprated {
+      flex-direction: row;
+
+      &__tipper {
+        margin-bottom: unset;
+        width: 3rem;
+        height: 3rem;
+
+        img {
+          width: 2.6rem;
+          height: 2.6rem;
+        }
+        &--crown {
+          left: -1px;
+        }
+
+        &:not(:last-of-type) {
+          margin-right: 1rem;
+        }
+      }
+    }
+
+    .livemodal {
+      &__card {
+        width: 50%;
+        height: 100%;
+
+        &--bg {
+          opacity: 0.95;
+        }
+
+        &--content {
+          overflow: auto;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(1rem);
+  }
+
+  &__header {
+    position: relative;
+    z-index: 4;
+    display: flex;
+    justify-content: space-between;
+
+    &__top {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1.2rem;
+
+      &--left {
+        display: flex;
+        align-items: center;
+      }
+      &--minimize {
+        position: relative;
+        top: 3px;
+      }
+      &--name {
+        @include montserrat-16-semi-bold;
+        color: #fff;
+        margin-left: 2rem;
+      }
+      &--close {
+        opacity: 0.5;
+        svg {
+          width: 1.6rem;
+          height: 1.6rem;
+        }
+      }
+    }
+    &__bottom {
+      &--stats {
+        display: flex;
+      }
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__toprated {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 1.7rem;
+    // position: absolute;
+    // top: 10rem;
+    // z-index: 2;
+  }
+  &__actions {
+    position: absolute;
+    top: 9.3rem;
+    right: 2rem;
+    z-index: 5;
+  }
+  &__player {
+    // height: 22rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__chat {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+  }
+  &__footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 8;
+
+    &.active {
+      z-index: 9;
+    }
+  }
+}

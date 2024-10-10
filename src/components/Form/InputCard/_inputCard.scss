@@ -1,0 +1,223 @@
+@import '.././../../assets/styles/abstracts/variables';
+
+.inputcard {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 7rem;
+  background: $white89deg;
+  border: 1px solid #dddddd;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  margin-bottom: 1rem;
+
+  &--withavatar {
+    .inputcard__input {
+      padding-left: 70px;
+      text-indent: 0;
+    }
+    .inputcard__label {
+      left: 70px;
+    }
+    &--right {
+      .inputcard__input {
+        padding-left: 20px;
+        padding-right: 70px;
+      }
+      .inputcard__label {
+        left: 20px;
+      }
+    }
+  }
+
+  &__avatar {
+    position: absolute;
+    left: 0;
+    height: 5rem;
+    width: 5rem;
+    margin-left: 1rem;
+
+    div {
+      height: 4.8rem;
+      width: 4.8rem;
+      background-color: #fff;
+      border-radius: 50%;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    min-width: 5rem;
+    border-radius: 20px;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 10px;
+    &--right {
+      left: initial;
+      right: 10px;
+    }
+    &--smaller {
+      border-radius: 1rem;
+      min-width: 1rem;
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__label {
+    @include montserrat-12-bold;
+    font-weight: 500;
+    position: absolute;
+    left: 2rem;
+    color: #b0b0b0;
+    pointer-events: none;
+    transition: 0.2s all;
+    transform: translateY(0);
+    background-color: white;
+    &--hide {
+      opacity: 0;
+      transform: translateY(-1rem);
+    }
+
+    &--afterfocus {
+      @include montserrat-12-bold;
+      position: absolute;
+      top: 1.6rem;
+      left: 7.5rem;
+      color: #b0b0b0;
+    }
+
+    &--filled {
+      top: 1.6rem;
+    }
+  }
+
+  &__input {
+    @include montserrat-14-normal;
+    font-weight: 600;
+    text-indent: 1.8rem;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    transition:
+      border 0.2s,
+      padding 0.2s;
+
+    &.disabled {
+      color: #b0b0b0;
+    }
+
+    &--textarea {
+      &:focus {
+        padding-top: 1rem !important;
+      }
+    }
+
+    &--afterfocus {
+      padding-top: 2rem;
+    }
+
+    &--filled {
+      padding-top: 2rem;
+
+      &:focus {
+        padding-top: 0;
+      }
+    }
+
+    &--pass {
+      font-size: 3rem;
+      text-indent: 1.5rem;
+    }
+
+    &:focus {
+      border: 2px solid #2f98fe;
+      outline: none;
+    }
+
+    &--error {
+      border: 2px solid red;
+      &:focus {
+        border: 2px solid red;
+        outline: none;
+      }
+    }
+  }
+
+  &__error {
+    text-align: center;
+    position: absolute;
+    bottom: -3rem;
+    width: 100%;
+    z-index: 1;
+    p {
+      @include montserrat-12-normal;
+      font-weight: 500;
+      margin: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #ffdada;
+      border-radius: 5px;
+      min-height: 2.4rem;
+      padding: 0 1rem;
+      color: #e73939;
+    }
+  }
+
+  &__eye {
+    position: absolute;
+    right: 1.5rem;
+  }
+
+  &__desc {
+    @include montserrat-12-normal;
+    position: absolute;
+    bottom: -2rem;
+    right: 0;
+
+    color: #828c94;
+  }
+
+  &__info {
+    position: absolute;
+    right: 2rem;
+  }
+}
+.inputcard-mask {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: 32px;
+  font-weight: 600;
+  font-size: 14px;
+  text-indent: 18px;
+  letter-spacing: 0.02em;
+  font-family: 'Montserrat', sans-serif;
+  border: 2px solid transparent;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-bottom: 1px;
+  opacity: 0;
+  visibility: hidden;
+  white-space: nowrap;
+  overflow: hidden;
+  &-visible {
+    transition: visibility 0.2s 0.2s;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.inputcard-input-masked {
+  transition:
+    border 0.2s,
+    padding 0.2s,
+    opacity 0s 0.2s;
+  opacity: 0;
+}

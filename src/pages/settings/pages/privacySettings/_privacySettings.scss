@@ -1,0 +1,72 @@
+@import '../../../../assets/styles/abstracts/variables';
+
+.twoStepVerification__card {
+  height: 7rem;
+}
+
+.verification-btn {
+  padding: 1rem 2rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.authenticatorApp {
+  h3 {
+    color: #0d1444;
+    font-family: $montserrat;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 150%;
+    margin: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    color: #0d1444;
+    font-family: $montserrat;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 120%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+
+    img {
+      margin-left: 3rem;
+    }
+  }
+}
+
+.blockedUsers__h3 {
+  color: #0d1444;
+  font-family: $montserrat;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  letter-spacing: 0.02rem;
+}
+
+.blocked__list {
+  margin-top: 3rem;
+  padding-bottom: 2rem;
+
+  .dropdownSelect {
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+}
+.flag__wrapper {
+  height: 30px;
+  width: 40px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.dropdownSelect__element__icon {
+  img {
+    max-width: unset;
+  }
+}

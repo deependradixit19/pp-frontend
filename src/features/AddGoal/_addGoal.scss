@@ -1,0 +1,129 @@
+@import '../../assets/styles/abstracts/variables';
+
+.addGoal {
+  display: flex;
+  flex: 1;
+  // position: fixed;
+  // top: 0;
+  // right: 0;
+  // bottom: 0;
+  // left: 0;
+  padding: 1.8rem 2rem 5rem;
+
+  @media (max-width: 375px) {
+    padding: 1.8rem 1rem 5rem;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(1rem);
+  }
+
+  &__wrapper {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+  }
+
+  &--withBgImg {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &.device-portrait {
+      &.img-landscape {
+      }
+    }
+    &.device-landscape {
+    }
+  }
+
+  &__header {
+    margin-bottom: 2.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__title {
+      @include montserrat-22-semi-bold;
+      color: #ffffff;
+      text-align: center;
+      flex: 1;
+    }
+
+    &__close {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &__tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 1rem 1.5rem;
+    opacity: 0.6;
+
+    @media (max-width: 375px) {
+      padding: 0.5rem 1rem;
+
+      &:not(:last-child) {
+        margin-right: 0.5rem;
+      }
+      &__text {
+        @include montserrat-12-semi-bold;
+      }
+    }
+
+    &--active {
+      opacity: 1;
+    }
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+
+    &__text {
+      @include montserrat-14-semi-bold;
+      color: #0d1444;
+      margin-left: 1rem;
+      text-transform: uppercase;
+    }
+  }
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex: 1;
+    padding-top: 1rem;
+    // padding-bottom: 6rem;
+  }
+  &__footer {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    .button {
+      &:first-of-type {
+        margin-right: 1rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+@import '../../../assets/styles/abstracts/variables';
+
+.feed {
+  // background: $white180deg;
+  // transform: translateY(-4rem);
+  // min-height: calc(100% - 45rem);
+  // border-radius: 25px 25px 0 0;
+  // padding: 2rem 2rem 12rem 2rem;
+
+  .navbar {
+    margin-bottom: 1rem;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+
+  &__noposts {
+    @include flex-center;
+    @include montserrat-14-normal;
+    flex-direction: column;
+    margin-top: 10%;
+    padding-bottom: 0rem;
+    color: #0d1444;
+    text-decoration: none;
+    &__plus {
+      height: 6rem;
+      width: 6rem;
+      padding: 1.5rem;
+      background: $blue140deg;
+      border-radius: 20px;
+    }
+    // font-size: 1.4rem;
+    // margin: 0.9rem 0 0 1rem;
+    // color: #828c94;
+  }
+
+  &__icons {
+    display: flex;
+    margin-bottom: 1rem;
+    &--sort {
+      margin-right: 2rem;
+    }
+
+    &--filter {
+      margin-right: 1rem;
+    }
+  }
+}

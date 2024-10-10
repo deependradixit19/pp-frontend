@@ -1,0 +1,123 @@
+.subscription-card-container {
+  border: 2px solid #696b73;
+  border-radius: 20px;
+  width: 100%;
+  display: flex;
+  position: relative;
+  padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
+  transition: all ease-in-out 0.3s;
+  flex-grow: 0;
+  flex-shrink: 0;
+  * {
+    font-family: inherit;
+  }
+}
+
+.subscrition-card-radio-outer {
+  width: 24px;
+  height: 24px;
+  border: 1.51px solid rgba(103, 110, 125, 0.8);
+  border-radius: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.subscrition-card-radio-inner {
+  background: #2f98fe;
+  border-radius: 100%;
+  width: 12px;
+  height: 12px;
+  transition: all ease-in-out 0.3s;
+  transform: scale(0);
+  visibility: hidden;
+}
+
+.subscription-card-info-container {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.subscrition-card-info-time {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.subscrition-card-info-time-main {
+  font-weight: 600;
+  font-size: 16px;
+  color: #0d1444;
+  margin-bottom: 5px;
+}
+
+.subscrition-card-info-time-discount {
+  border: 1px solid #b4daff;
+  border-radius: 5px;
+  color: #3199fe;
+  font-size: 11px;
+  padding: 2px;
+}
+
+.subscrition-card-info-price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.subscrition-card-info-price-main {
+  color: #0d1444;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  &-campaign {
+    font-size: 11px;
+    max-width: 100%;
+  }
+}
+
+.subscrition-card-info-price-sub {
+  color: #757576;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.subscription-card-selected-mark {
+  border-top: 40px solid #329afe;
+  border-left: 40px solid transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all ease-in-out 0.3s;
+}
+
+.subscription-card-selected-star {
+  position: absolute;
+  z-index: 1;
+  top: 8px;
+  right: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all ease-in-out 0.3s;
+}
+
+.subscription-card-container-selected {
+  border-color: #329afe;
+  .subscription-card-selected-mark,
+  .subscription-card-selected-star {
+    opacity: 1;
+    visibility: visible;
+  }
+  .subscrition-card-radio-inner {
+    transform: scale(1);
+    visibility: visible;
+  }
+}

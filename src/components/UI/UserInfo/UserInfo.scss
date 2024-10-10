@@ -1,0 +1,34 @@
+@import '../../../assets/styles/abstracts/variables';
+
+.userInfo {
+  display: flex;
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 1.5rem;
+  }
+
+  &__name {
+    @include montserrat-16-bold;
+    color: #0d1444;
+    margin: 0 0 0.2rem 0;
+  }
+  &__username {
+    @include montserrat-14-normal;
+    font-weight: 500;
+    color: #828c94;
+    margin: 0 0 0.2rem 0;
+  }
+  &__stats {
+    @include montserrat-14-normal;
+    font-weight: 500;
+    color: #828c94;
+    margin: 0;
+
+    span {
+      font-weight: 600;
+      color: #349bfd;
+    }
+  }
+}

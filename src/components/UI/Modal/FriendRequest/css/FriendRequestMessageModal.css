@@ -1,0 +1,38 @@
+.friendReqMessageModal .userInfo {
+  margin-bottom: 22px;
+}
+.friendReqMessageModal__message {
+  display: block;
+  width: 100%;
+  min-height: 90px;
+  margin-bottom: 2.5rem;
+  padding: 1.2rem;
+  border-radius: 22px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  font-weight: 500;
+  color: #0d1444;
+  background-color: #f6f6f6;
+}
+.friendReqMessageModal .buttons {
+  display: flex;
+  justify-content: center;
+}
+.friendReqMessageModal .buttons .button {
+  margin-right: 8px;
+}
+.friendReqMessageModal .buttons .button:last-child {
+  margin-right: 0;
+}
+.friendReqMessageModal .buttons .button__deny {
+  height: 4rem !important;
+  width: 4rem !important;
+  border-radius: 50% !important;
+}
+.friendReqMessageModal .buttons .button__accept {
+  height: 4rem;
+} /*# sourceMappingURL=FriendRequestMessageModal.css.map */

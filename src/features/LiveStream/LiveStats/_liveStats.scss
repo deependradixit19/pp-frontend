@@ -1,0 +1,59 @@
+@import '../../../assets/styles/abstracts/variables';
+
+.livestats {
+  @include montserrat-12-semi-bold;
+  display: flex;
+  justify-content: flex-start;
+  height: 2.4rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+
+  &:not(:last-of-type) {
+    margin-right: 0.5rem;
+  }
+
+  &__left {
+    width: 3.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      color: #ffffff;
+      opacity: 0.9;
+    }
+  }
+
+  &__right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(48, 42, 42, 0.8);
+    padding: 0.5rem;
+
+    span {
+      color: #ffffff;
+      opacity: 0.7;
+      margin-left: 0.5rem;
+    }
+
+    .goal-content {
+      span {
+        &:first-of-type {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.goal {
+  .livestats__left {
+    background: #1d3b5e;
+  }
+}
+.viewers {
+  .livestats__left {
+    background-color: #ff284f;
+  }
+}

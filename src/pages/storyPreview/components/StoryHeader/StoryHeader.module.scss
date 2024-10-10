@@ -1,0 +1,69 @@
+@import '../../../../assets/styles/abstracts/variables';
+
+.headerContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 7;
+}
+
+.progressContainer {
+  height: 2rem;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.avatarContainer {
+  align-items: center;
+  border: 2px solid #2e97fe;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  height: 4rem;
+  width: 4rem;
+}
+
+.avatarRing {
+  width: 4.7rem;
+  height: 4.7rem;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar {
+  border-radius: 50%;
+  display: block;
+  height: 3.6rem;
+  margin: 0;
+  width: 3.6rem;
+  object-fit: cover;
+}
+
+.titleContainer {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  @include montserrat-16-semi-bold;
+  margin-right: 1rem;
+  color: #ffffff;
+  margin-left: 1.3rem;
+}
+
+.subtitle {
+  @include montserrat-12-normal;
+  color: #bfbebe;
+}

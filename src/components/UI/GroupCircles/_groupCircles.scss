@@ -1,0 +1,98 @@
+@import '../../../assets/styles/abstracts/variables';
+
+.groupCircles {
+  display: flex;
+  flex-direction: row-reverse;
+
+  &__avatar {
+    border-radius: 50%;
+    height: 100%;
+    overflow: hidden;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    &:nth-child(1) {
+      z-index: 10;
+    }
+    &:nth-child(2) {
+      transform: translateX(13px);
+      z-index: 9;
+    }
+
+    &:nth-child(3) {
+      transform: translateX(26px);
+      z-index: 8;
+    }
+
+    &:nth-child(4) {
+      transform: translateX(39px);
+      z-index: 7;
+    }
+
+    &:nth-child(5) {
+      transform: translateX(52px);
+      z-index: 6;
+    }
+  }
+
+  &__overlay {
+    @include flex-center;
+    @include montserrat-10-bold;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 50%;
+    z-index: 11;
+    position: absolute;
+    background: linear-gradient(140.46deg, #93ceff 14.38%, #2894ff 94.98%), #2894ff;
+  }
+
+  &--24 {
+    height: 2.4rem;
+
+    img {
+      width: 2.4rem;
+    }
+
+    .groupCircles__overlay {
+      height: 2.4rem;
+      width: 2.4rem;
+    }
+  }
+  &--36 {
+    height: 3.6rem;
+
+    img {
+      width: 3.6rem;
+    }
+
+    .groupCircles__avatar {
+      &:nth-child(1) {
+        z-index: 10;
+        transform: translateX(-18px);
+      }
+      &:nth-child(2) {
+        transform: translateX(0px);
+        z-index: 9;
+      }
+
+      &:nth-child(3) {
+        transform: translateX(18px);
+        z-index: 8;
+      }
+
+      &:nth-child(4) {
+        transform: translateX(36px);
+        z-index: 7;
+      }
+    }
+
+    .groupCircles__overlay {
+      height: 3.6rem;
+      width: 3.6rem;
+    }
+  }
+}

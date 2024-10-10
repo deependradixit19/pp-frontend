@@ -1,0 +1,116 @@
+@import '../../assets/styles/abstracts/variables';
+@import '../../assets/styles/reset';
+
+.wrapper {
+  position: relative;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100vw;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  backdrop-filter: blur(19px) brightness(0.8);
+}
+
+.background {
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.title {
+  @include montserrat-semi-bold;
+  position: absolute;
+  font-size: 22px;
+  color: white;
+  margin-top: 26px;
+  z-index: 1;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.settingsButton {
+  @include resetButton;
+  position: absolute;
+  top: 31px;
+  left: 21px;
+
+  svg {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  margin: 0 20px 50px;
+  display: flex;
+  width: calc(100% - 40px);
+  flex-direction: column;
+}
+
+.footerOne {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerTwo {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footerTwo {
+}
+
+.footerButton {
+  border: none;
+  border-radius: 2rem;
+}
+
+.pollContainer {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex: 1 1;
+  bottom: 13rem;
+  width: 100%;
+}
+
+.textContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.progress {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.storySidebar {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+}

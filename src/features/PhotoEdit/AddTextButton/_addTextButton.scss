@@ -1,0 +1,39 @@
+@import '../../assets/styles/abstracts/variables';
+
+.addTextButton {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: transparent;
+
+  .hide {
+    display: none !important;
+  }
+
+  &__instance {
+    display: inline-block;
+    position: absolute;
+    z-index: 8;
+  }
+
+  .text__draggable {
+    padding: 1.7rem;
+    background: linear-gradient(157.59deg, #181920 0%, #0f0f13 100%);
+    opacity: 0.7;
+    border-radius: 20px;
+
+    &__input {
+      background: transparent;
+      border: 0px;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 1.8rem;
+      line-height: 0.5;
+      text-align: center;
+      letter-spacing: 0.02em;
+      color: #ffffff;
+      opacity: 0.8;
+    }
+  }
+}

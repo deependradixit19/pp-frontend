@@ -1,0 +1,33 @@
+.analyticsPeriodDropdown {
+  align-items: center;
+}
+.analyticsPeriodDropdown :global(.dropdown-select-input) {
+  text-overflow: ellipsis;
+}
+.analyticsPeriodDropdown :global(.dropdown-select-options) {
+  z-index: 11;
+  max-height: 21rem;
+  overflow-y: auto;
+  justify-content: flex-start;
+}
+.analyticsPeriodDropdown :global(.dropdown-select-option) {
+  width: 100%;
+  position: relative;
+}
+.analyticsPeriodDropdown :global(.dropdown-select-option):last-of-type::before {
+  content: '';
+  height: 1px;
+  background: #d9d9d9;
+  width: calc(100% + 4rem);
+  position: absolute;
+  left: -2rem;
+  top: -1rem;
+}
+.analyticsPeriodDropdown :global(.dropdown-select-selected-option) {
+  display: block;
+  top: unset;
+  bottom: unset;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+} /*# sourceMappingURL=AnalyticsPeriodDropdown.module.css.map */

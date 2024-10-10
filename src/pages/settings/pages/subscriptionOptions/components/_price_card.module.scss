@@ -1,0 +1,68 @@
+@import '../../../../../assets/styles/abstracts/variables';
+
+.subsOptions__priceCard {
+  @include montserrat-14-bold;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 7rem;
+  background: $white89deg;
+  border-radius: 20px;
+  border: 1px solid #dddddd;
+  padding: 1.5rem 2rem;
+  color: #0d1444;
+  margin-bottom: 1rem;
+  &__disabled {
+    pointer-events: none;
+    width: 50%;
+    color: #b0b0b0;
+
+    input {
+      color: #b0b0b0;
+    }
+  }
+
+  &__focused {
+    border: 2px solid #2f98fe;
+  }
+
+  &__title {
+    @include montserrat-12-normal;
+    font-weight: 500;
+    color: #b0b0b0;
+    transition: 0.2s all;
+
+    &__hide {
+      opacity: 0;
+      transform: translateY(-1rem);
+    }
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    transition: 0.2s all;
+
+    &__full {
+      transform: translateY(-1rem);
+    }
+  }
+
+  &__dollar {
+    margin: 0 0.4rem 0 0;
+  }
+
+  &__input {
+    @include montserrat-14-bold;
+    font-weight: 600;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    &:focus {
+      outline: none;
+    }
+  }
+}

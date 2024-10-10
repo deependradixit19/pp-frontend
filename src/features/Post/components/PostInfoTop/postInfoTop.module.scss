@@ -1,0 +1,39 @@
+@import '../../../../assets/styles/abstracts/variables';
+
+.wrapper {
+  position: absolute;
+  top: 3.5rem;
+  left: 0.5rem;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 2;
+
+  &.preview {
+    z-index: 6;
+    top: 6.5rem;
+  }
+}
+.info {
+  @include montserrat-12-normal;
+  color: #fff;
+  padding: 0.3rem;
+  background: linear-gradient(157.59deg, #18192050 0%, #0f0f1350 100%);
+  border-radius: 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.live {
+    background: #ff284f;
+  }
+
+  &:not(:last-of-type) {
+    margin-right: 0.5rem;
+  }
+
+  p {
+    margin: 0 0 0 0.3rem;
+  }
+}

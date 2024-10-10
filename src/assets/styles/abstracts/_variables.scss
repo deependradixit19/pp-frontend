@@ -1,0 +1,393 @@
+// FONTS
+
+$montserrat: 'Montserrat', sans-serif;
+$sf-pro: 'SF-Pro-Display', sans-serif;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin text-ellipsis {
+  display: block; // or inline block
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin text-ellipsis-basic {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin capitalize-first {
+  display: inline-block; // or block
+  white-space: pre-wrap; // show white space
+
+  &:first-letter {
+    text-transform: uppercase;
+  }
+}
+
+@mixin montserrat-x-light {
+  font-family: $montserrat;
+  font-style: normal;
+  font-weight: 275;
+  letter-spacing: 0.02em;
+}
+@mixin montserrat-light {
+  font-family: $montserrat;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+@mixin montserrat-normal {
+  font-family: $montserrat;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+@mixin montserrat-semi-bold {
+  font-family: $montserrat;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+@mixin montserrat-bold-700 {
+  font-family: $montserrat;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+@mixin montserrat-bold {
+  font-family: $montserrat;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+@mixin sf-light {
+  font-family: $sf-pro;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+@mixin sf-normal {
+  font-family: $sf-pro;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0.04em;
+}
+@mixin sf-bold {
+  font-family: $sf-pro;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+@mixin sf-bold-700 {
+  font-family: $sf-pro;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+@mixin montserrat-10-normal {
+  @include montserrat-normal;
+  font-weight: normal;
+  font-size: 1rem;
+}
+@mixin montserrat-10-bold {
+  @include montserrat-bold;
+  font-size: 1rem;
+}
+@mixin montserrat-10-semi-bold {
+  @include montserrat-semi-bold;
+  font-size: 1rem;
+}
+@mixin montserrat-10-bold-700 {
+  @include montserrat-bold-700;
+  font-size: 1rem;
+}
+@mixin sf-10-normal {
+  @include sf-normal;
+  font-size: 1rem;
+}
+
+@mixin sf-11-light {
+  @include sf-light;
+  font-size: 1.1rem;
+}
+@mixin sf-11-normal {
+  @include sf-normal;
+  font-size: 1.1rem;
+}
+
+@mixin montserrat-11-normal {
+  @include montserrat-normal;
+  font-size: 1.1rem;
+}
+@mixin montserrat-11-semi-bold {
+  @include montserrat-semi-bold;
+  font-size: 1.1rem;
+}
+@mixin montserrat-11-bold-700 {
+  @include montserrat-bold-700;
+  font-size: 1.1rem;
+}
+
+@mixin montserrat-9-normal {
+  @include montserrat-normal;
+  font-size: 0.9rem;
+  line-height: 1.3rem;
+}
+@mixin montserrat-12-light {
+  @include montserrat-light;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+@mixin montserrat-12-normal {
+  @include montserrat-normal;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+@mixin montserrat-12-bold {
+  @include montserrat-bold;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+@mixin montserrat-12-semi-bold {
+  @include montserrat-semi-bold;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+@mixin sf-12-light {
+  @include sf-light;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+@mixin sf-12-normal {
+  @include sf-normal;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+@mixin sf-12-bold {
+  @include sf-bold;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+@mixin montserrat-14-light {
+  @include montserrat-light;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+}
+@mixin montserrat-14-normal {
+  @include montserrat-normal;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+}
+
+@mixin montserrat-14-semi-bold {
+  @include montserrat-semi-bold;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+}
+@mixin montserrat-14-bold {
+  @include montserrat-bold;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+}
+@mixin sf-14-normal {
+  @include sf-normal;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+}
+@mixin sf-14-bold {
+  @include sf-bold;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+}
+
+@mixin sf-16-bold-700 {
+  @include sf-bold-700;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+@mixin montserrat-16-normal {
+  @include montserrat-normal;
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+@mixin montserrat-16-semi-bold {
+  @include montserrat-semi-bold;
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+@mixin montserrat-16-bold {
+  @include montserrat-bold;
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+@mixin sf-16-normal {
+  @include sf-normal;
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+@mixin sf-16-bold {
+  @include sf-bold;
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+
+@mixin montserrat-18-light {
+  @include montserrat-light;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+}
+@mixin montserrat-18-normal {
+  @include montserrat-normal;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+}
+@mixin montserrat-18-bold {
+  @include montserrat-bold;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+}
+@mixin montserrat-18-semi-bold {
+  @include montserrat-semi-bold;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+}
+@mixin sf-18-normal {
+  @include sf-normal;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+}
+
+@mixin sf-20-normal {
+  @include sf-normal;
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+@mixin montserrat-20-light {
+  @include montserrat-light;
+  font-size: 2.2rem;
+  line-height: 2.7rem;
+}
+@mixin montserrat-20-normal {
+  @include montserrat-normal;
+  font-size: 2.2rem;
+  line-height: 2.7rem;
+}
+@mixin montserrat-20-semi-bold {
+  @include montserrat-semi-bold;
+  font-size: 2.2rem;
+  line-height: 2.7rem;
+}
+@mixin montserrat-20-semi-bold {
+  @include montserrat-semi-bold;
+  font-size: 2.2rem;
+  line-height: 2.7rem;
+}
+@mixin montserrat-20-bold {
+  @include montserrat-bold;
+  font-size: 2.2rem;
+  line-height: 2.7rem;
+}
+@mixin montserrat-22-x-light {
+  @include montserrat-x-light;
+  font-size: 2.2rem;
+  line-height: 2.7rem;
+}
+@mixin montserrat-22-light {
+  @include montserrat-light;
+  font-size: 2.2rem;
+  line-height: 2.7rem;
+}
+@mixin montserrat-22-normal {
+  @include montserrat-normal;
+  font-size: 2.2rem;
+  line-height: 2.7rem;
+}
+@mixin montserrat-22-bold {
+  @include montserrat-bold;
+  font-size: 2.2rem;
+  line-height: 2.7rem;
+}
+@mixin montserrat-22-semi-bold {
+  @include montserrat-semi-bold;
+  font-size: 2.2rem;
+  line-height: 2.7rem;
+}
+
+@mixin montserrat-24-normal {
+  @include montserrat-normal;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+}
+@mixin montserrat-24-semi-bold {
+  @include montserrat-semi-bold;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+}
+@mixin montserrat-24-bold {
+  @include montserrat-bold;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+}
+
+@mixin montserrat-26-x-light {
+  @include montserrat-x-light;
+  font-size: 2.6rem;
+  line-height: 3.2rem;
+}
+
+@mixin montserrat-26-normal {
+  @include montserrat-normal;
+  font-size: 2.6rem;
+  line-height: 3.2rem;
+}
+@mixin montserrat-26-bold {
+  @include montserrat-bold;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+}
+@mixin montserrat-28-normal {
+  @include montserrat-normal;
+  font-size: 2.8rem;
+  line-height: 3.4rem;
+}
+
+@mixin montserrat-36-normal {
+  @include montserrat-normal;
+  font-size: 3.6rem;
+  line-height: 4.4rem;
+}
+
+@mixin montserrat-60-normal {
+  @include montserrat-normal;
+  font-size: 6rem;
+  line-height: 7.3rem;
+}
+
+// GRADIENTS
+$blue92deg: linear-gradient(92.95deg, #53aff7 -12.15%, #2894ff 111.4%);
+$blue140deg: linear-gradient(140.46deg, #93ceff 14.38%, #2894ff 94.98%);
+$white89deg: linear-gradient(89.85deg, #fbfbfb 0.1%, #ffffff 102.02%);
+$white90deg: linear-gradient(90deg, #f6f6f6 0%, #ffffff 51.09%, #efefef 100%), #f2f6f9;
+$whiteAuthCard: linear-gradient(180deg, #ffffff 0%, #fbfbfb 99.15%);
+$white180deg: linear-gradient(180deg, #ffffff 12.4%, #fbfbfb 99.26%);
+$white0deg: linear-gradient(0deg, #f5f5f6, #f5f5f6), linear-gradient(135deg, #f6f6f6 0%, #ffffff 51.09%, #efefef 100%),
+  #f2f6f9;
+$black157deg: linear-gradient(157.59deg, #181920 0%, #0f0f13 100%);
+$black0deg: linear-gradient(0deg, rgba(24, 79, 123, 0.62), rgba(24, 79, 123, 0.62));
+$black113deg: linear-gradient(113.73deg, #0f0f13 0%, #2e2f39 36.98%, #0f0f13 69.46%);
+
+// SHADOWS
+$shadow-black: 0px 4px 20px rgba(0, 0, 0, 0.05);
+$shadow-blue: 0px 10px 10px rgba(78, 172, 249, 0.2);

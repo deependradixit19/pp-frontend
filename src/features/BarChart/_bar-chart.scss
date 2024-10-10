@@ -1,0 +1,86 @@
+.barchart-tooltip-container {
+  transition: all ease-in-out 0.3s;
+  pointer-events: none;
+}
+
+.barchart-tooltip-circle-outer {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #262a33;
+  border: 1.51px solid #a6d7ff;
+  border-radius: 100%;
+  position: absolute;
+  pointer-events: none;
+  transition:
+    opacity ease-in-out 0.3s,
+    transform ease-in-out 0.3s;
+}
+
+.barchart-tooltip-circle-inner {
+  width: 10px;
+  height: 10px;
+  background: #2f98fe;
+  border-radius: 100%;
+}
+
+.barchart-tooltip-root {
+  position: relative;
+  z-index: 1;
+  opacity: 0.9;
+}
+
+.barchart-tooltip {
+  display: flex;
+  align-items: center;
+  position: relative;
+  min-width: 125px;
+  height: 26px;
+  border-radius: 20px;
+  background: #252932;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  padding: 0 10px;
+  z-index: 1;
+  right: 0;
+  transition: all ease-in-out 0.2s;
+}
+
+.barchart-tooltip-bubble-arrow {
+  display: block;
+  position: absolute;
+  content: '';
+  width: 24px;
+  height: 24px;
+  background: #252932;
+  transform: translateX(-50%) rotate(45deg);
+  left: 50%;
+  bottom: -3px;
+  z-index: 0;
+}
+
+.barchart-tooltip-label,
+.barchart-tooltip-value {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.barchart-tooltip-label {
+  color: #848485;
+  white-space: nowrap;
+}
+
+.barchart-tooltip-value {
+  color: white;
+}
+
+.barchart-separator {
+  color: black;
+  margin: 0 10px;
+}

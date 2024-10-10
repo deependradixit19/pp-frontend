@@ -1,0 +1,96 @@
+@import '../../../assets/styles/abstracts/variables';
+
+.container {
+  align-items: center;
+  background: linear-gradient(89.85deg, #fbfbfb 0.1%, #ffffff 102.02%);
+  border: 1px solid #dddddd;
+  border-radius: 20px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  position: relative;
+}
+
+.selectContainer,
+.leftContainer {
+  align-items: center;
+  display: flex;
+}
+.selectContainer {
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+
+.flag {
+  align-items: center;
+  background: #f7f7f7;
+  border-radius: 20px;
+  display: flex;
+  flex-shrink: 0;
+  height: 50px;
+  justify-content: center;
+  margin-right: 1rem;
+  width: 50px;
+  img {
+    height: 60%;
+    width: 60%;
+  }
+}
+
+.textContainer {
+  .label {
+    @include montserrat-12-normal;
+    color: #b0b0b0;
+    margin: 0 0 0.5rem;
+  }
+  .countryName {
+    @include montserrat-14-semi-bold;
+    appearance: none;
+    border: none;
+    margin: 0;
+    width: 100%;
+  }
+}
+
+.arrow {
+  align-items: center;
+  background: #f1f1f1;
+  border-radius: 10px;
+  display: flex;
+  flex-shrink: 0;
+  height: 30px;
+  justify-content: center;
+  justify-self: flex-end;
+  width: 30px;
+}
+
+.dropdown {
+  background: linear-gradient(89.85deg, #fbfbfb 0.1%, #ffffff 102.02%);
+  border: 1px solid #dddddd;
+  border-radius: 20px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+  height: 17rem;
+  left: 50%;
+  overflow-y: auto;
+  position: absolute;
+  top: 105%;
+  transform: translateX(-50%);
+  width: 90%;
+  z-index: 10;
+  > div {
+    @include montserrat-14-normal;
+    align-items: center;
+    display: flex;
+    padding: 0.8rem 1rem;
+  }
+}
+
+.separator {
+  border-top: 1px solid #d9d9d9;
+  width: calc(100% + 2rem);
+  margin: 1rem 0;
+}

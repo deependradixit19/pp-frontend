@@ -1,0 +1,13 @@
+@import '../../../../assets/styles/abstracts/variables';
+
+.wrapper {
+  background-color: rgba($color: #000000, $alpha: 0.2);
+  border-radius: 0.6rem;
+  padding: 0.6rem 0.6rem 0 0.6rem;
+}
+.count {
+  text-align: center;
+  @include sf-11-light;
+  color: #ffffff;
+  height: 1.8rem;
+}

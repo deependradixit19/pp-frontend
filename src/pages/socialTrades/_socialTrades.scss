@@ -1,0 +1,28 @@
+@import '../../assets/styles/abstracts/variables';
+
+.socialTrades {
+  &__content__wrapper {
+    height: calc(100% - 6rem);
+  }
+
+  &__title {
+    @include montserrat-18-normal;
+    font-weight: 500;
+    display: flex;
+    color: #0d1444;
+
+    img {
+      margin-right: 1rem;
+    }
+  }
+
+  &__browse {
+    .layoutHeader__search__withbuttons {
+      margin-bottom: 2rem;
+    }
+
+    .csTabs {
+      margin-bottom: 2rem;
+    }
+  }
+}

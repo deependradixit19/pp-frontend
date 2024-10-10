@@ -1,0 +1,46 @@
+@import '../../assets/styles/abstracts/variables';
+
+.profile {
+  &__content {
+    &__tabs {
+      margin-top: 2rem;
+      height: 2rem;
+    }
+
+    &__posts {
+      margin-top: 1rem;
+    }
+  }
+
+  &__setup {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    // padding-bottom: 7rem;
+    padding: 0 3rem 7rem 3rem;
+    width: 100%;
+    height: 14.5rem;
+    border-radius: 40px 40px 0 0;
+    background: $black113deg;
+
+    &__icon {
+      margin-right: 2rem;
+    }
+
+    &__text {
+      flex: 1;
+
+      &--top {
+        @include montserrat-14-normal;
+        color: #2894ff;
+        margin: 0;
+      }
+      &--bot {
+        @include montserrat-12-bold;
+        color: #9095b3;
+        margin: 0;
+      }
+    }
+  }
+}

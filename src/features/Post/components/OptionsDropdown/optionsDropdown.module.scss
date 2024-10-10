@@ -1,0 +1,114 @@
+@import '../../../../assets/styles/abstracts/variables';
+
+.optionsDropdown {
+  // &-nav {
+  //   position: absolute;
+  //   top: 1.5rem;
+  //   left: 1.5rem;
+  //   background: rgba(0, 0, 0, 0.3);
+  //   z-index: 5;
+  //   padding: 0.6rem;
+  //   display: flex;
+  //   border-radius: 20px;
+  // }
+
+  .optionsWrapper {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0px -20px 40px rgba(17, 29, 41, 0.6);
+    padding: 3rem 0 9rem;
+    border-radius: 10px;
+    display: none;
+    z-index: 9;
+    // transform: scaleY(0);
+    // transform-origin: top;
+    // transition: 0.2s transform;
+
+    .dropdownSection {
+      // border-bottom: 1px solid #d9d9d9;
+      padding-bottom: 1rem;
+
+      // .post__options__option {
+      //   padding: 1.3rem 3rem 0.8rem 3rem;
+      //   span {
+      //     @include montserrat-14-semi-bold;
+      //     color: #0d1444;
+      //   }
+      //   &:hover {
+      //     background-color: #f4f4f4;
+      //   }
+      // }
+
+      &--bot {
+        // border-top: 1px solid #d9d9d9;
+        padding-top: 2rem;
+
+        .post__options__option {
+          padding: 1.3rem 3rem 0.8rem 3rem;
+          span {
+            @include montserrat-14-semi-bold;
+            color: #0d1444;
+          }
+          &:hover {
+            background-color: #f4f4f4;
+          }
+        }
+
+        .post__options__option:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+      .separator__line {
+        height: 1px;
+        background-color: #d9d9d9;
+        margin: 0 3rem;
+      }
+    }
+
+    &--vid {
+      padding: 2rem 3rem;
+      // max-height: 12rem;
+      overflow-y: auto;
+    }
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    img {
+      margin-right: 1.4rem;
+      width: 2rem;
+    }
+
+    span {
+      @include montserrat-14-bold;
+      white-space: nowrap;
+    }
+  }
+}
+
+.option {
+  padding: 1.3rem 3rem 0.8rem 3rem;
+  span {
+    @include montserrat-14-semi-bold;
+    color: #0d1444;
+  }
+  &:hover {
+    background-color: #f4f4f4;
+  }
+}
+
+.separator {
+  height: 1px;
+  background-color: #d9d9d9;
+  margin: 0 3rem;
+}

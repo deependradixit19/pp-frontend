@@ -1,0 +1,41 @@
+@import '../../../../assets/styles/abstracts/variables';
+
+.wrapper {
+  width: 100%;
+  padding: 0 2rem;
+  margin-bottom: 2.8rem;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.3rem;
+}
+.sectionTitle {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  .icon {
+    margin-right: 1rem;
+  }
+  .title {
+    @include montserrat-18-semi-bold;
+    color: #0d1444;
+    text-transform: capitalize;
+  }
+}
+.action {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-decoration: none;
+
+  .button {
+    margin-left: 1rem;
+  }
+  .text {
+    @include montserrat-12-semi-bold;
+    color: #778797;
+  }
+}

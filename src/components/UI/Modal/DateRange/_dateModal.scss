@@ -1,0 +1,60 @@
+@import '../../../../assets/styles/abstracts/variables';
+
+// todo: convert to css module
+.dateModal {
+  &__body {
+    @include montserrat-16-normal;
+    color: #757576;
+    display: flex;
+    justify-content: center;
+    // margin-bottom: 2.5rem;
+  }
+
+  &__price {
+    &__input {
+      // flex: 3;
+      width: 100%;
+      position: relative;
+
+      input {
+        @include sf-16-bold;
+        background: #ffffff;
+        height: 5rem;
+        border: 2px solid rgba(103, 110, 125, 0.8);
+        box-sizing: border-box;
+        box-shadow: 0px 4px 14px rgba(162, 162, 162, 0.2);
+        border-radius: 25px;
+        text-indent: 3rem;
+        color: #696b73;
+        width: 100%;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      &--date {
+        input {
+          text-indent: 1rem;
+        }
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    // padding: 2rem 0 3rem 0;
+    padding: 2rem 0 1rem 0;
+
+    .button:last-of-type {
+      margin-left: 1rem;
+    }
+  }
+
+  &__date {
+    &__button {
+      margin: 0 auto !important;
+    }
+  }
+}

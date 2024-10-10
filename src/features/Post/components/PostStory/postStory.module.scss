@@ -1,0 +1,133 @@
+@import '../../../../assets/styles/abstracts/variables';
+
+.box {
+  height: 39.1rem;
+  // border-radius: 2rem;
+  // overflow: hidden;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  // isolation: isolate;
+
+  &.preview {
+    width: 100%;
+    height: 100%;
+    border-radius: unset;
+
+    :global(.post__files__file--poll) {
+      height: 100%;
+    }
+  }
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex: 1;
+  border-radius: 2rem;
+  overflow: hidden;
+  isolation: isolate;
+}
+.header {
+  display: flex;
+  position: absolute;
+  top: 2.4rem;
+  left: 1rem;
+  z-index: 2;
+}
+.avatar {
+  margin-right: 1rem;
+}
+.author {
+  @include montserrat-14-semi-bold;
+  color: #fff;
+}
+.time {
+  @include montserrat-12-normal;
+  color: #fff;
+}
+.progressBar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  padding: 1rem 2rem 0 2rem;
+  z-index: 2;
+}
+
+.progress {
+  height: 0.4rem;
+  flex-grow: 1;
+  border-radius: 1rem;
+
+  display: flex;
+  background-image: -webkit-linear-gradient(
+    left,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(88, 89, 104, 0.5) 50.001%,
+    rgba(88, 89, 104, 0.5) 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 200%;
+  background-color: #fff;
+  background-position: 100% 50%;
+  animation-timing-function: linear;
+  animation-delay: 0.2s;
+
+  &:not(:last-of-type) {
+    margin-right: 0.4rem;
+  }
+}
+
+.progress.active {
+  animation-name: Loader;
+}
+
+.progress.passed {
+  background-position: 0 0;
+}
+
+@keyframes Loader {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.storySlide {
+  width: 100%;
+  height: 100%;
+
+  :global(.post__files__file--poll) {
+    padding-bottom: 2.5rem;
+  }
+}
+
+.storySlider {
+  width: 100%;
+  height: 100%;
+  :global(.swiper-slide) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img,
+    video {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  :global(.swiper-pagination) {
+    bottom: unset !important;
+    display: flex;
+    padding: 1rem 2rem;
+    cursor: pointer;
+  }
+}

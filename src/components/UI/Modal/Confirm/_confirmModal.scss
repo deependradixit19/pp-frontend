@@ -1,0 +1,22 @@
+@import '../../../../assets/styles/abstracts/variables';
+
+.confirmModal {
+  &__body {
+    @include montserrat-16-normal;
+    color: #757575;
+  }
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0 1rem 0;
+
+    .button {
+      margin-left: 1rem;
+    }
+  }
+  &--font-light-14 {
+    .confirmModal__body {
+      @include montserrat-14-light;
+    }
+  }
+}

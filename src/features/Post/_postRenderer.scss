@@ -1,0 +1,109 @@
+@import '../../assets/styles/abstracts/variables';
+
+.postRenderer {
+  font-size: 1.6rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+
+  &__media {
+    position: relative;
+    min-height: 22rem;
+    overflow: hidden;
+  }
+
+  &__story {
+    .postSidebar {
+      top: 2.4rem;
+    }
+  }
+
+  &__options {
+    &-nav {
+      position: absolute;
+      top: 1.5rem;
+      left: 1.5rem;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 5;
+      padding: 0.6rem;
+      display: flex;
+      border-radius: 2rem;
+    }
+
+    &__dropdown {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background-color: #fff;
+      box-shadow: 0 -2rem 4rem rgba(17, 29, 41, 0.6);
+      padding: 3rem 0 9rem;
+      border-radius: 1rem;
+      display: none;
+      z-index: 9;
+      &__section {
+        padding-bottom: 1rem;
+
+        .post__options__option {
+          padding: 1.3rem 3rem 0.8rem 3rem;
+          span {
+            @include montserrat-14-semi-bold;
+            color: #0d1444;
+          }
+          &:hover {
+            background-color: #f4f4f4;
+          }
+        }
+
+        &--bot {
+          padding-top: 2rem;
+
+          .post__options__option {
+            padding: 1.3rem 3rem 0.8rem 3rem;
+            span {
+              @include montserrat-14-semi-bold;
+              color: #0d1444;
+            }
+            &:hover {
+              background-color: #f4f4f4;
+            }
+          }
+
+          .post__options__option:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+        .separator__line {
+          height: 0.1rem;
+          background-color: #d9d9d9;
+          margin: 0 3rem;
+        }
+      }
+
+      &--vid {
+        padding: 2rem 3rem;
+        // max-height: 12rem;
+        overflow-y: auto;
+      }
+
+      &--active {
+        display: block;
+      }
+    }
+
+    &__option {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+
+      img {
+        margin-right: 1.4rem;
+        width: 2rem;
+      }
+
+      span {
+        @include montserrat-14-bold;
+        white-space: nowrap;
+      }
+    }
+  }
+}

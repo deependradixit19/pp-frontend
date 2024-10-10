@@ -1,0 +1,141 @@
+.container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 4.6rem;
+}
+
+.dotCommon {
+  position: relative;
+  background-color: #fd027a;
+  color: #fd027a;
+
+  &,
+  &::before,
+  &::after {
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+  }
+
+  &::before {
+    left: -1rem;
+    background-color: #da02fd;
+    color: #da02fd;
+  }
+
+  &::after {
+    left: 1rem;
+    background-color: #028dfd;
+    color: #028dfd;
+  }
+}
+/**
+ * ==============================================
+ * Dot Flashing
+ * ==============================================
+ */
+.dotFlashing {
+  animation: flashingDot 1s infinite linear alternate;
+  animation-delay: 0.75s;
+
+  &::before {
+    animation: flashingDot 1s infinite linear alternate;
+    animation-delay: 0s;
+  }
+
+  &::after {
+    animation: flashingDot 1s infinite linear alternate;
+    animation-delay: 1s;
+  }
+}
+
+@keyframes flashingDot {
+  0% {
+    opacity: 0.5;
+  }
+  50%,
+  100% {
+    opacity: 1;
+  }
+}
+
+/**
+ * ==============================================
+ * Dot Elastic
+ * ==============================================
+ */
+.dotElastic {
+  animation: elasticDot 1s infinite linear;
+
+  &::before {
+    animation: dotElasticBefore 1s infinite linear;
+  }
+
+  &::after {
+    animation: dotElasticAfter 1s infinite linear;
+  }
+}
+
+@keyframes dotElasticBefore {
+  0% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(1, 1.5);
+  }
+  50% {
+    transform: scale(1, 0.67);
+  }
+  75% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes elasticDot {
+  0% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1, 1.5);
+  }
+  75% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes dotElasticAfter {
+  0% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1, 0.67);
+  }
+  75% {
+    transform: scale(1, 1.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}

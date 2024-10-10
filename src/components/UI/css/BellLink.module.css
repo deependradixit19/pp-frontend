@@ -1,0 +1,29 @@
+.bell {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2.2rem;
+  text-decoration: none;
+}
+.bell img {
+  width: 1.8rem;
+  height: 2.2rem;
+}
+.bell_count {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 0px;
+  margin-left: -0.8rem;
+  margin-top: -1.6rem;
+  border-radius: 50%;
+  color: #fff;
+  background: linear-gradient(92.95deg, #53aff7 -12.15%, #2894ff 111.4%);
+  width: 1.6rem;
+  height: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} /*# sourceMappingURL=BellLink.module.css.map */

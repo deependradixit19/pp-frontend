@@ -1,0 +1,8 @@
+.additional-content-wrapper {
+  min-width: 32rem;
+}
+@media (max-width: 680px) {
+  .additional-content-wrapper {
+    display: none;
+  }
+}

@@ -1,0 +1,90 @@
+@import '../../../assets/styles/abstracts/variables';
+
+.checkboxField {
+  align-items: center;
+  display: flex;
+
+  &__box {
+    @include flex-center;
+    border: 1px solid #676e7dcc;
+    border-radius: 50%;
+    box-shadow: 0 0 2px #d5d7da;
+    height: 3rem;
+    min-width: 3rem;
+    margin-right: 1rem;
+
+    background: transparent;
+    cursor: pointer;
+
+    color: #2f98fe;
+    font-size: 1.25rem;
+
+    -webkit-tap-highlight-color: transparent;
+
+    &__check {
+      border-radius: 50%;
+      height: 1.4rem;
+      width: 1.4rem;
+
+      background-color: #2f98fe;
+
+      transform: scale(0);
+      transition: 0.2s all;
+    }
+
+    &--selected {
+      .checkboxField__box__check {
+        transform: scale(1);
+      }
+    }
+  }
+
+  label {
+    @include sf-16-normal;
+    max-width: 24rem;
+
+    color: #696b73;
+
+    cursor: pointer;
+    user-select: none;
+
+    -webkit-tap-highlight-color: transparent;
+
+    &:focus {
+      outline: none;
+    }
+
+    a {
+      color: #285f95;
+      text-decoration: none;
+    }
+  }
+
+  &.dark-20 {
+    .checkboxField__box {
+      width: 2rem;
+      height: 2rem;
+      min-width: unset;
+      background: #333741;
+      border: 1.51px solid #767676;
+
+      &__check {
+        height: 1rem;
+        width: 1rem;
+      }
+
+      &--selected {
+        border: 1.51px solid #ffffff;
+      }
+    }
+  }
+}
+
+.dark-theme {
+  .checkboxField {
+    &__box {
+      background-color: #262a33;
+      border: none;
+    }
+  }
+}

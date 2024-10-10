@@ -1,0 +1,67 @@
+@import '../../../../assets/styles/abstracts/variables';
+
+.wrapper {
+  position: relative;
+
+  &:global(.customPlaylistsFeed) {
+    &:not(:last-of-type) {
+      margin-bottom: 1rem;
+    }
+    .media {
+      width: 100%;
+    }
+  }
+}
+
+.media {
+  width: 28.5rem;
+  height: 16rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 2rem;
+  overflow: hidden;
+  border: 3px solid transparent;
+  background-color: #fff;
+
+  &.active {
+    border: 3px solid #76bcff;
+    // box-shadow: 0px 4px 5px rgba(47, 152, 254, 0.2);
+  }
+
+  .title {
+    @include montserrat-18-semi-bold;
+    color: #0d1444;
+    text-transform: capitalize;
+    margin-bottom: 0.5rem;
+  }
+  .subtitle {
+    @include montserrat-12-normal;
+    color: #b0b0b0;
+  }
+}
+.sidebar {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.options {
+  display: flex;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.5rem;
+  border-radius: 1.1rem;
+  background-color: rgba($color: #000000, $alpha: 0.3);
+  z-index: 3;
+}
+
+.controls {
+  position: absolute;
+  top: calc(50% - 1rem);
+  height: 2rem;
+  width: 2rem;
+  left: calc(50% - 1rem);
+}

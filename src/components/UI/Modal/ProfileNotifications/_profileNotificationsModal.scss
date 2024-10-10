@@ -1,0 +1,63 @@
+@import '../../../../assets/styles/abstracts/variables';
+
+.profileNotificationsModal {
+  &__nav {
+    @include montserrat-12-bold;
+    display: flex;
+    height: 4rem;
+    padding: 0.5rem;
+    background: #f5f5f6;
+    border-radius: 20px;
+    margin-bottom: 1.5rem;
+
+    &__item {
+      @include flex-center;
+      flex: 1;
+
+      &--active {
+        background: #262a33;
+        border-radius: 20px;
+        color: #fff;
+      }
+    }
+  }
+
+  &__item {
+    @include montserrat-14-bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__disabled {
+    &--text {
+      @include montserrat-14-semi-bold;
+      text-align: left;
+    }
+
+    .profileNotificationsModal__item {
+      touch-action: none;
+      pointer-events: none;
+      color: rgb(170, 176, 187);
+    }
+
+    .switchbutton--active {
+      background: rgba(170, 176, 187, 0.5);
+    }
+
+    .radiobutton__inner--active {
+      background: rgba(170, 176, 187, 0.5);
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+}

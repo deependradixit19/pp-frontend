@@ -1,0 +1,190 @@
+@import '../../assets/styles/abstracts/variables';
+
+.howTo {
+  &__section {
+    @include montserrat-24-bold;
+    margin: 0 0 2rem 0;
+
+    &__filter {
+      @include flex-center;
+      height: 5rem;
+      width: 5rem;
+      background: #262a33;
+      border-radius: 10px;
+    }
+  }
+
+  &__searchfield {
+    display: flex;
+    align-items: center;
+
+    .searchfield {
+      flex: 1;
+    }
+  }
+}
+
+.faq {
+  &__tabs {
+    display: flex;
+    overflow-x: auto;
+    height: 5rem;
+    margin-bottom: 2rem;
+
+    &__tab {
+      @include montserrat-12-bold;
+      @include flex-center;
+      margin-right: 1rem;
+      height: 4rem;
+      padding: 0 2rem;
+      border-radius: 160px;
+      color: #757576;
+      border: 1px solid #757576;
+      text-transform: capitalize;
+
+      &--active {
+        color: #fff;
+        background: $blue92deg;
+        border: 1px solid transparent;
+      }
+    }
+  }
+
+  &__accordion {
+    background: $white89deg;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.2s height;
+
+    &--active {
+      overflow-y: auto;
+    }
+
+    &__head {
+      display: flex;
+      align-items: center;
+      height: 7rem;
+      padding: 1rem;
+
+      &__icon {
+        @include flex-center;
+        width: 5rem;
+        height: 5rem;
+        background: #f7f7f7;
+        border-radius: 20px;
+
+        img {
+          height: 3rem;
+        }
+      }
+
+      &__title {
+        @include montserrat-14-bold;
+        flex: 1;
+        color: #0d1444;
+        margin-left: 1rem;
+      }
+
+      &__arrow {
+        @include flex-center;
+        width: 3rem;
+        height: 3rem;
+        background: #f1f1f1;
+        opacity: 0.5;
+        border-radius: 10px;
+
+        img {
+          transition: 0.4s all;
+          transform: rotate(90deg);
+        }
+
+        &--active {
+          img {
+            transform: rotate(-90deg);
+          }
+        }
+      }
+    }
+
+    &__body {
+      &--inactive {
+        height: 0;
+      }
+    }
+
+    &__item {
+      @include montserrat-14-bold;
+      display: flex;
+      align-items: center;
+      padding: 0 2rem;
+      color: #0d1444;
+      height: 4rem;
+    }
+
+    &__subaccordion {
+      @include montserrat-14-bold;
+      display: flex;
+      align-items: center;
+      padding: 0 2rem;
+      color: #0d1444;
+
+      p {
+        flex: 1;
+      }
+    }
+  }
+
+  &__subaccordion {
+    @include montserrat-14-bold;
+    padding: 0 2rem;
+    color: #0d1444;
+    height: 4rem;
+    overflow: hidden;
+    transition: 0.2s height;
+
+    &__head {
+      display: flex;
+      align-items: center;
+
+      p {
+        flex: 1;
+      }
+
+      &__arrow {
+        @include flex-center;
+        width: 3rem;
+        height: 3rem;
+        background: #f1f1f1;
+        opacity: 0.5;
+        border-radius: 10px;
+
+        img {
+          transition: 0.4s transform;
+          transform: rotate(90deg);
+        }
+
+        &--active {
+          background: #53aff7;
+          img {
+            transform: rotate(-90deg);
+            filter: brightness(100);
+          }
+        }
+      }
+    }
+
+    &__title {
+      &--active {
+        color: #53aff7;
+      }
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+      height: 4rem;
+      padding: 0 2rem;
+    }
+  }
+}

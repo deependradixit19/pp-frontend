@@ -1,0 +1,13 @@
+.manageFeedButton {
+  align-items: center;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  color: #9b9b9b;
+  cursor: pointer;
+  display: flex;
+  font-size: 22px;
+  justify-content: center;
+  line-height: 22px;
+  height: 30px;
+  width: 30px;
+} /*# sourceMappingURL=ManageFeedButton.module.css.map */

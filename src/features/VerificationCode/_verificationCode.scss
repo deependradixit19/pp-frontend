@@ -1,0 +1,63 @@
+@import '../../assets/styles/abstracts/variables';
+
+.verificationCode {
+  border-top: 1px solid #d9d9d9;
+
+  &__title {
+    @include montserrat-14-normal;
+    font-weight: 500;
+    margin: 2.2rem 0 1rem 0;
+  }
+
+  &__input {
+    display: flex;
+    width: 100%;
+    margin-bottom: 2rem;
+
+    &__block {
+      @include montserrat-22-bold;
+      text-align: center;
+      flex: 1;
+      width: 1px;
+      margin-right: 1rem;
+      padding: 1rem;
+      border: 2px solid #e2e2e2;
+      border-radius: 10px;
+      transition: 0.2s border;
+
+      &--filled {
+        border: 2px solid #4baaf9;
+      }
+
+      &:focus {
+        border: 2px solid #4baaf9;
+        outline: none;
+      }
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__actions {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    &__codesent {
+      @include sf-14-normal;
+      color: #696b73;
+
+      span {
+        color: #4baaf9;
+      }
+    }
+
+    &__button {
+      margin: 0 auto;
+      &:disabled {
+        opacity: 0.75;
+      }
+    }
+  }
+}

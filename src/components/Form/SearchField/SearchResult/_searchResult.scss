@@ -1,0 +1,45 @@
+@import '../../../../assets/styles/abstracts/variables';
+
+.searchResult {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2.5rem 1.2rem 2rem;
+
+  &:hover {
+    background: #f4f4f4;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__avatar {
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 1rem;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__text {
+    text-decoration: none;
+    &--name {
+      @include montserrat-14-semi-bold;
+      color: #0d1444;
+      line-height: 1.7rem;
+    }
+    &--handle {
+      @include montserrat-12-normal;
+      color: #828c94;
+      line-height: 1.8rem;
+    }
+  }
+}

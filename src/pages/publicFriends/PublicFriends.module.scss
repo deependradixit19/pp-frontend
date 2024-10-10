@@ -1,0 +1,52 @@
+@import '../../assets/styles/abstracts/variables';
+
+.creators__content__wrapper {
+  .whs__wrapper {
+    padding-bottom: 0;
+  }
+}
+
+.browse-creators-list {
+  padding-bottom: 76px;
+  .creator {
+    margin-bottom: 10px;
+  }
+}
+
+.list__header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.friends__number {
+  margin-right: 10px;
+  padding: 4px 9px;
+  border-radius: 5px;
+
+  @include montserrat-11-normal;
+  background-color: white;
+
+  span {
+    font-weight: bold;
+  }
+}
+
+.basic_layout {
+  :global(.header__title) {
+    max-width: calc(100% - 13rem);
+    display: flex;
+  }
+}
+
+.header_avatar {
+  margin-right: 1.4rem;
+  vertical-align: bottom;
+  flex-shrink: 0;
+}
+
+.header_text {
+  @include text-ellipsis;
+  flex-grow: 0;
+}

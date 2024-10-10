@@ -1,0 +1,14 @@
+.storyFooterContainer {
+  width: 100%;
+  height: auto;
+  bottom: 2.7rem;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.8rem;
+  z-index: 2;
+}
+.storyFooterContainer :global .groupCircles__overlay {
+  background: linear-gradient(140.46deg, #93ceff 14.38%, #2894ff 94.98%);
+} /*# sourceMappingURL=StoryFooter.module.css.map */

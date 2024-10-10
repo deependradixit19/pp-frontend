@@ -1,0 +1,127 @@
+.goal {
+  width: 80%;
+  border-radius: 2rem;
+  overflow: hidden;
+  position: relative;
+}
+.header {
+  position: relative;
+  padding: 2.2rem 1rem;
+}
+.header::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(157.59deg, #181920 0%, #0f0f13 100%);
+  opacity: 0.7;
+}
+.header input {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  box-shadow: none;
+  position: relative;
+}
+.header input:focus {
+  outline: none;
+}
+.header input::-moz-placeholder {
+  color: #fff;
+  opacity: 0.5;
+}
+.header input:-ms-input-placeholder {
+  color: #fff;
+  opacity: 0.5;
+}
+.header input::placeholder {
+  color: #fff;
+  opacity: 0.5;
+}
+.content {
+  position: relative;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.inputGroup {
+  position: relative;
+  background: #fff;
+  padding: 1.2rem 1.2rem 1.2rem 2rem;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  height: 5rem;
+}
+.inputGroup input {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  color: #0d1444;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  box-shadow: none;
+  position: relative;
+}
+.inputGroup input:focus {
+  outline: none;
+}
+.inputGroup input::-moz-placeholder {
+  color: #bcbcbc;
+}
+.inputGroup input:-ms-input-placeholder {
+  color: #bcbcbc;
+}
+.inputGroup input::placeholder {
+  color: #bcbcbc;
+}
+.inputGroup .dollar {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  color: #0d1444;
+  position: absolute;
+  left: 1rem;
+}
+.inputGroup label {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  font-weight: normal;
+  font-size: 1rem;
+  position: absolute;
+  top: 0.3rem;
+  left: 2rem;
+}
+.error {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  color: red;
+  position: absolute;
+  bottom: 0.3rem;
+  left: 2rem;
+} /*# sourceMappingURL=goal.module.css.map */

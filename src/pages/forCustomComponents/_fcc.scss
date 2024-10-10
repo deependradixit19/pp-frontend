@@ -1,0 +1,27 @@
+.elementCC {
+  height: 300px;
+  width: 300px;
+  background-color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fcc {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.fcc__block {
+  height: 100vh;
+  background-color: blue;
+  .slider {
+    flex-direction: row !important;
+  }
+}
+
+// .carousel .slider-wrapper.axis-vertical .slider {
+//   flex-direction: column;

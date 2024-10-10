@@ -1,0 +1,77 @@
+@import '../../../assets/styles/abstracts/variables';
+
+.endstats {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  // background-color: #000;
+  background: url(../../../assets/svg/circles-bg.svg), linear-gradient(157.59deg, #181920 0%, #0f0f13 100%);
+  background-position: 50% 16%;
+  background-repeat: no-repeat;
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(218.53deg, rgba(6, 48, 90, 0.5) 16.4%, rgba(0, 0, 0, 0) 83.32%);
+  }
+  &__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 2rem 2.5rem 2rem;
+    position: relative;
+    z-index: 11;
+
+    &--title {
+      @include montserrat-18-semi-bold;
+      color: #a8c9f2;
+      text-align: center;
+      flex: 1;
+    }
+    &--back {
+      transform: rotate(90deg);
+    }
+  }
+  &__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 3.5rem;
+  }
+}
+
+.tabnav {
+  position: relative;
+  background: #12151a;
+  border-radius: 2rem;
+  display: flex;
+  padding: 0.5rem;
+
+  &__item {
+    @include montserrat-12-semi-bold;
+    color: #757576;
+    line-height: 15px;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    padding: 0.7rem 2rem;
+    border-radius: 2rem;
+
+    &.active {
+      background: #2894ff;
+      color: #ffffff;
+    }
+  }
+}

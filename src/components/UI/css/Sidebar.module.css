@@ -1,0 +1,53 @@
+.container {
+  position: relative;
+  display: inline-flex;
+  margin-top: 3rem;
+  padding-left: 1rem;
+}
+.sidebar {
+  display: flex;
+  flex-direction: column;
+}
+.item {
+  background: none;
+  border: none;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.item + .item {
+  margin-top: 3rem;
+}
+@media (max-width: 376px) {
+  .item + .item {
+    margin-top: 2rem;
+  }
+}
+.item:disabled {
+  opacity: 0.5;
+}
+.item:first-of-type .icon {
+  border: none;
+}
+.icon {
+  width: 3rem;
+  height: 3rem;
+  border: 1.5px solid #fff;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.05);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.label {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  color: #fff;
+  margin-left: 1rem;
+} /*# sourceMappingURL=Sidebar.module.css.map */

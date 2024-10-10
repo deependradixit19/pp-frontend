@@ -1,0 +1,40 @@
+@import '../../../assets/styles/abstracts/variables';
+
+.text__draggable {
+  position: absolute;
+  z-index: 3;
+  display: inline-block;
+  max-width: 90%;
+  padding: 1.7rem 2rem 2rem;
+  background: linear-gradient(157.59deg, #181920 0%, #0f0f13 100%);
+  opacity: 0.7;
+  border-radius: 2rem;
+
+  &__caption {
+    position: absolute;
+  }
+
+  span {
+    display: inline-block;
+    background: transparent;
+    border: 0px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    opacity: 0.8;
+    min-width: 2ch;
+
+    &[data-placeholder]:empty:not(:focus):before {
+      content: attr(data-placeholder);
+      pointer-events: none;
+      touch-action: none;
+      color: #888;
+      font-style: italic;
+    }
+  }
+}

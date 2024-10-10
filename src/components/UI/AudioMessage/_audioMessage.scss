@@ -1,0 +1,168 @@
+@import '../../../assets/styles/abstracts/variables';
+
+.audiomessage {
+  width: 100%;
+  height: 100%;
+
+  &__preview {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+
+    &__delete {
+      @include flex-center;
+      height: 2rem;
+      width: 2rem;
+      border: 2px solid #778797;
+      border-radius: 50%;
+      margin-right: 1rem;
+
+      img {
+        height: 0.75rem;
+        width: 0.75rem;
+      }
+    }
+
+    &__bars {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+      flex: 1;
+      padding: 0.5rem;
+      height: 100%;
+      border-radius: 10px;
+      &__blue {
+        background: $blue92deg;
+      }
+      &__white {
+        background: white;
+      }
+      &__transparent {
+        background: transparent;
+      }
+
+      &__lines {
+        display: flex;
+        align-items: center;
+        position: relative;
+        flex: 1;
+        height: 100%;
+        padding: 0 1rem;
+        overflow: hidden;
+        max-width: 100%;
+      }
+
+      &__overlay {
+        position: absolute;
+        left: 0;
+        height: 100%;
+        background: $blue92deg;
+        opacity: 0.4;
+
+        width: 100%;
+      }
+
+      &__length {
+        @include montserrat-12-normal;
+        font-weight: 500;
+        text-align: right;
+        color: #ffffff;
+        font-size: 10px;
+        margin-right: 3px;
+        width: 60px;
+      }
+    }
+
+    &__loader {
+      @include flex-center;
+      height: 3rem;
+      width: 3rem;
+      margin-left: 1rem;
+      border-radius: 1rem;
+    }
+
+    &__play {
+      @include flex-center;
+      height: 3rem;
+      width: 3rem;
+      margin-left: 1rem;
+      border-radius: 1rem;
+      background: $blue92deg;
+
+      img {
+        height: 1rem !important;
+        width: 1rem !important;
+      }
+    }
+    &__error {
+      @include montserrat-12-normal;
+      color: red;
+    }
+  }
+
+  &__audio {
+    display: none;
+    pointer-events: none;
+  }
+}
+
+.audiomessage-column {
+  .audiomessage__preview__bars {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  .audiomessage__preview__bars__length {
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+  }
+
+  .audiomessage__preview__bars__lines {
+    height: auto;
+    margin-top: 15px;
+  }
+  .audiomessage__preview__play {
+    margin-bottom: 15px;
+    margin-left: 5px;
+  }
+}
+
+.audiomessage-waveform {
+  background-position: left center;
+  background-size: contain;
+  background-repeat: repeat-x;
+  width: 100vw;
+  min-height: 20px;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+  outline: none;
+}
+
+.audiomessage-waveform-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 3;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+}
+
+@keyframes animatePlaybar {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

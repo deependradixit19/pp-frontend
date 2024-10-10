@@ -1,0 +1,36 @@
+@import '../../../assets/styles/abstracts/variables';
+
+.infoDiv {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    height: 5rem;
+    background-color: #fff;
+    border-radius: 2rem;
+    flex-shrink: 0;
+  }
+  .text {
+    padding-left: 1rem;
+  }
+  .title {
+    @include montserrat-10-semi-bold;
+    margin-bottom: 0.1rem;
+    line-height: 1.22rem;
+    color: #9b9b9b;
+  }
+  .boldText {
+    @include montserrat-16-semi-bold;
+    line-height: 1.95rem;
+    color: #0d1444;
+  }
+  .plainText {
+    @include montserrat-14-semi-bold;
+    color: #828c94;
+  }
+}

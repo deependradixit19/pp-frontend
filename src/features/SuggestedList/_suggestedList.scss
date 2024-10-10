@@ -1,0 +1,28 @@
+@import '../../assets/styles/abstracts/variables';
+
+.suggestedList {
+  padding-bottom: 7rem;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.7rem;
+
+    &--title {
+      @include montserrat-18-semi-bold;
+      color: #0d1444;
+    }
+    &--link {
+      a {
+        @include montserrat-14-semi-bold;
+        color: #008aff;
+        text-decoration: none;
+      }
+    }
+  }
+
+  & > a {
+    display: block;
+    margin-bottom: 1rem;
+  }
+}

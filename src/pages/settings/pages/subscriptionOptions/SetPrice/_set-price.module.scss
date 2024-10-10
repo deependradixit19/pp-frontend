@@ -1,0 +1,53 @@
+.header_wrapper {
+  & :global(.whs__wrapper) {
+    display: flex;
+    flex-direction: column;
+  }
+  & :global(.whs__header) {
+    border-color: #d9d9d9;
+  }
+}
+
+.price_card {
+  margin-bottom: 5px;
+  input {
+    font-weight: 600;
+  }
+  p {
+    font-weight: 400;
+  }
+}
+
+.price_description {
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  color: #afafaf;
+  font-weight: 400;
+  font-size: 12px;
+  span {
+    color: #757576;
+    font-weight: 600;
+  }
+}
+
+.button_wrapper {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  flex-grow: 0;
+  width: 200px;
+  height: 50px;
+  font-weight: 800;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  &_disabled {
+    cursor: default;
+    pointer-events: none;
+    opacity: 0.7;
+  }
+}

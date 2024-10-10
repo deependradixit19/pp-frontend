@@ -1,0 +1,21 @@
+{
+  "inApp": "In App-UK",
+  "push": "Push-UK",
+  "sms": "Sms-UK",
+  "email": "email-UK",
+  "newComment": "New Comment-UK",
+  "newLike": "New Like-UK",
+  "newTip": "New Tip-UK",
+  "newSubscriber": "New Subscriber-UK",
+  "newPremiumVideoPurchase": "New Premium Video Purchase-UK",
+  "newMessagePurchase": "New Message Purchase-UK",
+  "upcomingStreamReminders": "Upcoming Stream Reminders-UK",
+  "subscriptionRenewal": "Subscription Renewal-UK",
+  "newReferral": "New Referral-UK",
+  "incomingFriendRequest": "Incoming Friend Request-UK",
+  "acceptedFriendRequest": "Accepted Friend Request-UK",
+  "newTags": "New Tags-UK",
+  "newMessage": "New Message-UK",
+  "hasSentYouAFriendRequest": "Has sent you a friend request-UK",
+  "pollResponses": "Poll Responses-UK"
+}

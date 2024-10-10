@@ -1,0 +1,47 @@
+@import '../../../../../../assets/styles/abstracts/variables';
+.profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  width: 100%;
+
+  a {
+    display: block;
+    text-decoration: none;
+  }
+
+  .left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .avatar {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    overflow: hidden;
+    margin-right: 1rem;
+
+    img {
+      width: 100%;
+    }
+  }
+  .name {
+    @include montserrat-14-semi-bold;
+    max-width: 13.5rem;
+
+    a {
+      color: #0d1444;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  .time {
+    @include montserrat-12-normal;
+    color: #b0b0b0;
+  }
+}

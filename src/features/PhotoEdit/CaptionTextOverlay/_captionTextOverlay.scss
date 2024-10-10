@@ -1,0 +1,21 @@
+@import '../../../assets/styles/abstracts/variables';
+
+.caption__text__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  overflow: hidden;
+
+  .caption__text__overlay {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    overflow: hidden;
+  }
+}

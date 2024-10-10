@@ -1,0 +1,77 @@
+@import '../../../assets/styles/abstracts/variables';
+
+.livemodal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba($color: #000000, $alpha: 0.4);
+  z-index: 8;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &--additionalSettings {
+    .livemodal__settings {
+      opacity: 0.4;
+      pointer-events: none;
+    }
+  }
+
+  // &__bg {
+  //   position: absolute;
+  // }
+
+  &__settings {
+    position: absolute;
+    top: 2.8rem;
+    right: 6.7rem;
+  }
+
+  &__card {
+    border-radius: 2rem;
+    width: 100%;
+    position: relative;
+    padding: 3.5rem 2rem;
+
+    &--bg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: #121418;
+      opacity: 0.9;
+      border-radius: 2rem;
+    }
+
+    &--close {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+
+      svg {
+        width: 1.4rem;
+        height: 1.4rem;
+      }
+    }
+    &--title {
+      @include montserrat-18-semi-bold;
+      letter-spacing: 0.02em;
+      color: #ffffff;
+      margin-bottom: 2rem;
+      position: relative;
+    }
+    &--content {
+      position: relative;
+    }
+  }
+
+  &--endmodal {
+    .livemodal__card {
+      padding-left: 3rem;
+    }
+  }
+}
