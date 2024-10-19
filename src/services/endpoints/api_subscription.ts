@@ -26,7 +26,7 @@ export const getSubscriptionPlans = async (id: number) => {
     method: 'get',
     url: `api/subscription/prices/${id}`
   })
-  return data
+  return data?.data
 }
 
 export const updateSubscriptionPlans = async (newPlan: IPaymentPlan) => {

@@ -43,15 +43,16 @@ export const loginUser = (
     axios
       .post(`${apiUrl}/api/login`, data)
       .then(resp => {
-        setAccessToken(resp.data.token, data.remember)
-        if (fromProfileId) {
-          navigate(`/profile/${fromProfileId}/all`)
-        } else if (resp.data.userProfile.role === 'model') {
-          navigate(`/profile/${resp.data.userProfile.id}/all`)
+        setAccessToken(resp.data?.data.token, data.remember)
+        // if (fromProfileId) {
+        //   navigate(`/profile/${fromProfileId}/all`)
+        // } else 
+        if (resp.data?.data.userProfile.role === 'model') {
+          navigate(`/profile/${resp.data?.data.userProfile.id}/all`)
         } else {
           navigate('/')
         }
-        setLoggedInUser(resp.data.userProfile)
+        setLoggedInUser(resp.data?.data.userProfile)
         // window.location.reload();
       })
       .catch(err => {

@@ -49,5 +49,5 @@ export const selectSubscriptionLists = async (selected: number[]) => {
     url: `/api/subscription/list/select`,
     data: { selected }
   })
-  return data
+  return data?.data
 }
