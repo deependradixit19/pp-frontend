@@ -176,7 +176,7 @@ const ProfileHolder: FC<IProfileHolder> = ({
           isLive={show_online_status && online ? true : false}
         >
           {avatar ? (
-            <img src={avatar || ''} alt={t('profileAvatar')} />
+            <img src={`http://127.0.0.1:8000/`+avatar.replace('public/', '') || ''} alt={t('profileAvatar')} />
           ) : (
             <div className='profileholder__profile__placeholder'>
               <img src={AllIcons.user_placeholder} alt='Placeholder' />

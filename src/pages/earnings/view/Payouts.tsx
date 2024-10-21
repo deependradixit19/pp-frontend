@@ -17,7 +17,6 @@ const Payouts: FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>('')
   const debouncedSearch = useDebounce(searchTerm, 1000)
   const { t } = useTranslation()
-
   const { data, isFetching, fetchNextPage } = useInfiniteQuery<IInfinitePages<ISalesTransaction>, Error>(
     ['getPayoutsInvoices', debouncedSearch],
     ({ pageParam = 1 }) => getPayoutsInvoices({ page: pageParam, search: debouncedSearch }),
@@ -28,13 +27,15 @@ const Payouts: FC = () => {
       refetchOnWindowFocus: false
     }
   )
+  console.log(invoicesFeed,"===invoicesFeed")
+  console.log(data,"===data")
 
   useEffect(() => {
     if (data && !isFetching) {
       const tmp = data.pages.map(page => {
-        return page.page.data.data
+        return page.page.data
       })
-      console.log(tmp)
+      console.log(tmp,"=====temptemp")
       setInvoicesFeed([...tmp.flat()])
       setDataReady(true)
     }
@@ -60,7 +61,7 @@ const Payouts: FC = () => {
             if (invoicesFeed.length === index + 1) {
               return (
                 <InView
-                  key={invoice.invoiceId}
+                  key={invoice?.invoiceId}
                   as='div'
                   threshold={0.1}
                   triggerOnce
@@ -69,24 +70,24 @@ const Payouts: FC = () => {
                   }}
                 >
                   <UserCardPayouts
-                    key={invoice.invoiceId}
-                    avatarUrl={invoice.avatar}
-                    earningsCardType={invoice.status}
-                    date={invoice.date}
-                    invoiceNmbr={invoice.invoiceId}
-                    amount={invoice.amount}
+                    key={invoice?.invoiceId}
+                    avatarUrl={invoice?.avatar}
+                    earningsCardType={invoice?.status}
+                    date={invoice?.date}
+                    invoiceNmbr={invoice?.invoiceId}
+                    amount={invoice?.amount}
                   />
                 </InView>
               )
             } else {
               return (
                 <UserCardPayouts
-                  key={invoice.invoiceId}
-                  avatarUrl={invoice.avatar}
-                  earningsCardType={invoice.status}
-                  date={invoice.date}
-                  invoiceNmbr={invoice.invoiceId}
-                  amount={invoice.amount}
+                  key={invoice?.invoiceId}
+                  avatarUrl={invoice?.avatar}
+                  earningsCardType={invoice?.status}
+                  date={invoice?.date}
+                  invoiceNmbr={invoice?.invoiceId}
+                  amount={invoice?.amount}
                 />
               )
             }

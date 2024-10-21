@@ -94,7 +94,6 @@ const MenuProfileHolder: FC<{
   const { changeAccount } = useChangeAccount({})
 
   const { data, isLoading: isLoadingLinkedAccounts } = useQuery('linkedAccounts', getLinkedAccounts)
-
   const changeAvatar = () =>
     modalData.addModal(t('profilePhoto'), <ProfileImageModal />, undefined, undefined, 'profile__photo__modal')
 
@@ -109,7 +108,7 @@ const MenuProfileHolder: FC<{
         cameraFn={changeAvatar}
       >
         {profileImg ? (
-          <img src={profileImg} alt={t('profilePhoto')} />
+          <img src={`http://127.0.0.1:8000/`+profileImg.replace('public/', '')} alt={t('profilePhoto')} />
         ) : (
           <div className='profileholder__profile__placeholder'>
             <img src={AllIcons.user_placeholder} alt={t('placeholder')} />
@@ -156,7 +155,7 @@ const MenuProfileHolder: FC<{
                     <MenuProfileAccount
                       key={idx}
                       id={profile.id}
-                      profileImg={profile.cropped_avatar?.url || profile.avatar?.url}
+                      profileImg={profile.cropped_avatar?.url || `http://127.0.0.1:8000/`+profile.avatar?.url.replace('public/', '')}
                       displayName={profile.display_name}
                       username={profile.username}
                       followerCount={profile.follower_count}

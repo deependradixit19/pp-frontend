@@ -53,6 +53,8 @@ const ProfileImageModal: FC<{
 
   const updateAvatarImages = (avatar: string, cropped_avatar?: string) => {
     let uploadPromise
+    console.log(isCover,"======isCover");
+    console.log(avatar, cropped_avatar,"======avatar, cropped_avatar");
     if (!isCover) {
       const newImages = { avatar, cropped_avatar }
       uploadPromise = putAvatarImage(newImages)
@@ -121,7 +123,10 @@ const ProfileImageModal: FC<{
       data.append('photo', avatar.img)
       attachPhoto(data)
         .then(resp => {
-          updateAvatarImages(resp.data?.path)
+          console.log(resp.data,"====resp.data?.data?.path")
+          const { path } = resp.data.data;
+          console.log(resp.data,"====resp.data?.data?.path")
+          updateAvatarImages(path)
         })
         .catch(err => {
           setIsUploading(false)

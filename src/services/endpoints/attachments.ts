@@ -2,6 +2,7 @@ import { Orientation } from '../../helpers/media'
 import axiosInstance from '../http/axiosInstance'
 
 export type PhotoAttachmentResponse = {
+  [x: string]: any
   storage_path: string
   cropped_orientation: string | null
   cropped_path: string | null

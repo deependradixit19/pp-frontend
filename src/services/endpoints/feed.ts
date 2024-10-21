@@ -7,7 +7,7 @@ Get Feed
 export const getUsersFeed = async (id: string, filter: string, currentPage: number = 1) => {
   const { data } = await axiosInstance({
     method: 'get',
-    url: `/api/user/${id}/feed?type=${filter}&page=${currentPage}`
+    url: `/api/user/${id}/feed?type=all&media_category=1&page=${currentPage}`
   })
   return data
 }
@@ -19,8 +19,8 @@ export const getUsersFeedInfinite = async (
 ) => {
   const { data } = await axiosInstance({
     method: 'get',
-    url: `/api/user/${id}/feed`,
-    params
+    url: `/api/user/${id}/feed?type=all&media_category=1&page=1`,
+    
   })
 
   return {

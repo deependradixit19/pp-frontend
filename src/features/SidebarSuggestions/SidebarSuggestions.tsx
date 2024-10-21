@@ -9,7 +9,7 @@ function SidebarSuggestions() {
   const { t } = useTranslation()
   const userData = useUserContext()
   const navigate = useNavigate()
-
+  console.log(userData,"===userData")
   return (
     <>
       <div className='header-right'>
@@ -38,7 +38,7 @@ function SidebarSuggestions() {
         <div className='profile__menu' onClick={() => navigate('/menu')}>
           <img
             className='header-avatar'
-            src={userData.cropped_avatar?.url || userData.avatar?.url || avatarPlaceholder}
+            src={userData.cropped_avatar?.url || `http://127.0.0.1:8000/`+userData.avatar?.url.replace('public/', '') || avatarPlaceholder}
             alt={t('profile')}
           />
         </div>
