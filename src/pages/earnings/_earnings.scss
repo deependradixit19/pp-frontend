@@ -1,6 +1,6 @@
 @import '../../assets/styles/abstracts/variables';
 .earnings {
-  background-color: #05090d;
+  // background-color: #05090d;
   background-image: url('../../assets/svg/transactions-bg-vector.svg');
   background-size: contain;
   background-position: 0 -95px;
@@ -31,7 +31,7 @@
 .balance-number {
   display: flex;
   font-size: 60px;
-  color: #ffffff;
+  // color: #ffffff;
   margin: 15px 0;
   align-items: flex-start;
   line-height: 60px;
@@ -54,7 +54,7 @@
 
   span {
     @include montserrat-12-semi-bold;
-    color: #ffffff;
+    // color: #ffffff;
   }
 }
 

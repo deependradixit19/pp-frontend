@@ -66,7 +66,6 @@ const SalesChart: FC = () => {
 
   const profile = useUserContext()
   const navigate = useNavigate()
-
   const payoutMethod = profile.payout_method
   const payoutRequested = true
 
@@ -127,7 +126,6 @@ const SalesChart: FC = () => {
       refetchOnMount: false
     }
   )
-
   const changeSelectedChartOption = (chartOpt: keyof typeof chartOptionToTranslateKey) => {
     setSelectedChartOption(chartOpt)
     setChartOptionsOpen(false)
@@ -190,16 +188,16 @@ const SalesChart: FC = () => {
           <div className='balance-text'>{t('currentBalance')}</div>
           {currentBalance && (
             <div className='balance-number'>
-              <spriteIcons.IconDollar width='25' height='49' />
+              <spriteIcons.IconDollar color='black' width='25' height='49' />
 
-              <div className='balance-number-value'>{Math.trunc(currentBalance.balance)}</div>
+              <div className='balance-number-value'>{Math.trunc(currentBalance.data.balance)}</div>
 
               <span className='balance-number-currency-text'>(USD)</span>
             </div>
           )}
           {pendingBalance && (
             <div className='balance-pending'>
-              Pending <span>${Math.trunc(pendingBalance.balance)}</span>
+              Pending <span>${Math.trunc(pendingBalance.data.balance)}</span>
             </div>
           )}
           <div className='balance-options'>
@@ -220,7 +218,7 @@ const SalesChart: FC = () => {
             <div className='balance-chart-currency'>
               <div className='balance-number'>
                 <spriteIcons.IconDollar width='40' height='40' />
-                <div>{Math.trunc(currentBalance.balance)}</div>
+                <div>{Math.trunc(currentBalance.data.balance)}</div>
                 <span className='balance-number-currency-text'>
                   <div>(USD)</div>
                   <div className='balance-text'>{t('overallRevenue')}</div>

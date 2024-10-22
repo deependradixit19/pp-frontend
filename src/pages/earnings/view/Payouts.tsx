@@ -33,7 +33,8 @@ const Payouts: FC = () => {
   useEffect(() => {
     if (data && !isFetching) {
       const tmp = data.pages.map(page => {
-        return page.page.data
+        const result =page.page.data as any
+        return result?.results
       })
       console.log(tmp,"=====temptemp")
       setInvoicesFeed([...tmp.flat()])

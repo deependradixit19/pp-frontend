@@ -16,7 +16,8 @@ const Sales: FC = () => {
   useEffect(() => {
     if (data && !isFetching) {
       const tmp = data.pages.map(page => {
-        return page.page.data.data
+        const sales = page.page.data as any
+        return sales?.results
       })
       console.log(tmp)
       setSalesFeed([...tmp.flat()])
