@@ -81,7 +81,7 @@ const AudioMessage: FC<{
   const [playing, setPlaying] = useState<boolean>(false)
   const [listened, setListened] = useState<any>(0)
   const [fullyListened, setFullyListened] = useState<boolean>(false)
-  const [duration, setDuration] = useState<any>('')
+  const [duration, setDuration] = useState<any>(0)
   const [durationPreview, setDurationPreview] = useState<string>('')
   const [dragging, setDragging] = useState(false)
   const audioRef = useRef<any>(null)
@@ -108,12 +108,14 @@ const AudioMessage: FC<{
   }, [playing, fullyListened, listenedTimer])
 
   useEffect(() => {
-    if (audioBlob) {
+    if (audioBlob && audioBlob.size > 0) {
       getBlobDuration(audioBlob).then(resp => {
-        setDuration(resp)
+        setDuration(resp);
       })
+    } else {
+      setDuration('');
     }
-  }, [audioBlob])
+  }, [audioBlob]);
 
   useEffect(() => {
     if (duration) {

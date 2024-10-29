@@ -2,8 +2,9 @@ import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import './_sidebarNavigation.scss'
 import * as spriteIcons from '../../assets/svg/sprite'
-import logo1 from '../../assets/images/home/logo1.svg'
+// import logo1 from '../../assets/images/home/logo1.svg'
 import { AllIcons } from '../../helpers/allIcons'
+import { useEffect, useRef, useState } from 'react'
 const navItems = [
   {
     label: 'feed',
@@ -66,29 +67,85 @@ const navItems = [
     icon: <spriteIcons.IconManHeadphones />
   }
 ]
-
 function SidebarNavigation() {
   const { t } = useTranslation()
+  
+  const newPostButtonRef = useRef<HTMLLIElement>(null)
+  const [newPostOpen, setNewPostOpen] = useState(false)
+
+  function toggleNewPostPopup() {
+    setNewPostOpen(prev => !prev)
+  }
+
+  const handleClickOutside = (event: MouseEvent) => {
+    const target = event.target as HTMLElement
+    if (newPostButtonRef.current && !newPostButtonRef.current.contains(target)) {
+      setNewPostOpen(false)
+    }
+  }
+
+  useEffect(() => {
+    document.addEventListener('click', handleClickOutside, true)
+    return () => {
+      document.removeEventListener('click', handleClickOutside, true)
+    }
+  }, [])
+
   return (
     <>
-      <ul className='sidebar'>
-        <li className='sidebar-item post-container'>
-          <span className='plus-sign-border'>
-            <span className='plus-sign'>
-              <img src={AllIcons.footer_addpost} alt='Add post' />
+      <div className='sidebarmain'>
+        <ul className='sidebar'>
+          <li
+            className={`sidebar-item post-container ${newPostOpen ? 'post-containerActive' : ''}`}
+            ref={newPostButtonRef}
+            onClick={toggleNewPostPopup}
+          >
+            <span className='plus-sign-border'>
+              <span className='plus-sign'>
+                {!newPostOpen ? (
+                  <img src={AllIcons.footer_addpost} alt='Add post' />
+                ) : (
+                  <span className='closepostdiv'>
+                   
+                    <img src={AllIcons.footer_addpost} alt='Add post' />
+                  </span>
+                )}
+              </span>
             </span>
-          </span>
-          New Post
-        </li>
-        {navItems.map((item, i) => (
-          <li className={`sidebar-item ${item.link === window.location.pathname ? 'active' : ''}`} key={i}>
-            <Link to={`${item.link}`}>
-              {item.icon}
-              {t(item.label)}
-            </Link>
+            New Post
           </li>
-        ))}
-      </ul>
+          {navItems.map((item, i) => (
+            <li className={`sidebar-item ${item.link === window.location.pathname ? 'active' : ''}`} key={i}>
+              <Link to={`${item.link}`}>
+                {item.icon}
+                {t(item.label)}
+              </Link>
+            </li>
+          ))}
+        </ul>
+        {newPostOpen && (
+          <div className='popup-menu'>
+            <div className='popup-menu-items'>
+              <Link to='/new/post/create' className='popup-menu-item'>
+                <img src={AllIcons.post_edit} alt='post' />
+                Post
+              </Link>
+              <Link to='/messages/inbox' className='popup-menu-item'>
+                <img src={AllIcons.footer_newmessage} alt='message' />
+                Message
+              </Link>
+              <Link to='/story' className='popup-menu-item'>
+                <img src={AllIcons.footer_newstory} alt='story' />
+                Story
+              </Link>
+              <Link to='/live' className='popup-menu-item'>
+                <img className='newpostLiveImg' src={AllIcons.settings_livestream} alt='live' />
+                GoLive
+              </Link>
+            </div>
+          </div>
+        )}
+      </div>
     </>
   )
 }

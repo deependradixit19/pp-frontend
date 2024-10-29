@@ -129,12 +129,12 @@ const Wallet: FC = () => {
   useEffect(() => {
     if (
       cardsList &&
-      cardsList.data &&
-      cardsList.data.length === 1 &&
-      cardsList.data[0].id !== userData.default_card &&
-      !cardsList.data[0].is_default
+      cardsList.data.cards &&
+      cardsList.data.cards.length === 1 &&
+      cardsList.data.cards[0].id !== userData.default_card &&
+      !cardsList.data.cards[0].is_default
     ) {
-      setDefaultCard.mutate(cardsList.data[0].id)
+      setDefaultCard.mutate(cardsList.data.cards[0].id)
     }
   }, [cardsList])
 
@@ -184,7 +184,6 @@ const Wallet: FC = () => {
           : minimumAmountOptions[3].value
     })
   }
-
   return (
     <>
       <div className='wallet-top-section'>
@@ -273,7 +272,7 @@ const Wallet: FC = () => {
       </div>
       <WithHeaderSection withoutBorder={true} headerSection={<LayoutHeader type='basic' title={t('yourCards')} />}>
         {cardsList &&
-          cardsList.data.map((card: ICard) => (
+          cardsList?.data.cards.map((card: ICard) => (
             <ActionCard
               key={card.id}
               icon={card.card_number.charAt(0) === '3' ? <spriteIcons.IconVisa /> : <spriteIcons.IconMasterCard />}

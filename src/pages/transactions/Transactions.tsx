@@ -60,7 +60,10 @@ const Transactions: FC = () => {
   )
 
   const transactions = useMemo(() => {
-    return transactionsData?.pages.flatMap(page => page.data.data)
+    return transactionsData?.pages.flatMap(page =>{ 
+      const trans =page.data as any
+      console.log(trans.transactions.data,'trans')
+     return trans.transactions.data})
   }, [transactionsData])
 
   useEffect(() => {
@@ -84,7 +87,8 @@ const Transactions: FC = () => {
     // even after new page is fetched (but last element is still in view),
     // but not really probable in real world examples
   ])
-
+console.log(transactionsData,'transactionsData')
+console.log(transactions,'transactions')
   return (
     <BasicLayout title={t('transactions')}>
       <WithHeaderSection
